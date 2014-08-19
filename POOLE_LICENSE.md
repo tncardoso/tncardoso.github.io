@@ -1,3 +1,7 @@
+This license applies to Poole files. For more information:
+
+https://github.com/poole/poole
+
 # Released under MIT License
 
 Copyright (c) 2013 Mark Otto.
