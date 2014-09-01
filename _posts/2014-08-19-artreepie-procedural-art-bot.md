@@ -5,7 +5,7 @@ tags: [art, codegolf]
 ---
 
 <div class="centered">
-<img src="{{ "public/img/artreepie/icon.png" | prepend: site.baseurl }}" width="64px" height="64px" class="post-icon">
+<img src="{{ "img/artreepie/icon.png" | prepend: site.baseurl }}" width="64px" height="64px" class="post-icon">
 </div>
 
 Last week, I stumbled upon a great 
@@ -60,7 +60,7 @@ in the order they were posted: the first tweet will be used for the
 red channel, the second for the green channel and the third for the blue channel. 
 
 For example, this 
-<a href="{{"public/img/artreepie/example1.png" | prepend: site.baseurl }}" target="_blank">image</a>
+<a href="{{"img/artreepie/example1.png" | prepend: site.baseurl }}" target="_blank">image</a>
 was generated with the following tweets:
 
 {% highlight lisp %}
@@ -83,14 +83,14 @@ Here are some example images, listed in the stackexchange thread, written using 
 @artreepie (if (and (!= i 0) (!= j 0)) (+ (% i j) (% j i)) 0)
 @artreepie (if (and (!= i 0) (!= j 0)) (| (% i j) (% j i)) 0)
 {% endhighlight %}
-See the <a href="{{"public/img/artreepie/example2.png" | prepend: site.baseurl }}" target="_blank">result</a>.
+See the <a href="{{"img/artreepie/example2.png" | prepend: site.baseurl }}" target="_blank">result</a>.
 
 {% highlight lisp %}
 @artreepie (var s (/ 3.0 (+ j 99))) (* (+ (% (+ (* j s) (* s (+ i w))) 2) (% (+ (* j s) (* s (- (* w 2) i))) 2)) 127)
 @artreepie (var s (/ 3.0 (+ j 99))) (* (+ (% (+ (* j s) (* s (+ i w))) 2) (% (+ (* j s) (* s (- (* w 2) i))) 2)) 127)
 @artreepie (var s (/ 3.0 (+ j 99))) (* (+ (% (+ (* j s) (* s (+ i w))) 2) (% (+ (* j s) (* s (- (* w 2) i))) 2)) 127)
 {% endhighlight %}
-See the <a href="{{"public/img/artreepie/example3.png" | prepend: site.baseurl }}" target="_blank">result</a>.
+See the <a href="{{"img/artreepie/example3.png" | prepend: site.baseurl }}" target="_blank">result</a>.
 
 ## Your turn!
 

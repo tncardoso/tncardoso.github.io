@@ -16,16 +16,16 @@
 }
 
 .icon-twitter {
-    background-image: url('/public/icons/twitter-16.png');
+    background-image: url('/img/icons/twitter-16.png');
 }
 .icon-rss {
-    background-image: url('/public/icons/rss-16.png');
+    background-image: url('/img/icons/rss-16.png');
 }
 .icon-github {
-    background-image: url('/public/icons/github-16.png');
+    background-image: url('/img/icons/github-16.png');
 }
 .icon-linkedin {
-    background-image: url('/public/icons/linkedin-16.png');
+    background-image: url('/img/icons/linkedin-16.png');
 }
 .post-snippet .post-date {
     float: left;
@@ -53,4 +53,9 @@ table {
 
 .post-icon {
     display: inline-block;
+}
+
+.post-image {
+    display: inline-block;
+    margin-top: 2em;
 }
