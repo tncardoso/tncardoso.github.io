@@ -13,10 +13,10 @@
     
     <item>
       <title>artreepie, a procedural art bot</title>
-      <link>http://tncardoso.com/blog/artreepie-procedural-art-bot/</link>
+      <link>http://tncardoso.com/blog/2014/08/artreepie-a-procedural-art-bot/</link>
       <pubDate>Sat, 09 Aug 2014 16:16:30 -0200</pubDate>
       
-      <guid>http://tncardoso.com/blog/artreepie-procedural-art-bot/</guid>
+      <guid>http://tncardoso.com/blog/2014/08/artreepie-a-procedural-art-bot/</guid>
       <description>Last week, I stumbled upon a great stackexchange discussion on procedural art. The idea was to come up with three code snippets that would be used to generate an image. More specifically, each snippet &amp;ndash; one for each color channel (R, G, B) &amp;ndash; is a function that, given a pixel coordinate, returns its intensity. Each snippet should fit in a single tweet.
 This very interesting exercise inspired me into creating @artreepie.</description>
     </item>
