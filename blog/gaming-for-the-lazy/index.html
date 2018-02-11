@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer">
+<meta name="author" content="Thiago Cardoso">
+<meta name="description" content="I come from a time when gaming was serious business. You could not beat a game without hours of continuous effort. There was no such thing as saving your progress and the only difficulty level was &lsquo;Hard&rsquo;.
+Once, as a kid, I was playing Sonic when someone accidentally kicked the videogame, making the screen go black. After moments of tension, images suddenly returned, surprisingly, in the final stage of the game.">
+
+<meta property="og:title" content="Gaming for the lazy" />
+<meta property="og:description" content="I come from a time when gaming was serious business. You could not beat a game without hours of continuous effort. There was no such thing as saving your progress and the only difficulty level was &lsquo;Hard&rsquo;.
+Once, as a kid, I was playing Sonic when someone accidentally kicked the videogame, making the screen go black. After moments of tension, images suddenly returned, surprisingly, in the final stage of the game." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://tncardoso.com/blog/gaming-for-the-lazy/" />
+
+
+
+<meta property="article:published_time" content="2014-09-01T16:16:30-02:00"/>
+
+<meta property="article:modified_time" content="2014-09-01T16:16:30-02:00"/>
+
+
+
+
+
+
+
+
+
+
+
+
+<title>
+
+
+     Gaming for the lazy 
+
+</title>
+<link rel="canonical" href="http://tncardoso.com/blog/gaming-for-the-lazy/">
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Ubuntu+Mono:400,400i,700,700i|Raleway:500">
+
+
+
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/pygments.css">
+    <link rel="stylesheet" href="/css/main.css">
+    
+
+
+
+
+<link rel="shortcut icon"
+
+    href="/img/favicon.ico"
+
+>
+
+
+
+
+
+
+
+
+</head>
+
+
+<body lang="">
+
+<section class="header">
+    <div class="container">
+        <div class="content">
+            
+                
+                
+                
+                
+                
+                    
+                
+                    
+                
+                    
+                
+                
+                <a href="/"><img class="avatar" src="/img/avatar.jpg" srcset="http://tncardoso.com/img/avatar.jpg 1x"></a>
+            
+            <a href="/"><div class="name">Thiago Cardoso</div></a>
+            
+            <nav>
+                <ul>
+                    
+                        <li class="nav-blog"><a href="http://tncardoso.com/"><span>Blog</span></a></li>
+                    
+                </ul>
+            </nav>
+        </div>
+    </div>
+</section>
+
+<section class="icons">
+    <div class="container">
+        <div class="content">
+        
+            <a href="//github.com/tncardoso" target="_blank" rel="noopener"><img class="icon" src="/img/github.svg" alt="github" /></a>
+        
+
+        
+            <a href="//twitter.com/tncardoso" target="_blank" rel="noopener"><img class="icon" src="/img/twitter.svg" alt="twitter" /></a>
+        
+
+	
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+        </div>
+    </div>
+</section>
+
+
+<section class="main post non-narrow zero-top-spacing">
+    <div class="container">
+        <div class="content">
+            <div class="front-matter">
+                <div class="title-container">
+                    <div class="page-heading">
+
+    Gaming for the lazy
+
+</div>
+
+                    <div class="initials"><a href="http://tncardoso.com/"></a></div>
+                </div>
+                <div class="meta">
+                    
+                    <div class="date" title='Mon Sep 1 2014 16:16:30 -0200'>Sep 1, 2014</div>
+                    
+                    
+		    <div class="reading-time"><div class="middot"></div>3 minutes read</div>
+                    
+                </div>
+            </div>
+            <div class="markdown">
+                
+
+<div class="centered" align="center">
+    <img src="/img/gaming/sonic.png" width="168" height="118" class="post-icon">
+</div>
+
+
+
+<p>I come from a time when gaming was serious business. You could not beat
+a game without hours of continuous effort. There was no such thing as
+saving your progress and the only difficulty level was &lsquo;Hard&rsquo;.</p>
+
+<p>Once, as a kid, I was playing Sonic when someone accidentally kicked the
+videogame, making the screen go black. After moments of tension, images
+suddenly returned, surprisingly, in the final stage of the game.
+Everyone claimed that the the more experienced player should finish it,
+but I didn&rsquo;t yield: it was my chance to shine. Of course, I would have
+made a different decision if I knew I would lose in the first pit.</p>
+
+<p>Fast forward some years, during a clean up, the old Sega Master System
+emerged and it was fully functional. Between the old cartridges, there
+was Sonic. I instantly got curious if there were other ways to finish it
+and decided to connect my computer to the video-game via an arduino
+board. That would enable me to record and replay game input, just like a
+save-state system.</p>
+
+<h2 id="arduino-for-the-rescue">Arduino for the rescue</h2>
+
+<p>Master System controller has 8 pins: 6 for each possible input, one for
+ground and one for VCC. Input pins output a very small voltage when
+idle. When a button is pressed, the wire is grounded, resulting in an
+action. This simple protocol may be implemented using an Arduino by
+connecting each action wire to an output gate and controlling these
+outputs via serial port using a computer. Also, resistors are used for
+each connection in order to protect the board and reduce the voltage
+used for keeping inputs idle.</p>
+
+<div class="centered" align="center">
+<a href="/img/gaming/board.jpg" target="_blank">
+<img src="/img/gaming/board.jpg"
+width="512px" height="384px" class="post-image">
+</a>
+</div>
+
+<h2 id="controller">Controller</h2>
+
+<p>A very simple protocol was implemented for the Arduino. Bytes are
+constantly read from the serial connection, and for each possible value
+an action is taken. For example, the value 0x01 activates the left
+arrow, while the value 0x02 deactivates it.</p>
+
+<p>A python client was developed for communicating with the arduino and
+after some tweaking with sleep times (nanosecond measures were
+necessary) the client was ready for use. This client allows not only for
+live playing but also for recording and replaying sessions. Because
+games used to be deterministic on those days &ndash;  events usually happened
+at the same time, and enemies followed the same path &ndash;, replaying a
+previously recorded session leads to exactly the same outcome.</p>
+
+<p>In the following video you can see a playback of Sonic&rsquo;s first stage,
+fully controlled by Arduino.</p>
+
+<div class="post-image" align="center">
+<iframe width="560" height="315"
+src="//www.youtube.com/embed/4H-_ebr436g" frameborder="0"
+allowfullscreen></iframe>
+</div>
+
+<h2 id="now-it-s-on-you">Now it&rsquo;s on you</h2>
+
+<p>If you want to dive into the details of Master Arduino Controller, just
+check the source code available on <a
+href="https://github.com/tncardoso/master-arduino-controller" target="_blank">
+Github</a> under a three-clause BSD license and go for it.</p>
+
+                <br>
+		<p class="back-to-posts"><a href="/blog/">Back to posts</a></p>
+            </div>
+            <br>
+            <div class="disqus">
+                
+            </div>
+            
+        </div>
+    </div>
+</section>
+
+
+
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-25953089-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='//www.google-analytics.com/analytics.js'></script>
+
+
+
+
+
+
+
+</body>
+</html>
+

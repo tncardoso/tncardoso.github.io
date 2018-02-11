@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blogs on Thiago Cardoso</title>
+    <link>http://tncardoso.com/blog/</link>
+    <description>Recent content in Blogs on Thiago Cardoso</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 01 Sep 2014 16:16:30 -0200</lastBuildDate>
+    
+	<atom:link href="http://tncardoso.com/blog/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Gaming for the lazy</title>
+      <link>http://tncardoso.com/blog/gaming-for-the-lazy/</link>
+      <pubDate>Mon, 01 Sep 2014 16:16:30 -0200</pubDate>
+      
+      <guid>http://tncardoso.com/blog/gaming-for-the-lazy/</guid>
+      <description>I come from a time when gaming was serious business. You could not beat a game without hours of continuous effort. There was no such thing as saving your progress and the only difficulty level was &amp;lsquo;Hard&amp;rsquo;.
+Once, as a kid, I was playing Sonic when someone accidentally kicked the videogame, making the screen go black. After moments of tension, images suddenly returned, surprisingly, in the final stage of the game.</description>
+    </item>
+    
+    <item>
+      <title>artreepie, a procedural art bot</title>
+      <link>http://tncardoso.com/blog/artreepie-procedural-art-bot/</link>
+      <pubDate>Sat, 09 Aug 2014 16:16:30 -0200</pubDate>
+      
+      <guid>http://tncardoso.com/blog/artreepie-procedural-art-bot/</guid>
+      <description>Last week, I stumbled upon a great stackexchange discussion on procedural art. The idea was to come up with three code snippets that would be used to generate an image. More specifically, each snippet &amp;ndash; one for each color channel (R, G, B) &amp;ndash; is a function that, given a pixel coordinate, returns its intensity. Each snippet should fit in a single tweet.
+This very interesting exercise inspired me into creating @artreepie.</description>
+    </item>
+    
+  </channel>
+</rss>
