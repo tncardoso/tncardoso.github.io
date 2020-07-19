@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>
+    
+    
+      
+        Thiago Cardoso :: Padoca: hotkey keyboard
+      
+    
+  </title>
+
+  
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-25953089-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-25953089-1');
+  </script>
+
+  <link rel="icon" type="image/png" href="/img/favicon.png">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+  <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/main.css">
+</head>
+
+<body>
+<nav class="navbar is-dark" role="navigation" aria-label="main navigation">
+  <div class="container">
+    <div class="navbar-brand">
+      <span class="navbar-item"><img src="/img/logo.png"></span>
+
+      <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+
+    <div id="navbarBasicExample" class="navbar-menu">
+      <div class="navbar-start">
+      </div>
+
+      <div class="navbar-end">
+        
+          
+          <a class="navbar-item" href="http://tncardoso.com/">About</a>
+          
+        
+          
+          <a class="navbar-item" href="http://tncardoso.com/blog">Blog</a>
+          
+        
+          
+          <a class="navbar-item" href="http://tncardoso.com/projects">Projects</a>
+          
+        
+          
+          <a class="navbar-item" href="https://scholar.google.com/citations?user=XLih4b8AAAAJ" target="_blank">Publications</a>
+          
+        
+      </div>
+    </div>
+</nav>
+
+
+
+
+<div class="container">
+  <section class="section">
+    <div class="container">
+      <h1 class="title has-text-grey-dark">Padoca: hotkey keyboard</h1>
+      <p class="subtitle">
+        <span class="post-date"><time datetime='2020-07-19T18:36:30-03:00'>
+          
+            2020-07-19
+          
+        </time></span>
+      </p>
+
+      <div class="content">
+        <p>Online meetings became widespread during the 2020 COVID pandemic. Call etiquette mandates that you keep your microphone muted while not talking, as almost everyone knows. This mute-unmute dynamic inspired me to search for a more comfortable solution that didn&rsquo;t involve pressing multiple keys on the keyboard or reaching for the mouse every time.
+Luckily I stumbled upon this
+<a href="https://www.instructables.com/id/HotKeys-Keyboard-With-Custom-Profiles/" target="_blank">Instructable</a>
+ by
+<a href="https://www.instructables.com/member/FabroLabs&#43;Technologies/" target="_blank">FabroLabs Technologies</a>
+.
+I decided to give it a try and build a hotkey keyboard from scratch: the casing, circuit, firmware, and keycaps.</p>
+<p>Although I have some previous experience with modeling and sculpting in Blender 3d, I am not acquainted with CAD software. Because of this limitation, I decided to start by designing the casing, and after experimenting with FreeCAD, Fusion 360, and OpenSCAD, I decided to stick with the latter. In OpenSCAD&rsquo;s workflow, you don&rsquo;t interactively model a 3D mesh. Instead, you write scripts that describe 3D objects, ending with a parametric description of the mesh that can be easily adjusted.</p>
+
+<figure>
+  <img src="/blog/2020/07/padoca-hotkey-keyboard/img/openscad.png" alt="Screenshot of OpenSCAD with the keyboard design" />
+  <figcaption>Designing the keyboard using OpenSCAD</figcaption>
+</figure>
+
+<p>After I developed the casing, I iterated by printing the parts that would later fit a component to check for any sizing mistakes. The following pictures show some of those tests.</p>
+
+
+<figure>
+  <img src="/blog/2020/07/padoca-hotkey-keyboard/img/test_hu7af45c05e7eaab656aeab8d5fe153c59_110249_300x0_resize_q75_box.jpg" alt="A hand holding a piece of the case with an LCD attached" />
+  <figcaption>Not the best first layer but useful to check measurements</figcaption>
+</figure>
+
+<p>Assembling the circuit was pretty straightforward. I used an Arduino Pro Micro, a KY-040 rotary encoder, a 1602 LCD, Gateron blue switches, 1N4148 small-signal diodes, and some current limiting resistors. I assembled the switches in a matrix with the diodes used to prevent ghosting as described in this <a href="https://www.dribin.org/dave/keyboard/one_html/" target="_blank">post</a>
+.</p>
+
+
+<figure>
+  <img src="/blog/2020/07/padoca-hotkey-keyboard/img/internal_hu7af45c05e7eaab656aeab8d5fe153c59_185839_600x0_resize_q75_box.jpg" alt="The opened case with the wiring of components" />
+  <figcaption>The wiring of the switch matrix</figcaption>
+</figure>
+
+<p>During the final assembly, I found the spaces between switches to be small for conventional keycaps. Since I was using
+<a href="https://github.com/rsheldiii" target="_blank">rsheldiii’s</a>
+ excellent
+<a href="https://github.com/rsheldiii/KeyV2" target="_blank">KeyV2 lib</a>
+ for generating them, I only had to reduce the width to 14mm. This is the printed
+<a href="http://www.thingiverse.com/thing:3568997" target="_blank">knob</a>
+ from
+<a href="https://www.thingiverse.com" target="_blank">Thingiverse</a>
+ and the final product looks like this.</p>
+
+
+<figure>
+  <img src="/blog/2020/07/padoca-hotkey-keyboard/img/final01_hu7af45c05e7eaab656aeab8d5fe153c59_181195_600x0_resize_q75_box.jpg" alt="Final assembled hotkey keyboard with the LCD display on" />
+  <figcaption></figcaption>
+</figure>
+
+
+
+<figure>
+  <img src="/blog/2020/07/padoca-hotkey-keyboard/img/final02_hu7af45c05e7eaab656aeab8d5fe153c59_211037_600x0_resize_q75_box.jpg" alt="Close-up of the LCD with the text [00] Debug" />
+  <figcaption>It is possible to switch between different profiles</figcaption>
+</figure>
+
+<p>If you want to build your own hotkey keyboard, I&rsquo;ve open-sourced all the resources needed in this <a href="http://github.com/tncardoso/padoca/" target="_blank">repository</a>
+.</p>
+
+      </div>
+    </div>
+  </section>
+</div>

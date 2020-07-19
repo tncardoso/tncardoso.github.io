@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Thiago Cardoso</title>
@@ -6,10 +6,37 @@
     <description>Recent content on Thiago Cardoso</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 01 Sep 2014 16:16:30 -0200</lastBuildDate>
+    <lastBuildDate>Sun, 19 Jul 2020 18:36:30 -0300</lastBuildDate>
     
 	<atom:link href="http://tncardoso.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Padoca: hotkey keyboard</title>
+      <link>http://tncardoso.com/blog/2020/07/padoca-hotkey-keyboard/</link>
+      <pubDate>Sun, 19 Jul 2020 18:36:30 -0300</pubDate>
+      
+      <guid>http://tncardoso.com/blog/2020/07/padoca-hotkey-keyboard/</guid>
+      <description>Online meetings became widespread during the 2020 COVID pandemic. Call etiquette mandates that you keep your microphone muted while not talking, as almost everyone knows. This mute-unmute dynamic inspired me to search for a more comfortable solution that didn&amp;rsquo;t involve pressing multiple keys on the keyboard or reaching for the mouse every time. Luckily I stumbled upon this Instructable by FabroLabs Technologies . I decided to give it a try and build a hotkey keyboard from scratch: the casing, circuit, firmware, and keycaps.</description>
+    </item>
+    
+    <item>
+      <title>Eletronic Voting</title>
+      <link>http://tncardoso.com/projects/eletronic-voting/</link>
+      <pubDate>Tue, 09 Jan 2018 17:18:43 -0300</pubDate>
+      
+      <guid>http://tncardoso.com/projects/eletronic-voting/</guid>
+      <description>Security assessment of brazilian voting machines.</description>
+    </item>
+    
+    <item>
+      <title>Dermis</title>
+      <link>http://tncardoso.com/projects/dermis/</link>
+      <pubDate>Sat, 09 Sep 2017 17:18:43 -0300</pubDate>
+      
+      <guid>http://tncardoso.com/projects/dermis/</guid>
+      <description>Dermis is an experiment on libc debugging.</description>
+    </item>
     
     <item>
       <title>Gaming for the lazy</title>
@@ -27,8 +54,8 @@ Once, as a kid, I was playing Sonic when someone accidentally kicked the videoga
       <pubDate>Sat, 09 Aug 2014 16:16:30 -0200</pubDate>
       
       <guid>http://tncardoso.com/blog/2014/08/artreepie-a-procedural-art-bot/</guid>
-      <description>Last week, I stumbled upon a great stackexchange discussion on procedural art. The idea was to come up with three code snippets that would be used to generate an image. More specifically, each snippet &amp;ndash; one for each color channel (R, G, B) &amp;ndash; is a function that, given a pixel coordinate, returns its intensity. Each snippet should fit in a single tweet.
-This very interesting exercise inspired me into creating @artreepie.</description>
+      <description>Last week, I stumbled upon a great stackexchange discussion on procedural art . The idea was to come up with three code snippets that would be used to generate an image. More specifically, each snippet &amp;ndash; one for each color channel (R, G, B) &amp;ndash; is a function that, given a pixel coordinate, returns its intensity. Each snippet should fit in a single tweet.
+This very interesting exercise inspired me into creating @artreepie .</description>
     </item>
     
   </channel>

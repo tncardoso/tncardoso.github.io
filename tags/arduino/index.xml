@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Arduino on Thiago Cardoso</title>
+    <title>arduino on Thiago Cardoso</title>
     <link>http://tncardoso.com/tags/arduino/</link>
-    <description>Recent content in Arduino on Thiago Cardoso</description>
+    <description>Recent content in arduino on Thiago Cardoso</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 01 Sep 2014 16:16:30 -0200</lastBuildDate>
