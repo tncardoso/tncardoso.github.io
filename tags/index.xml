@@ -2,48 +2,48 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Thiago Cardoso</title>
-    <link>http://tncardoso.com/tags/</link>
+    <link>https://tncardoso.com/tags/</link>
     <description>Recent content in Tags on Thiago Cardoso</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 19 Jul 2020 18:36:30 -0300</lastBuildDate>
     
-	<atom:link href="http://tncardoso.com/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://tncardoso.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>hardware</title>
-      <link>http://tncardoso.com/tags/hardware/</link>
+      <link>https://tncardoso.com/tags/hardware/</link>
       <pubDate>Sun, 19 Jul 2020 18:36:30 -0300</pubDate>
       
-      <guid>http://tncardoso.com/tags/hardware/</guid>
+      <guid>https://tncardoso.com/tags/hardware/</guid>
       <description></description>
     </item>
     
     <item>
       <title>arduino</title>
-      <link>http://tncardoso.com/tags/arduino/</link>
+      <link>https://tncardoso.com/tags/arduino/</link>
       <pubDate>Mon, 01 Sep 2014 16:16:30 -0200</pubDate>
       
-      <guid>http://tncardoso.com/tags/arduino/</guid>
+      <guid>https://tncardoso.com/tags/arduino/</guid>
       <description></description>
     </item>
     
     <item>
       <title>art</title>
-      <link>http://tncardoso.com/tags/art/</link>
+      <link>https://tncardoso.com/tags/art/</link>
       <pubDate>Sat, 09 Aug 2014 16:16:30 -0200</pubDate>
       
-      <guid>http://tncardoso.com/tags/art/</guid>
+      <guid>https://tncardoso.com/tags/art/</guid>
       <description></description>
     </item>
     
     <item>
       <title>codegolf</title>
-      <link>http://tncardoso.com/tags/codegolf/</link>
+      <link>https://tncardoso.com/tags/codegolf/</link>
       <pubDate>Sat, 09 Aug 2014 16:16:30 -0200</pubDate>
       
-      <guid>http://tncardoso.com/tags/codegolf/</guid>
+      <guid>https://tncardoso.com/tags/codegolf/</guid>
       <description></description>
     </item>
     

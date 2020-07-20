@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>hardware on Thiago Cardoso</title>
-    <link>http://tncardoso.com/tags/hardware/</link>
+    <link>https://tncardoso.com/tags/hardware/</link>
     <description>Recent content in hardware on Thiago Cardoso</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 19 Jul 2020 18:36:30 -0300</lastBuildDate>
     
-	<atom:link href="http://tncardoso.com/tags/hardware/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://tncardoso.com/tags/hardware/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Padoca: hotkey keyboard</title>
-      <link>http://tncardoso.com/blog/2020/07/padoca-hotkey-keyboard/</link>
+      <link>https://tncardoso.com/blog/2020/07/padoca-hotkey-keyboard/</link>
       <pubDate>Sun, 19 Jul 2020 18:36:30 -0300</pubDate>
       
-      <guid>http://tncardoso.com/blog/2020/07/padoca-hotkey-keyboard/</guid>
+      <guid>https://tncardoso.com/blog/2020/07/padoca-hotkey-keyboard/</guid>
       <description>Online meetings became widespread during the 2020 COVID pandemic. Call etiquette mandates that you keep your microphone muted while not talking, as almost everyone knows. This mute-unmute dynamic inspired me to search for a more comfortable solution that didn&amp;rsquo;t involve pressing multiple keys on the keyboard or reaching for the mouse every time. Luckily I stumbled upon this Instructable by FabroLabs Technologies . I decided to give it a try and build a hotkey keyboard from scratch: the casing, circuit, firmware, and keycaps.</description>
     </item>
     
