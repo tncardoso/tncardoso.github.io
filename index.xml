@@ -6,10 +6,16 @@
     <description>Recent content on Thiago Cardoso</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 26 Jul 2020 14:56:10 -0300</lastBuildDate>
-    
-	<atom:link href="https://tncardoso.com/index.xml" rel="self" type="application/rss+xml" />
-    
+    <lastBuildDate>Thu, 08 Oct 2020 18:56:10 -0300</lastBuildDate><atom:link href="https://tncardoso.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Machine Learning reading (and watching) list</title>
+      <link>https://tncardoso.com/blog/2020/10/machine-learning-reading-and-watching-list/</link>
+      <pubDate>Thu, 08 Oct 2020 18:56:10 -0300</pubDate>
+      
+      <guid>https://tncardoso.com/blog/2020/10/machine-learning-reading-and-watching-list/</guid>
+      <description>Reading (and watching) list for getting started on Machine Learning.
+Foundation   course Andrew Ng’s Machine Learning Course : A good starting point. Although it is not recent, the course is a good overview of Machine Learning methods.  course Deep Learning Specialization : Andrew&amp;rsquo;s specialization on Deep Learning methods that hold state of the art in many applications.  course Structuring Machine Learning Projects : A course of the Deep Learning specialization that deserves mention.</description>
+    </item>
     
     <item>
       <title>LCD custom characters library</title>

@@ -6,11 +6,7 @@
     <description>Recent content in hardware on Thiago Cardoso</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 26 Jul 2020 14:56:10 -0300</lastBuildDate>
-    
-	<atom:link href="https://tncardoso.com/tags/hardware/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Sun, 26 Jul 2020 14:56:10 -0300</lastBuildDate><atom:link href="https://tncardoso.com/tags/hardware/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>LCD custom characters library</title>
       <link>https://tncardoso.com/blog/2020/07/lcd-custom-characters-library/</link>
