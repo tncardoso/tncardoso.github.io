@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>
+    
+    
+      
+        Thiago Cardoso :: git-wormhole: generating partial collisions in commits
+      
+    
+  </title>
+
+  
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-25953089-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-25953089-1');
+  </script>
+
+  <link rel="icon" type="image/png" href="/img/favicon.png">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+  <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/main.css">
+</head>
+
+<body>
+<nav class="navbar is-dark" role="navigation" aria-label="main navigation">
+  <div class="container">
+    <div class="navbar-brand">
+      <span class="navbar-item"><img src="/img/logo.png"></span>
+
+      <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+
+    <div id="navbarBasicExample" class="navbar-menu">
+      <div class="navbar-start">
+      </div>
+
+      <div class="navbar-end">
+        
+          
+          <a class="navbar-item" href="https://tncardoso.com/">About</a>
+          
+        
+          
+          <a class="navbar-item" href="https://tncardoso.com/blog">Blog</a>
+          
+        
+          
+          <a class="navbar-item" href="https://tncardoso.com/projects">Projects</a>
+          
+        
+          
+          <a class="navbar-item" href="https://scholar.google.com/citations?user=XLih4b8AAAAJ" target="_blank">Publications</a>
+          
+        
+      </div>
+    </div>
+</nav>
+
+
+
+
+<div class="container">
+  <section class="section">
+    <div class="container">
+      <h1 class="title has-text-grey-dark">git-wormhole: generating partial collisions in commits</h1>
+      <p class="subtitle">
+        <span class="post-date"><time datetime='2021-03-27T16:40:10-03:00'>
+          
+            2021-03-27
+          
+        </time></span>
+      </p>
+
+      <div class="content">
+        <p>If you tried to add a substring from the git commit hash to your software version,  you may have noticed that it is not easy (or possible). For example, imagine you want to version your software as &ldquo;0.0.0-aabbccdd&rdquo;, being &ldquo;aabbccdd&rdquo; the commit&rsquo;s prefix in which this version was defined.</p>
+<p>It turns out that the git hash is the sha1 of multiple pieces of information: the repository tree hash, the parent commit, author and committer name and email, Unix timestamp, timezone offset and message. You can visualize this information with <code>git cat-file</code>:</p>
+<pre><code>$ git cat-file -p 97dbf1d711ef1c76779735b486546a0bdf75dc13
+tree 8352f2c439b16c85e2c8e9fe2af8db9f303933ab
+parent 9e32c286db179de34c5a4f0de8596dd8f4c65f08
+author Author Name &lt;author@email.com&gt; 1616706238 -0300
+committer Committer Name &lt;author@email.com&gt; 1616706238 -0300
+
+Commit message
+</code></pre>
+<p>Many of those fields could be manipulated to search for a given commit hash. You could change a file content to influence the tree hash, the author information, commit time, or even add some random information to the commit message.
+Finding a full sha1 collision is possible, but not cheap. The first published collision (<a href="https://shattered.io/" target="_blank">shattered</a>
+) used the equivalent of 6500 years of single-CPU computation or 110 years of single-GPU processing power. Since this investment is not something we want to do for tagging software versions, we&rsquo;ll stick to small prefixes.</p>
+
+
+<figure>
+  <img src="/blog/2021/03/git-wormhole-generating-partial-collisions-in-commits/img/commit_hue8252bbc19ea366ccea3809ce6bafaff_42148_900x0_resize_box_2.png" alt="Github commit with 0xdeadc0de prefix" />
+  <figcaption>Github commit with 0xdeadc0de prefix</figcaption>
+</figure>
+
+<p>As a proof of concept, I implemented <a href="https://github.com/tncardoso/git-wormhole" target="_blank">git-wormhole</a>
+
+to create files containing the commit hash prefix.
+In this <a href="https://github.com/tncardoso/git-wormhole-example" target="_blank">repository</a>
+ you can see the README with the commit hash inside.
+You can find more information about generating you collisions <a href="https://github.com/tncardoso/git-wormhole" target="_blank">here</a>
+.</p>
+
+      </div>
+    </div>
+  </section>
+</div>
