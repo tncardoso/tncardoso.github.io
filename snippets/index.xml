@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Snippets on Thiago Cardoso</title>
+    <link>https://tncardoso.com/snippets/</link>
+    <description>Recent content in Snippets on Thiago Cardoso</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 03 Jun 2021 13:18:43 -0300</lastBuildDate><atom:link href="https://tncardoso.com/snippets/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>devices/huion</title>
+      <link>https://tncardoso.com/snippets/devices_huion/</link>
+      <pubDate>Thu, 03 Jun 2021 13:18:43 -0300</pubDate>
+      
+      <guid>https://tncardoso.com/snippets/devices_huion/</guid>
+      <description>Map device to primary monitor It is possible to list devices using xsetwacom.
+$ xsetwacom --list devices HUION Huion Tablet Pad pad id: 16	type: PAD HUION Huion Tablet Pen stylus id: 17	type: STYLUS  The following script can be used to map the device:
+xsetwacom set &amp;quot;HUION Huion Tablet Pen stylus&amp;quot; MapToOutput &amp;quot;HEAD-1&amp;quot; xsetwacom set &amp;quot;HUION Huion Tablet Pad pad&amp;quot; MapToOutput &amp;quot;HEAD-1&amp;quot;  </description>
+    </item>
+    
+    <item>
+      <title>apps/dbeaver</title>
+      <link>https://tncardoso.com/snippets/apps_dbeaver/</link>
+      <pubDate>Sat, 09 Sep 2017 17:18:43 -0300</pubDate>
+      
+      <guid>https://tncardoso.com/snippets/apps_dbeaver/</guid>
+      <description>Single connection mode dbeaver usually opens multiple connections to databases. If you have limited connections, then it is necessary to restrict the pool size or connection numbers. Since dbeaver does not have a &amp;ldquo;Single connection mode&amp;rdquo;, a few tweaks are necessary.
+Disable using one exclusive connection for metadata:
+Uncheck: &amp;gt; File &amp;gt; Properties &amp;gt; Metadata &amp;gt; Open separate connection for metadata read  Disable using exclusive connections for SQL Editors:</description>
+    </item>
+    
+  </channel>
+</rss>

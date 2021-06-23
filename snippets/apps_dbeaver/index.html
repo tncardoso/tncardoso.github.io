@@ -7,7 +7,7 @@
     
     
       
-        Thiago Cardoso :: security
+        Thiago Cardoso :: apps/dbeaver
       
     
   </title>
@@ -73,19 +73,37 @@
 <div class="container">
   <section class="section">
     <div class="container">
-      <h1 class="title has-text-grey-dark">security</h1>
-      <ul>
-      
-        <li>
-          <span class="post-date"><time datetime='2021-03-27T16:40:10-03:00'>
-          
-            2021-03-27
-          
-          </time></span>
-          <a href="https://tncardoso.com/blog/2021/03/git-wormhole-generating-partial-collisions-in-commits/"><span>git-wormhole: generating partial collisions in commits</span></a>
-      </li>
-      
-      </ul>
+      <h1 class="title has-text-grey-dark">apps/dbeaver</h1>
+      <p class="subtitle">
+      </p>
+      <br />
+
+      <div class="content">
+        <h3 id="single-connection-mode">Single connection mode</h3>
+<p>dbeaver usually opens multiple connections to databases. If you have
+limited connections, then it is necessary to restrict
+the pool size or connection numbers. Since dbeaver does not have a
+&ldquo;Single connection mode&rdquo;, a few tweaks are necessary.</p>
+<p>Disable using one exclusive connection for metadata:</p>
+<pre><code>Uncheck:
+
+&gt; File
+&gt; Properties
+&gt; Metadata
+&gt; Open separate connection for metadata read
+</code></pre>
+<p>Disable using exclusive connections for SQL Editors:</p>
+<pre><code>Uncheck:
+
+&gt; Right mouse click in SQL Editor
+&gt; Preferences
+&gt; DBeaver
+&gt; Editors
+&gt; SQL Editor
+&gt; Open separate connection for each editor
+</code></pre>
+
+      </div>
     </div>
   </section>
 </div>

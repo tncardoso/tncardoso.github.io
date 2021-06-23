@@ -7,7 +7,7 @@
     
     
       
-        Thiago Cardoso :: security
+        Thiago Cardoso :: devices/huion
       
     
   </title>
@@ -73,19 +73,24 @@
 <div class="container">
   <section class="section">
     <div class="container">
-      <h1 class="title has-text-grey-dark">security</h1>
-      <ul>
-      
-        <li>
-          <span class="post-date"><time datetime='2021-03-27T16:40:10-03:00'>
-          
-            2021-03-27
-          
-          </time></span>
-          <a href="https://tncardoso.com/blog/2021/03/git-wormhole-generating-partial-collisions-in-commits/"><span>git-wormhole: generating partial collisions in commits</span></a>
-      </li>
-      
-      </ul>
+      <h1 class="title has-text-grey-dark">devices/huion</h1>
+      <p class="subtitle">
+      </p>
+      <br />
+
+      <div class="content">
+        <h3 id="map-device-to-primary-monitor">Map device to primary monitor</h3>
+<p>It is possible to list devices using xsetwacom.</p>
+<pre><code>$ xsetwacom --list devices
+HUION Huion Tablet Pad pad      	id: 16	type: PAD
+HUION Huion Tablet Pen stylus   	id: 17	type: STYLUS
+</code></pre>
+<p>The following script can be used to map the device:</p>
+<pre><code>xsetwacom set &quot;HUION Huion Tablet Pen stylus&quot; MapToOutput &quot;HEAD-1&quot;
+xsetwacom set &quot;HUION Huion Tablet Pad pad&quot; MapToOutput &quot;HEAD-1&quot;
+</code></pre>
+
+      </div>
     </div>
   </section>
 </div>
