@@ -7,7 +7,7 @@
     
     
       
-        Thiago Cardoso :: arduino
+        Thiago Cardoso :: ml/optimizers
       
     
   </title>
@@ -91,19 +91,32 @@
 <div class="container">
   <section class="section">
     <div class="container">
-      <h1 class="title has-text-grey-dark">arduino</h1>
-      <ul>
-      
-        <li>
-          <span class="post-date"><time datetime='2014-09-01T16:16:30-02:00'>
-          
-            2014-09-01
-          
-          </time></span>
-          <a href="https://tncardoso.com/blog/2014/09/gaming-for-the-lazy/"><span>Gaming for the lazy</span></a>
-      </li>
-      
-      </ul>
+      <h1 class="title has-text-grey-dark">ml/optimizers</h1>
+      <p class="subtitle">
+      </p>
+      <br />
+
+      <div class="content">
+        <h3 id="lion">Lion</h3>
+<p>Lion is an learned optimizer that only uses the gradient sign for the
+update vector. The paper <a href="https://arxiv.org/abs/2302.06675" target="_blank">Symbolic Discovery of Optimization Algorithms</a>
+ presents how they used symbolic AI.</p>
+<pre><code>def train(weight, gradient, momentum, lr):
+    # default beta1 = 0.9, beta2 = 0.99
+    # only tracks momentum and uses sign to compute update
+    update = interp(gradient, momentum, beta1)
+    update = sign(update)
+    momentum = interp(gradient, momentum, beta2)
+
+    # regular weight decay
+    weight_decay = weight * lambda
+    update = update + weight_decay
+
+    update = update * lr
+    return update, momentum
+</code></pre>
+
+      </div>
     </div>
   </section>
 </div>

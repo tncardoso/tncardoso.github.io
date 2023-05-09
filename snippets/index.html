@@ -13,12 +13,30 @@
   </title>
 
   
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-25953089-1"></script>
+  <script data-goatcounter="https://tncardoso.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+
   <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'UA-25953089-1');
+    document.addEventListener('DOMContentLoaded', () => {
+
+  
+  const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+  
+  $navbarBurgers.forEach( el => {
+    el.addEventListener('click', () => {
+
+      
+      const target = el.dataset.target;
+      const $target = document.getElementById(target);
+
+      
+      el.classList.toggle('is-active');
+      $target.classList.toggle('is-active');
+
+    });
+  });
+
+});
   </script>
 
   <link rel="icon" type="image/png" href="/img/favicon.png">
@@ -82,6 +100,10 @@
       
         <li>
           <a href="https://tncardoso.com/snippets/devices_huion/"><span>devices/huion</span></a>
+      </li>
+      
+        <li>
+          <a href="https://tncardoso.com/snippets/ml_optimizer/"><span>ml/optimizers</span></a>
       </li>
       
       </ul>

@@ -13,12 +13,30 @@
   </title>
 
   
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-25953089-1"></script>
+  <script data-goatcounter="https://tncardoso.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+
   <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'UA-25953089-1');
+    document.addEventListener('DOMContentLoaded', () => {
+
+  
+  const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+  
+  $navbarBurgers.forEach( el => {
+    el.addEventListener('click', () => {
+
+      
+      const target = el.dataset.target;
+      const $target = document.getElementById(target);
+
+      
+      el.classList.toggle('is-active');
+      $target.classList.toggle('is-active');
+
+    });
+  });
+
+});
   </script>
 
   <link rel="icon" type="image/png" href="/img/favicon.png">
@@ -99,7 +117,7 @@ Finding a full sha1 collision is possible, but not cheap. The first published co
 
 
 <figure>
-  <img src="/blog/2021/03/git-wormhole-generating-partial-collisions-in-commits/img/commit_hue8252bbc19ea366ccea3809ce6bafaff_42148_900x0_resize_box_2.png" alt="Github commit with 0xdeadc0de prefix" />
+  <img src="/blog/2021/03/git-wormhole-generating-partial-collisions-in-commits/img/commit_hue8252bbc19ea366ccea3809ce6bafaff_42148_900x0_resize_box_3.png" alt="Github commit with 0xdeadc0de prefix" />
   <figcaption>Github commit with 0xdeadc0de prefix</figcaption>
 </figure>
 

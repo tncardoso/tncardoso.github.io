@@ -13,12 +13,30 @@
   </title>
 
   
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-25953089-1"></script>
+  <script data-goatcounter="https://tncardoso.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+
   <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'UA-25953089-1');
+    document.addEventListener('DOMContentLoaded', () => {
+
+  
+  const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+  
+  $navbarBurgers.forEach( el => {
+    el.addEventListener('click', () => {
+
+      
+      const target = el.dataset.target;
+      const $target = document.getElementById(target);
+
+      
+      el.classList.toggle('is-active');
+      $target.classList.toggle('is-active');
+
+    });
+  });
+
+});
   </script>
 
   <link rel="icon" type="image/png" href="/img/favicon.png">
@@ -86,8 +104,11 @@ HUION Huion Tablet Pad pad      	id: 16	type: PAD
 HUION Huion Tablet Pen stylus   	id: 17	type: STYLUS
 </code></pre>
 <p>The following script can be used to map the device:</p>
-<pre><code>xsetwacom set &quot;HUION Huion Tablet Pen stylus&quot; MapToOutput &quot;HEAD-1&quot;
-xsetwacom set &quot;HUION Huion Tablet Pad pad&quot; MapToOutput &quot;HEAD-1&quot;
+<pre><code>$ xsetwacom set &quot;HUION Huion Tablet Pen stylus&quot; MapToOutput &quot;HEAD-1&quot;
+$ xsetwacom set &quot;HUION Huion Tablet Pad pad&quot; MapToOutput &quot;HEAD-1&quot;
+</code></pre>
+<p>Set coordinates when dealing with multiple monitors:</p>
+<pre><code>$ xinput set-prop 'HUION Huion Tablet stylus' --type=float &quot;Coordinate Transformation Matrix&quot; 0.5 0 0 0 1 0 0 0 1
 </code></pre>
 
       </div>

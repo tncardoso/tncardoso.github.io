@@ -15,7 +15,7 @@
       <guid>https://tncardoso.com/blog/2020/07/lcd-custom-characters-library/</guid>
       <description>If you use LCD components(1602, HD44780) and haven&amp;rsquo;t given up to modern OLEDs and e-ink displays, the chances are that you know the possibility of using custom characters.
 I was searching for some cut-and-paste characters for a project but could not find an easy solution. For that reason, I decided to assemble an editor and library with some characters.
- The editor with a selection of ready-to-use characters.   You can access a live version of the project here , and the source code is available on Github .</description>
+The editor with a selection of ready-to-use characters. You can access a live version of the project here , and the source code is available on Github .</description>
     </item>
     
     <item>

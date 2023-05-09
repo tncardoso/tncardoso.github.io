@@ -6,7 +6,17 @@
     <description>Recent content in Snippets on Thiago Cardoso</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 03 Jun 2021 13:18:43 -0300</lastBuildDate><atom:link href="https://tncardoso.com/snippets/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 05 May 2023 08:18:43 -0300</lastBuildDate><atom:link href="https://tncardoso.com/snippets/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ml/optimizers</title>
+      <link>https://tncardoso.com/snippets/ml_optimizer/</link>
+      <pubDate>Fri, 05 May 2023 08:18:43 -0300</pubDate>
+      
+      <guid>https://tncardoso.com/snippets/ml_optimizer/</guid>
+      <description>Lion Lion is an learned optimizer that only uses the gradient sign for the update vector. The paper Symbolic Discovery of Optimization Algorithms presents how they used symbolic AI.
+def train(weight, gradient, momentum, lr): # default beta1 = 0.9, beta2 = 0.99 # only tracks momentum and uses sign to compute update update = interp(gradient, momentum, beta1) update = sign(update) momentum = interp(gradient, momentum, beta2) # regular weight decay weight_decay = weight * lambda update = update + weight_decay update = update * lr return update, momentum </description>
+    </item>
+    
     <item>
       <title>devices/huion</title>
       <link>https://tncardoso.com/snippets/devices_huion/</link>
@@ -14,8 +24,8 @@
       
       <guid>https://tncardoso.com/snippets/devices_huion/</guid>
       <description>Map device to primary monitor It is possible to list devices using xsetwacom.
-$ xsetwacom --list devices HUION Huion Tablet Pad pad id: 16	type: PAD HUION Huion Tablet Pen stylus id: 17	type: STYLUS  The following script can be used to map the device:
-xsetwacom set &amp;quot;HUION Huion Tablet Pen stylus&amp;quot; MapToOutput &amp;quot;HEAD-1&amp;quot; xsetwacom set &amp;quot;HUION Huion Tablet Pad pad&amp;quot; MapToOutput &amp;quot;HEAD-1&amp;quot;  </description>
+$ xsetwacom --list devices HUION Huion Tablet Pad pad id: 16	type: PAD HUION Huion Tablet Pen stylus id: 17	type: STYLUS The following script can be used to map the device:
+$ xsetwacom set &amp;quot;HUION Huion Tablet Pen stylus&amp;quot; MapToOutput &amp;quot;HEAD-1&amp;quot; $ xsetwacom set &amp;quot;HUION Huion Tablet Pad pad&amp;quot; MapToOutput &amp;quot;HEAD-1&amp;quot; Set coordinates when dealing with multiple monitors:</description>
     </item>
     
     <item>
@@ -26,7 +36,8 @@ xsetwacom set &amp;quot;HUION Huion Tablet Pen stylus&amp;quot; MapToOutput &amp
       <guid>https://tncardoso.com/snippets/apps_dbeaver/</guid>
       <description>Single connection mode dbeaver usually opens multiple connections to databases. If you have limited connections, then it is necessary to restrict the pool size or connection numbers. Since dbeaver does not have a &amp;ldquo;Single connection mode&amp;rdquo;, a few tweaks are necessary.
 Disable using one exclusive connection for metadata:
-Uncheck: &amp;gt; File &amp;gt; Properties &amp;gt; Metadata &amp;gt; Open separate connection for metadata read  Disable using exclusive connections for SQL Editors:</description>
+Uncheck: &amp;gt; File &amp;gt; Properties &amp;gt; Metadata &amp;gt; Open separate connection for metadata read Disable using exclusive connections for SQL Editors:
+Uncheck: &amp;gt; Right mouse click in SQL Editor &amp;gt; Preferences &amp;gt; DBeaver &amp;gt; Editors &amp;gt; SQL Editor &amp;gt; Open separate connection for each editor </description>
     </item>
     
   </channel>

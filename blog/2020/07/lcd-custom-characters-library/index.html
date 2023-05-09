@@ -13,12 +13,30 @@
   </title>
 
   
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-25953089-1"></script>
+  <script data-goatcounter="https://tncardoso.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+
   <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'UA-25953089-1');
+    document.addEventListener('DOMContentLoaded', () => {
+
+  
+  const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+  
+  $navbarBurgers.forEach( el => {
+    el.addEventListener('click', () => {
+
+      
+      const target = el.dataset.target;
+      const $target = document.getElementById(target);
+
+      
+      el.classList.toggle('is-active');
+      $target.classList.toggle('is-active');
+
+    });
+  });
+
+});
   </script>
 
   <link rel="icon" type="image/png" href="/img/favicon.png">
@@ -88,13 +106,13 @@
 <p><a href="http://tncardoso.com/lcd-custom-chars/" target="_blank">
 
 <figure>
-  <img src="/blog/2020/07/lcd-custom-characters-library/img/screenshot_hu86006b631e5357fc5371c7061392a62e_57049_900x0_resize_box_2.png" alt="The editor with a selection of ready-to-use characters." />
+  <img src="/blog/2020/07/lcd-custom-characters-library/img/screenshot_hu86006b631e5357fc5371c7061392a62e_57049_900x0_resize_box_3.png" alt="The editor with a selection of ready-to-use characters." />
   <figcaption>The editor with a selection of ready-to-use characters.</figcaption>
 </figure>
 </a>
 </p>
 <p>You can access a
-<a href="http://tncardoso.com/lcd-custom-chars/" target="_blank">live version of the project here</a>
+<a href="https://tncardoso.com/lcd-custom-chars/" target="_blank">live version of the project here</a>
 
 , and the
 <a href="https://github.com/tncardoso/lcd-custom-chars" target="_blank">source code is available on Github</a>

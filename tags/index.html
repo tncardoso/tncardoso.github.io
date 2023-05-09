@@ -13,12 +13,30 @@
   </title>
 
   
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-25953089-1"></script>
+  <script data-goatcounter="https://tncardoso.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+
   <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'UA-25953089-1');
+    document.addEventListener('DOMContentLoaded', () => {
+
+  
+  const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+  
+  $navbarBurgers.forEach( el => {
+    el.addEventListener('click', () => {
+
+      
+      const target = el.dataset.target;
+      const $target = document.getElementById(target);
+
+      
+      el.classList.toggle('is-active');
+      $target.classList.toggle('is-active');
+
+    });
+  });
+
+});
   </script>
 
   <link rel="icon" type="image/png" href="/img/favicon.png">
@@ -113,21 +131,21 @@
       </li>
       
         <li>
-          <span class="post-date"><time datetime='2020-10-08T18:56:10-03:00'>
-          
-            2020-10-08
-          
-          </time></span>
-          <a href="https://tncardoso.com/tags/machine-learning/"><span>machine-learning</span></a>
-      </li>
-      
-        <li>
           <span class="post-date"><time datetime='2021-03-27T16:40:10-03:00'>
           
             2021-03-27
           
           </time></span>
           <a href="https://tncardoso.com/tags/security/"><span>security</span></a>
+      </li>
+      
+        <li>
+          <span class="post-date"><time datetime='2023-05-08T08:00:10-03:00'>
+          
+            2023-05-08
+          
+          </time></span>
+          <a href="https://tncardoso.com/tags/machine-learning/"><span>machine-learning</span></a>
       </li>
       
       </ul>

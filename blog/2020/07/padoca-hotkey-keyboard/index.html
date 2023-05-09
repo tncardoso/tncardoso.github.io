@@ -13,12 +13,30 @@
   </title>
 
   
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-25953089-1"></script>
+  <script data-goatcounter="https://tncardoso.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+
   <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'UA-25953089-1');
+    document.addEventListener('DOMContentLoaded', () => {
+
+  
+  const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+  
+  $navbarBurgers.forEach( el => {
+    el.addEventListener('click', () => {
+
+      
+      const target = el.dataset.target;
+      const $target = document.getElementById(target);
+
+      
+      el.classList.toggle('is-active');
+      $target.classList.toggle('is-active');
+
+    });
+  });
+
+});
   </script>
 
   <link rel="icon" type="image/png" href="/img/favicon.png">
@@ -115,7 +133,7 @@ I decided to give it a try and build a hotkey keyboard from scratch: the casing,
 </figure>
 
 <p>During the final assembly, I found the spaces between switches to be small for conventional keycaps. Since I was using
-<a href="https://github.com/rsheldiii" target="_blank">rsheldiii’s</a>
+<a href="https://github.com/rsheldiii" target="_blank">rsheldiii&rsquo;s</a>
  excellent
 <a href="https://github.com/rsheldiii/KeyV2" target="_blank">KeyV2 lib</a>
  for generating them, I only had to reduce the width to 14mm. This is the printed

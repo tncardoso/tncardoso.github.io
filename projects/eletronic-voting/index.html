@@ -13,12 +13,30 @@
   </title>
 
   
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-25953089-1"></script>
+  <script data-goatcounter="https://tncardoso.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+
   <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'UA-25953089-1');
+    document.addEventListener('DOMContentLoaded', () => {
+
+  
+  const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+  
+  $navbarBurgers.forEach( el => {
+    el.addEventListener('click', () => {
+
+      
+      const target = el.dataset.target;
+      const $target = document.getElementById(target);
+
+      
+      el.classList.toggle('is-active');
+      $target.classList.toggle('is-active');
+
+    });
+  });
+
+});
   </script>
 
   <link rel="icon" type="image/png" href="/img/favicon.png">
@@ -86,14 +104,14 @@
         <p>During the public security tests of 2017, we were able to achieve
 arbitrary code execution on the Brazilian voting machines. You can find
 additional links and detailed information in
-<a href="https://urnaeletronica.info/links/" target="_blank"><a href="https://urnaeletronica.info/">https://urnaeletronica.info/</a></a>
+<a href="https://urnaeletronica.info/links/" target="_blank">https://urnaeletronica.info/</a>
 
 (Portuguese only). For an English version, access
 <a href="https://www.researchgate.net/publication/323470546_The_Return_of_Software_Vulnerabilities_in_the_Brazilian_Voting_Machine?channel=doi&amp;linkId=5a9761de0f7e9ba42974d0c9&amp;showFulltext=true" target="_blank">ResearchGate</a>
 .</p>
 <h3 id="links">Links</h3>
 <ul>
-<li><a href="https://urnaeletronica.info/links/" target="_blank"><a href="https://urnaeletronica.info/">https://urnaeletronica.info/</a></a>
+<li><a href="https://urnaeletronica.info/links/" target="_blank">https://urnaeletronica.info/</a>
 :
 portuguese links and information</li>
 <li><a href="https://www.researchgate.net/publication/323470546_The_Return_of_Software_Vulnerabilities_in_the_Brazilian_Voting_Machine?channel=doi&amp;linkId=5a9761de0f7e9ba42974d0c9&amp;showFulltext=true" target="_blank">Technical report</a>

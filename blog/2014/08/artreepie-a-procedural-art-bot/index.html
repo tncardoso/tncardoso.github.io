@@ -13,12 +13,30 @@
   </title>
 
   
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-25953089-1"></script>
+  <script data-goatcounter="https://tncardoso.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+
   <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'UA-25953089-1');
+    document.addEventListener('DOMContentLoaded', () => {
+
+  
+  const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+  
+  $navbarBurgers.forEach( el => {
+    el.addEventListener('click', () => {
+
+      
+      const target = el.dataset.target;
+      const $target = document.getElementById(target);
+
+      
+      el.classList.toggle('is-active');
+      $target.classList.toggle('is-active');
+
+    });
+  });
+
+});
   </script>
 
   <link rel="icon" type="image/png" href="/img/favicon.png">
@@ -91,12 +109,12 @@
 </section>
 
 
-<p>Last week, I stumbled upon a great 
+<p>Last week, I stumbled upon a great
 <a href="http://codegolf.stackexchange.com/questions/35569/tweetable-mathematical-art" target="_blank">stackexchange discussion on procedural art</a>
-. 
+.
 The idea was to come up with three code snippets that would be used to generate an image.
 More specifically, each snippet &ndash; one for each
-color channel (R, G, B) &ndash; is a function that, given 
+color channel (R, G, B) &ndash; is a function that, given
 a pixel coordinate, returns its intensity. Each snippet should fit in a single tweet.</p>
 <p>This very interesting exercise inspired me into creating
 <em><a href="http://www.twitter.com/artreepie" target="_blank">@artreepie</a>
@@ -225,7 +243,7 @@ The code snippet to be tweeted to <em>artreepie</em> may use a number of provide
 </table>
 <h2 id="ok-i-am-ready-to-use-it">Ok, I am ready to use it</h2>
 <p>In order to use <em>artreepie</em> all you need is a Twitter account. Tweets are processed
-in the order they were posted: the first tweet will be used for the 
+in the order they were posted: the first tweet will be used for the
 red channel, the second for the green channel and the third for the blue channel.</p>
 <p>This image was generated with the following tweets:</p>
 
@@ -234,30 +252,30 @@ red channel, the second for the green channel and the third for the blue channel
   <figcaption>Another abstract art by artreepie</figcaption>
 </figure>
 
-<div class="highlight"><pre class="chroma"><code class="language-lisp" data-lang="lisp"><span class="nv">@artreepie</span> <span class="p">(</span><span class="nv">&amp;</span> <span class="nv">i</span> <span class="nv">j</span><span class="p">)</span>
-<span class="nv">@artreepie</span> <span class="p">(</span><span class="nv">%</span> <span class="p">(</span><span class="nf">+</span> <span class="nv">i</span> <span class="nv">j</span><span class="p">)</span> <span class="mi">255</span><span class="p">)</span>
-<span class="nv">@artreepie</span> <span class="p">(</span><span class="nv">&amp;</span> <span class="nv">i</span> <span class="nv">j</span><span class="p">)</span></code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-lisp" data-lang="lisp"><span class="line"><span class="cl"><span class="nv">@artreepie</span> <span class="p">(</span><span class="nv">&amp;</span> <span class="nv">i</span> <span class="nv">j</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nv">@artreepie</span> <span class="p">(</span><span class="nv">%</span> <span class="p">(</span><span class="nf">+</span> <span class="nv">i</span> <span class="nv">j</span><span class="p">)</span> <span class="mi">255</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nv">@artreepie</span> <span class="p">(</span><span class="nv">&amp;</span> <span class="nv">i</span> <span class="nv">j</span><span class="p">)</span></span></span></code></pre></div>
 <p>In case of errors during the computation of the image &ndash; e.g. division by zero &ndash; the whole
 image is silently discarded. For testing different expressions before submitting it to <em>artreepie</em>,
-you may use a command line version of the bot available in the project page on 
+you may use a command line version of the bot available in the project page on
 <a href="http://www.github.com/tncardoso/artreepie" target="_blank">Github</a>
 .</p>
 <h2 id="some-generated-images">Some generated images</h2>
 <p>Here are some example images, listed in the stackexchange thread, written using twik:</p>
-<p><div class="highlight"><pre class="chroma"><code class="language-lisp" data-lang="lisp"><span class="nv">@artreepie</span> <span class="p">(</span><span class="k">if</span> <span class="p">(</span><span class="nb">and</span> <span class="p">(</span><span class="nv">!=</span> <span class="nv">i</span> <span class="mi">0</span><span class="p">)</span> <span class="p">(</span><span class="nv">!=</span> <span class="nv">j</span> <span class="mi">0</span><span class="p">))</span> <span class="p">(</span><span class="nv">&amp;</span> <span class="p">(</span><span class="nv">%</span> <span class="nv">i</span> <span class="nv">j</span><span class="p">)</span> <span class="p">(</span><span class="nv">%</span> <span class="nv">j</span> <span class="nv">i</span><span class="p">))</span> <span class="mi">0</span><span class="p">)</span>
-<span class="nv">@artreepie</span> <span class="p">(</span><span class="k">if</span> <span class="p">(</span><span class="nb">and</span> <span class="p">(</span><span class="nv">!=</span> <span class="nv">i</span> <span class="mi">0</span><span class="p">)</span> <span class="p">(</span><span class="nv">!=</span> <span class="nv">j</span> <span class="mi">0</span><span class="p">))</span> <span class="p">(</span><span class="nf">+</span> <span class="p">(</span><span class="nv">%</span> <span class="nv">i</span> <span class="nv">j</span><span class="p">)</span> <span class="p">(</span><span class="nv">%</span> <span class="nv">j</span> <span class="nv">i</span><span class="p">))</span> <span class="mi">0</span><span class="p">)</span>
-<span class="nv">@artreepie</span> <span class="p">(</span><span class="k">if</span> <span class="p">(</span><span class="nb">and</span> <span class="p">(</span><span class="nv">!=</span> <span class="nv">i</span> <span class="mi">0</span><span class="p">)</span> <span class="p">(</span><span class="nv">!=</span> <span class="nv">j</span> <span class="mi">0</span><span class="p">))</span> <span class="p">(</span><span class="err">|</span> <span class="p">(</span><span class="nv">%</span> <span class="nv">i</span> <span class="nv">j</span><span class="p">)</span> <span class="p">(</span><span class="nv">%</span> <span class="nv">j</span> <span class="nv">i</span><span class="p">))</span> <span class="mi">0</span><span class="p">)</span></code></pre></div>
+<p><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-lisp" data-lang="lisp"><span class="line"><span class="cl"><span class="nv">@artreepie</span> <span class="p">(</span><span class="k">if</span> <span class="p">(</span><span class="nb">and</span> <span class="p">(</span><span class="nv">!=</span> <span class="nv">i</span> <span class="mi">0</span><span class="p">)</span> <span class="p">(</span><span class="nv">!=</span> <span class="nv">j</span> <span class="mi">0</span><span class="p">))</span> <span class="p">(</span><span class="nv">&amp;</span> <span class="p">(</span><span class="nv">%</span> <span class="nv">i</span> <span class="nv">j</span><span class="p">)</span> <span class="p">(</span><span class="nv">%</span> <span class="nv">j</span> <span class="nv">i</span><span class="p">))</span> <span class="mi">0</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nv">@artreepie</span> <span class="p">(</span><span class="k">if</span> <span class="p">(</span><span class="nb">and</span> <span class="p">(</span><span class="nv">!=</span> <span class="nv">i</span> <span class="mi">0</span><span class="p">)</span> <span class="p">(</span><span class="nv">!=</span> <span class="nv">j</span> <span class="mi">0</span><span class="p">))</span> <span class="p">(</span><span class="nf">+</span> <span class="p">(</span><span class="nv">%</span> <span class="nv">i</span> <span class="nv">j</span><span class="p">)</span> <span class="p">(</span><span class="nv">%</span> <span class="nv">j</span> <span class="nv">i</span><span class="p">))</span> <span class="mi">0</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nv">@artreepie</span> <span class="p">(</span><span class="k">if</span> <span class="p">(</span><span class="nb">and</span> <span class="p">(</span><span class="nv">!=</span> <span class="nv">i</span> <span class="mi">0</span><span class="p">)</span> <span class="p">(</span><span class="nv">!=</span> <span class="nv">j</span> <span class="mi">0</span><span class="p">))</span> <span class="p">(</span><span class="err">|</span> <span class="p">(</span><span class="nv">%</span> <span class="nv">i</span> <span class="nv">j</span><span class="p">)</span> <span class="p">(</span><span class="nv">%</span> <span class="nv">j</span> <span class="nv">i</span><span class="p">))</span> <span class="mi">0</span><span class="p">)</span></span></span></code></pre></div>
 See the 
 <a href="/blog/2014/08/artreepie-a-procedural-art-bot/img/example2.png" title="result" target="_blank">result</a>
 .</p>
-<p><div class="highlight"><pre class="chroma"><code class="language-lisp" data-lang="lisp"><span class="nv">@artreepie</span> <span class="p">(</span><span class="nv">var</span> <span class="nv">s</span> <span class="p">(</span><span class="nf">/</span> <span class="mf">3.0</span> <span class="p">(</span><span class="nf">+</span> <span class="nv">j</span> <span class="mi">99</span><span class="p">)))</span> <span class="p">(</span><span class="nf">*</span> <span class="p">(</span><span class="nf">+</span> <span class="p">(</span><span class="nv">%</span> <span class="p">(</span><span class="nf">+</span> <span class="p">(</span><span class="nf">*</span> <span class="nv">j</span> <span class="nv">s</span><span class="p">)</span> <span class="p">(</span><span class="nf">*</span> <span class="nv">s</span> <span class="p">(</span><span class="nf">+</span> <span class="nv">i</span> <span class="nv">w</span><span class="p">)))</span> <span class="mi">2</span><span class="p">)</span> <span class="p">(</span><span class="nv">%</span> <span class="p">(</span><span class="nf">+</span> <span class="p">(</span><span class="nf">*</span> <span class="nv">j</span> <span class="nv">s</span><span class="p">)</span> <span class="p">(</span><span class="nf">*</span> <span class="nv">s</span> <span class="p">(</span><span class="nf">-</span> <span class="p">(</span><span class="nf">*</span> <span class="nv">w</span> <span class="mi">2</span><span class="p">)</span> <span class="nv">i</span><span class="p">)))</span> <span class="mi">2</span><span class="p">))</span> <span class="mi">127</span><span class="p">)</span>
-<span class="nv">@artreepie</span> <span class="p">(</span><span class="nv">var</span> <span class="nv">s</span> <span class="p">(</span><span class="nf">/</span> <span class="mf">3.0</span> <span class="p">(</span><span class="nf">+</span> <span class="nv">j</span> <span class="mi">99</span><span class="p">)))</span> <span class="p">(</span><span class="nf">*</span> <span class="p">(</span><span class="nf">+</span> <span class="p">(</span><span class="nv">%</span> <span class="p">(</span><span class="nf">+</span> <span class="p">(</span><span class="nf">*</span> <span class="nv">j</span> <span class="nv">s</span><span class="p">)</span> <span class="p">(</span><span class="nf">*</span> <span class="nv">s</span> <span class="p">(</span><span class="nf">+</span> <span class="nv">i</span> <span class="nv">w</span><span class="p">)))</span> <span class="mi">2</span><span class="p">)</span> <span class="p">(</span><span class="nv">%</span> <span class="p">(</span><span class="nf">+</span> <span class="p">(</span><span class="nf">*</span> <span class="nv">j</span> <span class="nv">s</span><span class="p">)</span> <span class="p">(</span><span class="nf">*</span> <span class="nv">s</span> <span class="p">(</span><span class="nf">-</span> <span class="p">(</span><span class="nf">*</span> <span class="nv">w</span> <span class="mi">2</span><span class="p">)</span> <span class="nv">i</span><span class="p">)))</span> <span class="mi">2</span><span class="p">))</span> <span class="mi">127</span><span class="p">)</span>
-<span class="nv">@artreepie</span> <span class="p">(</span><span class="nv">var</span> <span class="nv">s</span> <span class="p">(</span><span class="nf">/</span> <span class="mf">3.0</span> <span class="p">(</span><span class="nf">+</span> <span class="nv">j</span> <span class="mi">99</span><span class="p">)))</span> <span class="p">(</span><span class="nf">*</span> <span class="p">(</span><span class="nf">+</span> <span class="p">(</span><span class="nv">%</span> <span class="p">(</span><span class="nf">+</span> <span class="p">(</span><span class="nf">*</span> <span class="nv">j</span> <span class="nv">s</span><span class="p">)</span> <span class="p">(</span><span class="nf">*</span> <span class="nv">s</span> <span class="p">(</span><span class="nf">+</span> <span class="nv">i</span> <span class="nv">w</span><span class="p">)))</span> <span class="mi">2</span><span class="p">)</span> <span class="p">(</span><span class="nv">%</span> <span class="p">(</span><span class="nf">+</span> <span class="p">(</span><span class="nf">*</span> <span class="nv">j</span> <span class="nv">s</span><span class="p">)</span> <span class="p">(</span><span class="nf">*</span> <span class="nv">s</span> <span class="p">(</span><span class="nf">-</span> <span class="p">(</span><span class="nf">*</span> <span class="nv">w</span> <span class="mi">2</span><span class="p">)</span> <span class="nv">i</span><span class="p">)))</span> <span class="mi">2</span><span class="p">))</span> <span class="mi">127</span><span class="p">)</span></code></pre></div>
+<p><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-lisp" data-lang="lisp"><span class="line"><span class="cl"><span class="nv">@artreepie</span> <span class="p">(</span><span class="nv">var</span> <span class="nv">s</span> <span class="p">(</span><span class="nf">/</span> <span class="mf">3.0</span> <span class="p">(</span><span class="nf">+</span> <span class="nv">j</span> <span class="mi">99</span><span class="p">)))</span> <span class="p">(</span><span class="nf">*</span> <span class="p">(</span><span class="nf">+</span> <span class="p">(</span><span class="nv">%</span> <span class="p">(</span><span class="nf">+</span> <span class="p">(</span><span class="nf">*</span> <span class="nv">j</span> <span class="nv">s</span><span class="p">)</span> <span class="p">(</span><span class="nf">*</span> <span class="nv">s</span> <span class="p">(</span><span class="nf">+</span> <span class="nv">i</span> <span class="nv">w</span><span class="p">)))</span> <span class="mi">2</span><span class="p">)</span> <span class="p">(</span><span class="nv">%</span> <span class="p">(</span><span class="nf">+</span> <span class="p">(</span><span class="nf">*</span> <span class="nv">j</span> <span class="nv">s</span><span class="p">)</span> <span class="p">(</span><span class="nf">*</span> <span class="nv">s</span> <span class="p">(</span><span class="nf">-</span> <span class="p">(</span><span class="nf">*</span> <span class="nv">w</span> <span class="mi">2</span><span class="p">)</span> <span class="nv">i</span><span class="p">)))</span> <span class="mi">2</span><span class="p">))</span> <span class="mi">127</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nv">@artreepie</span> <span class="p">(</span><span class="nv">var</span> <span class="nv">s</span> <span class="p">(</span><span class="nf">/</span> <span class="mf">3.0</span> <span class="p">(</span><span class="nf">+</span> <span class="nv">j</span> <span class="mi">99</span><span class="p">)))</span> <span class="p">(</span><span class="nf">*</span> <span class="p">(</span><span class="nf">+</span> <span class="p">(</span><span class="nv">%</span> <span class="p">(</span><span class="nf">+</span> <span class="p">(</span><span class="nf">*</span> <span class="nv">j</span> <span class="nv">s</span><span class="p">)</span> <span class="p">(</span><span class="nf">*</span> <span class="nv">s</span> <span class="p">(</span><span class="nf">+</span> <span class="nv">i</span> <span class="nv">w</span><span class="p">)))</span> <span class="mi">2</span><span class="p">)</span> <span class="p">(</span><span class="nv">%</span> <span class="p">(</span><span class="nf">+</span> <span class="p">(</span><span class="nf">*</span> <span class="nv">j</span> <span class="nv">s</span><span class="p">)</span> <span class="p">(</span><span class="nf">*</span> <span class="nv">s</span> <span class="p">(</span><span class="nf">-</span> <span class="p">(</span><span class="nf">*</span> <span class="nv">w</span> <span class="mi">2</span><span class="p">)</span> <span class="nv">i</span><span class="p">)))</span> <span class="mi">2</span><span class="p">))</span> <span class="mi">127</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nv">@artreepie</span> <span class="p">(</span><span class="nv">var</span> <span class="nv">s</span> <span class="p">(</span><span class="nf">/</span> <span class="mf">3.0</span> <span class="p">(</span><span class="nf">+</span> <span class="nv">j</span> <span class="mi">99</span><span class="p">)))</span> <span class="p">(</span><span class="nf">*</span> <span class="p">(</span><span class="nf">+</span> <span class="p">(</span><span class="nv">%</span> <span class="p">(</span><span class="nf">+</span> <span class="p">(</span><span class="nf">*</span> <span class="nv">j</span> <span class="nv">s</span><span class="p">)</span> <span class="p">(</span><span class="nf">*</span> <span class="nv">s</span> <span class="p">(</span><span class="nf">+</span> <span class="nv">i</span> <span class="nv">w</span><span class="p">)))</span> <span class="mi">2</span><span class="p">)</span> <span class="p">(</span><span class="nv">%</span> <span class="p">(</span><span class="nf">+</span> <span class="p">(</span><span class="nf">*</span> <span class="nv">j</span> <span class="nv">s</span><span class="p">)</span> <span class="p">(</span><span class="nf">*</span> <span class="nv">s</span> <span class="p">(</span><span class="nf">-</span> <span class="p">(</span><span class="nf">*</span> <span class="nv">w</span> <span class="mi">2</span><span class="p">)</span> <span class="nv">i</span><span class="p">)))</span> <span class="mi">2</span><span class="p">))</span> <span class="mi">127</span><span class="p">)</span></span></span></code></pre></div>
 See the 
 <a href="/blog/2014/08/artreepie-a-procedural-art-bot/img/example3.png" title="result" target="_blank">result</a>
 .</p>
 <h2 id="your-turn">Your turn!</h2>
-<p>What can you come up with? Tweet and get into <a href="https://twitter.com/artreepie/media" target="_blank">@artreepie’s gallery</a>
+<p>What can you come up with? Tweet and get into <a href="https://twitter.com/artreepie/media" target="_blank">@artreepie&rsquo;s gallery</a>
 .</p>
 <h2 id="tldr">TL;DR</h2>
 <ol>

@@ -13,12 +13,30 @@
   </title>
 
   
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-25953089-1"></script>
+  <script data-goatcounter="https://tncardoso.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+
   <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'UA-25953089-1');
+    document.addEventListener('DOMContentLoaded', () => {
+
+  
+  const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+  
+  $navbarBurgers.forEach( el => {
+    el.addEventListener('click', () => {
+
+      
+      const target = el.dataset.target;
+      const $target = document.getElementById(target);
+
+      
+      el.classList.toggle('is-active');
+      $target.classList.toggle('is-active');
+
+    });
+  });
+
+});
   </script>
 
   <link rel="icon" type="image/png" href="/img/favicon.png">
@@ -88,7 +106,7 @@
 <ul>
 <li>
 <span class="tag is-danger" style="margin-right: 1em">course</span>
- <a href="https://www.coursera.org/learn/machine-learning" target="_blank">Andrew Ng’s Machine Learning Course</a>
+ <a href="https://www.coursera.org/learn/machine-learning" target="_blank">Andrew Ng&rsquo;s Machine Learning Course</a>
 : A good starting point. Although it is not recent, the course is a good overview of Machine Learning methods.</li>
 <li>
 <span class="tag is-danger" style="margin-right: 1em">course</span>
@@ -150,7 +168,7 @@
 : Reinforcement Learning specialization offered by University of Alberta.</li>
 <li>
 <span class="tag is-danger" style="margin-right: 1em">course</span>
- <a href="https://www.davidsilver.uk/teaching/" target="_blank">David Silver’s course on RL</a>
+ <a href="https://www.davidsilver.uk/teaching/" target="_blank">David Silver&rsquo;s course on RL</a>
 : A good complement to the Reinforcement Learning specialization.</li>
 <li>
 <span class="tag is-success" style="margin-right: 1em">book</span>

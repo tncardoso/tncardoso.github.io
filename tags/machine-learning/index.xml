@@ -6,7 +6,17 @@
     <description>Recent content in machine-learning on Thiago Cardoso</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 08 Oct 2020 18:56:10 -0300</lastBuildDate><atom:link href="https://tncardoso.com/tags/machine-learning/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 08 May 2023 08:00:10 -0300</lastBuildDate><atom:link href="https://tncardoso.com/tags/machine-learning/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Generative AI reading (and watching) list</title>
+      <link>https://tncardoso.com/blog/2023/05/generative-ai-reading-and-watching-list/</link>
+      <pubDate>Mon, 08 May 2023 08:00:10 -0300</pubDate>
+      
+      <guid>https://tncardoso.com/blog/2023/05/generative-ai-reading-and-watching-list/</guid>
+      <description>Reading (and watching) list for getting started on Generative AI and Prompting.
+Prompt Engineering course Prompt Engineering: How to Talk to the AIs : A compact introduction and some advanced topics in prompt engineering by Xavier Amatriain. course ChatGPT Prompt Engineering for Developers : DeepLearning.ai course on prompt engineering. post Prompt Engineering 101: Introduction and resources : Xavier Amatriain&amp;rsquo;s introduction to prompt engineering. post Chunking Strategies for LLM Applications : When dealing with Knowledge Bases it is necessary to split your documents into chunks.</description>
+    </item>
+    
     <item>
       <title>Machine Learning reading (and watching) list</title>
       <link>https://tncardoso.com/blog/2020/10/machine-learning-reading-and-watching-list/</link>
@@ -14,7 +24,7 @@
       
       <guid>https://tncardoso.com/blog/2020/10/machine-learning-reading-and-watching-list/</guid>
       <description>Reading (and watching) list for getting started on Machine Learning.
-Foundation   course Andrew Ng’s Machine Learning Course : A good starting point. Although it is not recent, the course is a good overview of Machine Learning methods.  course Deep Learning Specialization : Andrew&amp;rsquo;s specialization on Deep Learning methods that hold state of the art in many applications.  course Structuring Machine Learning Projects : A course of the Deep Learning specialization that deserves mention.</description>
+Foundation course Andrew Ng&amp;rsquo;s Machine Learning Course : A good starting point. Although it is not recent, the course is a good overview of Machine Learning methods. course Deep Learning Specialization : Andrew&amp;rsquo;s specialization on Deep Learning methods that hold state of the art in many applications. course Structuring Machine Learning Projects : A course of the Deep Learning specialization that deserves mention.</description>
     </item>
     
   </channel>
