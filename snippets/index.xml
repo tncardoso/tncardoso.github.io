@@ -6,7 +6,17 @@
     <description>Recent content in Snippets on Thiago Cardoso</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 05 May 2023 08:18:43 -0300</lastBuildDate><atom:link href="https://tncardoso.com/snippets/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 13 Sep 2023 08:00:23 -0300</lastBuildDate><atom:link href="https://tncardoso.com/snippets/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>sec/gdb</title>
+      <link>https://tncardoso.com/snippets/sec_gdb/</link>
+      <pubDate>Wed, 13 Sep 2023 08:00:23 -0300</pubDate>
+      
+      <guid>https://tncardoso.com/snippets/sec_gdb/</guid>
+      <description>Coredump Dumping the process memory can be useful for recovering data.
+$ # get the process pid $ pgrep -l app_name $ # attach gdb and dump core, this will kill the app $ gdb &amp;lt;pid&amp;gt; gcore app.dump quit $ # find data in dump $ strings app.dump | grep &amp;quot;what i want to find&amp;quot; </description>
+    </item>
+    
     <item>
       <title>ml/optimizers</title>
       <link>https://tncardoso.com/snippets/ml_optimizer/</link>

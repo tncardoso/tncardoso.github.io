@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>
+    
+    
+      
+        Thiago Cardoso :: Turing Machine | Board Game
+      
+    
+  </title>
+
+  
+  <script data-goatcounter="https://tncardoso.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+
+  
+  const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+  
+  $navbarBurgers.forEach( el => {
+    el.addEventListener('click', () => {
+
+      
+      const target = el.dataset.target;
+      const $target = document.getElementById(target);
+
+      
+      el.classList.toggle('is-active');
+      $target.classList.toggle('is-active');
+
+    });
+  });
+
+});
+  </script>
+
+  <link rel="icon" type="image/png" href="/img/favicon.png">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+  <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/main.css">
+</head>
+
+<body>
+<nav class="navbar is-dark" role="navigation" aria-label="main navigation">
+  <div class="container">
+    <div class="navbar-brand">
+      <span class="navbar-item"><img src="/img/logo.png"></span>
+
+      <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+
+    <div id="navbarBasicExample" class="navbar-menu">
+      <div class="navbar-start">
+      </div>
+
+      <div class="navbar-end">
+        
+          
+          <a class="navbar-item" href="https://tncardoso.com/">About</a>
+          
+        
+          
+          <a class="navbar-item" href="https://tncardoso.com/blog">Blog</a>
+          
+        
+          
+          <a class="navbar-item" href="https://tncardoso.com/projects">Projects</a>
+          
+        
+          
+          <a class="navbar-item" href="https://scholar.google.com/citations?user=XLih4b8AAAAJ" target="_blank">Publications</a>
+          
+        
+      </div>
+    </div>
+</nav>
+
+
+
+
+<div class="container">
+  <section class="section">
+    <div class="container">
+      <h1 class="title has-text-grey-dark">Turing Machine | Board Game</h1>
+      <p class="subtitle">
+        <span class="post-date"><time datetime='2023-11-26T20:12:15-03:00'>
+          
+            2023-11-26
+          
+        </time></span>
+      </p>
+
+      <div class="content">
+        <p>Turing Machine is a competitive board game designed by Fabin Gridel and Yoann Levet. The goal is to uncover a three-digit code using minimal tests. The game features machines with multiple cards, each performing an unknown test. For example, one card might test if one digit is smaller than three, but the specific digit being tested remains a mystery until uncovered through gameplay. Players must strategically use their tests to deduce the correct code.</p>
+<p>The game consists of code cards, criteria cards, and verification cards. Code cards represent the code being tested, while criteria cards specify the criteria that each code card could be testing. Verification cards provide the results of whether a code tests true or false for a specific criteria card. Changing the verification card changes the criterion being evaluated.</p>
+
+ <figure>
+   <img src="/blog/2023/11/turing-machine-board-game/img/code_stacked.jpg" alt="Code cards representing code 145 stacked over a verification card. The test output is a single red square, representing a False outcome." />
+   <figcaption>Code cards when stacked leave only one square visible in the verification card. This is the outcome of the test. Source <a href="https://whatsericplaying.com/2022/11/14/turing-machine/" target="_blank">What&rsquo;s Eric Playing?</a>
+ .</figcaption>
+ </figure>
+
+<p>The Turing Machine is a beautiful and ingenious game. The code cards are perforated, with only one visible perforation when stacked. By aligning the code cards with the verification card, you can see the result of the code for the given criteria. Each square on the verification card corresponds to a possible code, resulting in a total of 125 possibilities. In the provided image, green squares represent codes that are tested as True for that specific machine card.</p>
+<h2 id="finding-the-right-code">Finding the right code</h2>
+<p>Firstly, we prune possible codes based on feasibility for a given machine. It is important to note that not every combination of sub-criteria is valid. Some combinations may have multiple possible codes, while others may have none at all. A valid machine is guaranteed to have only one secret code that tests to True in every criteria.</p>
+<p>Secondly, we choose tests that are expected to significantly reduce entropy regardless of outcome. This is similar to the way <a href="https://akinator.com" target="_blank">Akinator</a>
+ works.</p>
+<h2 id="code-pruning">Code pruning</h2>
+<p>The machine, equipped with criteria cards 9, 16, 25, 26, 47, and 48, can test various potential sub-criteria. Although card 48 alone offers nine possible tests, the machine as a whole can combine these criteria into 3,888 unique configurations.</p>
+<p>$$\text{PossibleConfigs} = \prod_{card_i} NumberSubCriteria(card_i)$$</p>
+<p>Out of these, only 332 form functional machines—those with a single valid code. This refinement process reduces the potential codes from an initial count of 125 to a final selection of just 89 valid options, without using any tests. Subsequently, the appropriate code and corresponding cards are selected for testing.</p>
+
+ <figure>
+   <img src="/blog/2023/11/turing-machine-board-game/img/machine.png" alt="Example machine composed of criteria cards 9, 16, 25, 26, 47, 48." />
+   <figcaption>Example machine composed of criteria cards 9, 16, 25, 26, 47, 48. Source <a href="https://turingmachine.info/" target="_blank">Turing Machine</a>
+ .</figcaption>
+ </figure>
+
+<h2 id="choosing-the-best-test">Choosing the best test</h2>
+<p>In evaluating the efficiency of code-cracking strategies, we consider the impact of card outcomes on the pool of potential codes. Our method involves systematically testing combinations of up to three cards using the same code. The objective is to choose tests that effectively halve the number of remaining possibilities, regardless of whether the tested cards are true or false. With this approach, on average, it should take approximately \(\log_2(\text{number of codes})\) tests to pinpoint the secret code.</p>
+<p>The strategy is designed to follow a &lsquo;safe path&rsquo; by ensuring significant reductions in possibilities with each test, optimizing for all possible outcomes. While it is theoretically possible to identify the secret code in fewer tests with an element of luck — for instance, a single true outcome might immediately isolate the correct code — the likelihood is low. Therefore, this algorithm focuses on consistent and predictable progress toward identifying the secret code rather than relying on chance.</p>
+<h2 id="source-code">Source code</h2>
+<p>The following image contains one example game. You can find the code for solving Turing Machines in this <a href="https://github.com/tncardoso/random/tree/main/boardgames/boardgames/turingmachine" target="_blank">repository</a>
+.</p>
+
+ <figure>
+   <img src="/blog/2023/11/turing-machine-board-game/img/tmresult.png" alt="Image showing a terminal with a test run of solver." />
+   <figcaption>Example run of the solver.</figcaption>
+ </figure>
+
+
+      </div>
+    </div>
+  </section>
+</div>
+
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
