@@ -1,54 +1,40 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Snippets on Thiago Cardoso</title>
+    <title>Thiago Cardoso</title>
     <link>https://tncardoso.com/snippets/</link>
-    <description>Recent content in Snippets on Thiago Cardoso</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content on Thiago Cardoso</description>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 13 Sep 2023 08:00:23 -0300</lastBuildDate><atom:link href="https://tncardoso.com/snippets/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 13 Sep 2023 08:00:23 -0300</lastBuildDate>
+    <atom:link href="https://tncardoso.com/snippets/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>sec/gdb</title>
       <link>https://tncardoso.com/snippets/sec_gdb/</link>
       <pubDate>Wed, 13 Sep 2023 08:00:23 -0300</pubDate>
-      
       <guid>https://tncardoso.com/snippets/sec_gdb/</guid>
-      <description>Coredump Dumping the process memory can be useful for recovering data.
-$ # get the process pid $ pgrep -l app_name $ # attach gdb and dump core, this will kill the app $ gdb &amp;lt;pid&amp;gt; gcore app.dump quit $ # find data in dump $ strings app.dump | grep &amp;quot;what i want to find&amp;quot; </description>
+      <description>Coredump Dumping the process memory can be useful for recovering data.&#xA;$ # get the process pid $ pgrep -l app_name $ # attach gdb and dump core, this will kill the app $ gdb &amp;lt;pid&amp;gt; gcore app.dump quit $ # find data in dump $ strings app.dump | grep &amp;quot;what i want to find&amp;quot; </description>
     </item>
-    
     <item>
       <title>ml/optimizers</title>
       <link>https://tncardoso.com/snippets/ml_optimizer/</link>
       <pubDate>Fri, 05 May 2023 08:18:43 -0300</pubDate>
-      
       <guid>https://tncardoso.com/snippets/ml_optimizer/</guid>
-      <description>Lion Lion is an learned optimizer that only uses the gradient sign for the update vector. The paper Symbolic Discovery of Optimization Algorithms presents how they used symbolic AI.
-def train(weight, gradient, momentum, lr): # default beta1 = 0.9, beta2 = 0.99 # only tracks momentum and uses sign to compute update update = interp(gradient, momentum, beta1) update = sign(update) momentum = interp(gradient, momentum, beta2) # regular weight decay weight_decay = weight * lambda update = update + weight_decay update = update * lr return update, momentum </description>
+      <description>Lion Lion is an learned optimizer that only uses the gradient sign for the update vector. The paper Symbolic Discovery of Optimization Algorithms presents how they used symbolic AI.&#xA;def train(weight, gradient, momentum, lr): # default beta1 = 0.9, beta2 = 0.99 # only tracks momentum and uses sign to compute update update = interp(gradient, momentum, beta1) update = sign(update) momentum = interp(gradient, momentum, beta2) # regular weight decay weight_decay = weight * lambda update = update + weight_decay update = update * lr return update, momentum </description>
     </item>
-    
     <item>
       <title>devices/huion</title>
       <link>https://tncardoso.com/snippets/devices_huion/</link>
       <pubDate>Thu, 03 Jun 2021 13:18:43 -0300</pubDate>
-      
       <guid>https://tncardoso.com/snippets/devices_huion/</guid>
-      <description>Map device to primary monitor It is possible to list devices using xsetwacom.
-$ xsetwacom --list devices HUION Huion Tablet Pad pad id: 16	type: PAD HUION Huion Tablet Pen stylus id: 17	type: STYLUS The following script can be used to map the device:
-$ xsetwacom set &amp;quot;HUION Huion Tablet Pen stylus&amp;quot; MapToOutput &amp;quot;HEAD-1&amp;quot; $ xsetwacom set &amp;quot;HUION Huion Tablet Pad pad&amp;quot; MapToOutput &amp;quot;HEAD-1&amp;quot; Set coordinates when dealing with multiple monitors:</description>
+      <description>Map device to primary monitor It is possible to list devices using xsetwacom.&#xA;$ xsetwacom --list devices HUION Huion Tablet Pad pad id: 16&#x9;type: PAD HUION Huion Tablet Pen stylus id: 17&#x9;type: STYLUS The following script can be used to map the device:&#xA;$ xsetwacom set &amp;quot;HUION Huion Tablet Pen stylus&amp;quot; MapToOutput &amp;quot;HEAD-1&amp;quot; $ xsetwacom set &amp;quot;HUION Huion Tablet Pad pad&amp;quot; MapToOutput &amp;quot;HEAD-1&amp;quot; Set coordinates when dealing with multiple monitors:</description>
     </item>
-    
     <item>
       <title>apps/dbeaver</title>
       <link>https://tncardoso.com/snippets/apps_dbeaver/</link>
       <pubDate>Sat, 09 Sep 2017 17:18:43 -0300</pubDate>
-      
       <guid>https://tncardoso.com/snippets/apps_dbeaver/</guid>
-      <description>Single connection mode dbeaver usually opens multiple connections to databases. If you have limited connections, then it is necessary to restrict the pool size or connection numbers. Since dbeaver does not have a &amp;ldquo;Single connection mode&amp;rdquo;, a few tweaks are necessary.
-Disable using one exclusive connection for metadata:
-Uncheck: &amp;gt; File &amp;gt; Properties &amp;gt; Metadata &amp;gt; Open separate connection for metadata read Disable using exclusive connections for SQL Editors:
-Uncheck: &amp;gt; Right mouse click in SQL Editor &amp;gt; Preferences &amp;gt; DBeaver &amp;gt; Editors &amp;gt; SQL Editor &amp;gt; Open separate connection for each editor </description>
+      <description>Single connection mode dbeaver usually opens multiple connections to databases. If you have limited connections, then it is necessary to restrict the pool size or connection numbers. Since dbeaver does not have a &amp;ldquo;Single connection mode&amp;rdquo;, a few tweaks are necessary.&#xA;Disable using one exclusive connection for metadata:&#xA;Uncheck: &amp;gt; File &amp;gt; Properties &amp;gt; Metadata &amp;gt; Open separate connection for metadata read Disable using exclusive connections for SQL Editors:&#xA;Uncheck: &amp;gt; Right mouse click in SQL Editor &amp;gt; Preferences &amp;gt; DBeaver &amp;gt; Editors &amp;gt; SQL Editor &amp;gt; Open separate connection for each editor </description>
     </item>
-    
   </channel>
 </rss>

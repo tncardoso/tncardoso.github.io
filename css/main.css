@@ -9,16 +9,24 @@ body {
 	"cv05", "cv06", "cv09", "cv10";
 }
 
+figure {
+    margin-top: 2em;
+}
+
+.shadow {
+    filter: drop-shadow(0 0 0.75rem #f0f0f0);
+}
+
 .container {
     max-width: 800px;
 }
 
 .social-icon {
-	color: #7a7a7a;
+    color: #7a7a7a;
 }
 
 .social-icon:hover {
-	color: #6e94d0;
+    color: #6e94d0;
 }
 
 .post-date {

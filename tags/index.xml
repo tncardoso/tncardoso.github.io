@@ -4,71 +4,58 @@
     <title>Tags on Thiago Cardoso</title>
     <link>https://tncardoso.com/tags/</link>
     <description>Recent content in Tags on Thiago Cardoso</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 26 Nov 2023 20:12:15 -0300</lastBuildDate><atom:link href="https://tncardoso.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 07 Jul 2024 11:28:56 -0300</lastBuildDate>
+    <atom:link href="https://tncardoso.com/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>boardgame</title>
-      <link>https://tncardoso.com/tags/boardgame/</link>
-      <pubDate>Sun, 26 Nov 2023 20:12:15 -0300</pubDate>
-      
-      <guid>https://tncardoso.com/tags/boardgame/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>machine-learning</title>
-      <link>https://tncardoso.com/tags/machine-learning/</link>
-      <pubDate>Mon, 08 May 2023 08:00:10 -0300</pubDate>
-      
-      <guid>https://tncardoso.com/tags/machine-learning/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>security</title>
-      <link>https://tncardoso.com/tags/security/</link>
-      <pubDate>Sat, 27 Mar 2021 16:40:10 -0300</pubDate>
-      
-      <guid>https://tncardoso.com/tags/security/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>hardware</title>
-      <link>https://tncardoso.com/tags/hardware/</link>
-      <pubDate>Sun, 26 Jul 2020 14:56:10 -0300</pubDate>
-      
-      <guid>https://tncardoso.com/tags/hardware/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>arduino</title>
-      <link>https://tncardoso.com/tags/arduino/</link>
-      <pubDate>Mon, 01 Sep 2014 16:16:30 -0200</pubDate>
-      
-      <guid>https://tncardoso.com/tags/arduino/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>art</title>
+      <title>Art</title>
       <link>https://tncardoso.com/tags/art/</link>
-      <pubDate>Sat, 09 Aug 2014 16:16:30 -0200</pubDate>
-      
+      <pubDate>Sun, 07 Jul 2024 11:28:56 -0300</pubDate>
       <guid>https://tncardoso.com/tags/art/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>codegolf</title>
+      <title>Machine-Learning</title>
+      <link>https://tncardoso.com/tags/machine-learning/</link>
+      <pubDate>Sun, 07 Jul 2024 11:28:56 -0300</pubDate>
+      <guid>https://tncardoso.com/tags/machine-learning/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Boardgame</title>
+      <link>https://tncardoso.com/tags/boardgame/</link>
+      <pubDate>Sun, 26 Nov 2023 20:12:15 -0300</pubDate>
+      <guid>https://tncardoso.com/tags/boardgame/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Security</title>
+      <link>https://tncardoso.com/tags/security/</link>
+      <pubDate>Sat, 27 Mar 2021 16:40:10 -0300</pubDate>
+      <guid>https://tncardoso.com/tags/security/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Hardware</title>
+      <link>https://tncardoso.com/tags/hardware/</link>
+      <pubDate>Sun, 26 Jul 2020 14:56:10 -0300</pubDate>
+      <guid>https://tncardoso.com/tags/hardware/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Arduino</title>
+      <link>https://tncardoso.com/tags/arduino/</link>
+      <pubDate>Mon, 01 Sep 2014 16:16:30 -0200</pubDate>
+      <guid>https://tncardoso.com/tags/arduino/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Codegolf</title>
       <link>https://tncardoso.com/tags/codegolf/</link>
       <pubDate>Sat, 09 Aug 2014 16:16:30 -0200</pubDate>
-      
       <guid>https://tncardoso.com/tags/codegolf/</guid>
       <description></description>
     </item>
-    
   </channel>
 </rss>

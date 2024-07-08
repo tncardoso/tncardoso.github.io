@@ -2,31 +2,37 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://tncardoso.com/blog/</loc>
-    <lastmod>2023-11-26T20:12:15-03:00</lastmod>
+    <loc>https://tncardoso.com/blog/2024/07/abstract-machine-learning-art/</loc>
+    <lastmod>2024-07-07T11:28:56-03:00</lastmod>
   </url><url>
-    <loc>https://tncardoso.com/tags/boardgame/</loc>
-    <lastmod>2023-11-26T20:12:15-03:00</lastmod>
+    <loc>https://tncardoso.com/tags/art/</loc>
+    <lastmod>2024-07-07T11:28:56-03:00</lastmod>
+  </url><url>
+    <loc>https://tncardoso.com/blog/</loc>
+    <lastmod>2024-07-07T11:28:56-03:00</lastmod>
+  </url><url>
+    <loc>https://tncardoso.com/tags/machine-learning/</loc>
+    <lastmod>2024-07-07T11:28:56-03:00</lastmod>
   </url><url>
     <loc>https://tncardoso.com/tags/</loc>
-    <lastmod>2023-11-26T20:12:15-03:00</lastmod>
+    <lastmod>2024-07-07T11:28:56-03:00</lastmod>
   </url><url>
     <loc>https://tncardoso.com/</loc>
+    <lastmod>2024-07-07T11:28:56-03:00</lastmod>
+  </url><url>
+    <loc>https://tncardoso.com/tags/boardgame/</loc>
     <lastmod>2023-11-26T20:12:15-03:00</lastmod>
   </url><url>
     <loc>https://tncardoso.com/blog/2023/11/turing-machine-board-game/</loc>
     <lastmod>2023-11-26T20:12:15-03:00</lastmod>
   </url><url>
-    <loc>https://tncardoso.com/snippets/sec_gdb/</loc>
-    <lastmod>2023-09-13T08:00:23-03:00</lastmod>
-  </url><url>
     <loc>https://tncardoso.com/snippets/</loc>
     <lastmod>2023-09-13T08:00:23-03:00</lastmod>
   </url><url>
-    <loc>https://tncardoso.com/blog/2023/05/generative-ai-reading-and-watching-list/</loc>
-    <lastmod>2023-05-08T08:00:10-03:00</lastmod>
+    <loc>https://tncardoso.com/snippets/sec_gdb/</loc>
+    <lastmod>2023-09-13T08:00:23-03:00</lastmod>
   </url><url>
-    <loc>https://tncardoso.com/tags/machine-learning/</loc>
+    <loc>https://tncardoso.com/blog/2023/05/generative-ai-reading-and-watching-list/</loc>
     <lastmod>2023-05-08T08:00:10-03:00</lastmod>
   </url><url>
     <loc>https://tncardoso.com/snippets/ml_optimizer/</loc>
@@ -53,10 +59,10 @@
     <loc>https://tncardoso.com/blog/2020/07/padoca-hotkey-keyboard/</loc>
     <lastmod>2020-07-19T18:36:30-03:00</lastmod>
   </url><url>
-    <loc>https://tncardoso.com/projects/eletronic-voting/</loc>
+    <loc>https://tncardoso.com/projects/</loc>
     <lastmod>2018-01-09T17:18:43-03:00</lastmod>
   </url><url>
-    <loc>https://tncardoso.com/projects/</loc>
+    <loc>https://tncardoso.com/projects/eletronic-voting/</loc>
     <lastmod>2018-01-09T17:18:43-03:00</lastmod>
   </url><url>
     <loc>https://tncardoso.com/snippets/apps_dbeaver/</loc>
@@ -70,9 +76,6 @@
   </url><url>
     <loc>https://tncardoso.com/blog/2014/09/gaming-for-the-lazy/</loc>
     <lastmod>2014-09-01T16:16:30-02:00</lastmod>
-  </url><url>
-    <loc>https://tncardoso.com/tags/art/</loc>
-    <lastmod>2014-08-09T16:16:30-02:00</lastmod>
   </url><url>
     <loc>https://tncardoso.com/blog/2014/08/artreepie-a-procedural-art-bot/</loc>
     <lastmod>2014-08-09T16:16:30-02:00</lastmod>

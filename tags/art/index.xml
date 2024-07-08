@@ -1,21 +1,26 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>art on Thiago Cardoso</title>
+    <title>Art on Thiago Cardoso</title>
     <link>https://tncardoso.com/tags/art/</link>
-    <description>Recent content in art on Thiago Cardoso</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Art on Thiago Cardoso</description>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 09 Aug 2014 16:16:30 -0200</lastBuildDate><atom:link href="https://tncardoso.com/tags/art/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 07 Jul 2024 11:28:56 -0300</lastBuildDate>
+    <atom:link href="https://tncardoso.com/tags/art/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Abstract Machine Learning Art</title>
+      <link>https://tncardoso.com/blog/2024/07/abstract-machine-learning-art/</link>
+      <pubDate>Sun, 07 Jul 2024 11:28:56 -0300</pubDate>
+      <guid>https://tncardoso.com/blog/2024/07/abstract-machine-learning-art/</guid>
+      <description>Moving to a new home, I was confronted with empty walls. Thinking about images to decorete them reminded of an old project: creating abstract art using machine learning.&#xA;It is fascinating to combine the rigidity of Linear Algebra with art and creativity. Inspired by the work of dribnet , I aimed to create abstract images that could deceive Machine Learning algorithms while still being recognizable to humans. Different from dribnet&amp;rsquo;s approach, my objective was to generate those images with an end-to-end differentiable approach.</description>
+    </item>
     <item>
       <title>artreepie, a procedural art bot</title>
       <link>https://tncardoso.com/blog/2014/08/artreepie-a-procedural-art-bot/</link>
       <pubDate>Sat, 09 Aug 2014 16:16:30 -0200</pubDate>
-      
       <guid>https://tncardoso.com/blog/2014/08/artreepie-a-procedural-art-bot/</guid>
-      <description>Last week, I stumbled upon a great stackexchange discussion on procedural art . The idea was to come up with three code snippets that would be used to generate an image. More specifically, each snippet &amp;ndash; one for each color channel (R, G, B) &amp;ndash; is a function that, given a pixel coordinate, returns its intensity. Each snippet should fit in a single tweet.
-This very interesting exercise inspired me into creating @artreepie .</description>
+      <description>Last week, I stumbled upon a great stackexchange discussion on procedural art . The idea was to come up with three code snippets that would be used to generate an image. More specifically, each snippet &amp;ndash; one for each color channel (R, G, B) &amp;ndash; is a function that, given a pixel coordinate, returns its intensity. Each snippet should fit in a single tweet.&#xA;This very interesting exercise inspired me into creating @artreepie .</description>
     </item>
-    
   </channel>
 </rss>

@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html>
-<head>
+<html><head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>
@@ -43,11 +42,10 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
   <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
   <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/lc_gif_player.css">
   <link rel="stylesheet" href="/css/main.css">
 </head>
-
-<body>
-<nav class="navbar is-dark" role="navigation" aria-label="main navigation">
+<body><nav class="navbar is-dark" role="navigation" aria-label="main navigation">
   <div class="container">
     <div class="navbar-brand">
       <span class="navbar-item"><img src="/img/logo.png"></span>
@@ -83,10 +81,8 @@
         
       </div>
     </div>
+  </div>
 </nav>
-
-
-
 
 <div class="container">
   <section class="section">
@@ -110,7 +106,7 @@ Luckily I stumbled upon this
 I decided to give it a try and build a hotkey keyboard from scratch: the casing, circuit, firmware, and keycaps.</p>
 <p>Although I have some previous experience with modeling and sculpting in Blender 3d, I am not acquainted with CAD software. Because of this limitation, I decided to start by designing the casing, and after experimenting with FreeCAD, Fusion 360, and OpenSCAD, I decided to stick with the latter. In OpenSCAD&rsquo;s workflow, you don&rsquo;t interactively model a 3D mesh. Instead, you write scripts that describe 3D objects, ending with a parametric description of the mesh that can be easily adjusted.</p>
 
-<figure>
+<figure >
   <img src="/blog/2020/07/padoca-hotkey-keyboard/img/openscad.png" alt="Screenshot of OpenSCAD with the keyboard design" />
   <figcaption>Designing the keyboard using OpenSCAD</figcaption>
 </figure>
@@ -164,4 +160,15 @@ I decided to give it a try and build a hotkey keyboard from scratch: the casing,
 </div>
 
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+<script>
+  MathJax = {
+    tex: {
+      displayMath: [['\\[', '\\]'], ['$$', '$$']],  
+      inlineMath: [['\\(', '\\)']]                  
+    }
+  };
+</script>
+
+</body>
+</html>

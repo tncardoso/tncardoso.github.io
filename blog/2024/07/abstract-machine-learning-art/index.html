@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>
+    
+    
+      
+        Thiago Cardoso :: Abstract Machine Learning Art
+      
+    
+  </title>
+
+  
+  <script data-goatcounter="https://tncardoso.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+
+  
+  const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+  
+  $navbarBurgers.forEach( el => {
+    el.addEventListener('click', () => {
+
+      
+      const target = el.dataset.target;
+      const $target = document.getElementById(target);
+
+      
+      el.classList.toggle('is-active');
+      $target.classList.toggle('is-active');
+
+    });
+  });
+
+});
+  </script>
+
+  <link rel="icon" type="image/png" href="/img/favicon.png">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+  <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/lc_gif_player.css">
+  <link rel="stylesheet" href="/css/main.css">
+</head>
+<body><nav class="navbar is-dark" role="navigation" aria-label="main navigation">
+  <div class="container">
+    <div class="navbar-brand">
+      <span class="navbar-item"><img src="/img/logo.png"></span>
+
+      <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+
+    <div id="navbarBasicExample" class="navbar-menu">
+      <div class="navbar-start">
+      </div>
+
+      <div class="navbar-end">
+        
+          
+          <a class="navbar-item" href="https://tncardoso.com/">About</a>
+          
+        
+          
+          <a class="navbar-item" href="https://tncardoso.com/blog">Blog</a>
+          
+        
+          
+          <a class="navbar-item" href="https://tncardoso.com/projects">Projects</a>
+          
+        
+          
+          <a class="navbar-item" href="https://scholar.google.com/citations?user=XLih4b8AAAAJ" target="_blank">Publications</a>
+          
+        
+      </div>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+  <section class="section">
+    <div class="container">
+      <h1 class="title has-text-grey-dark">Abstract Machine Learning Art</h1>
+      <p class="subtitle">
+        <span class="post-date"><time datetime='2024-07-07T11:28:56-03:00'>
+          
+            2024-07-07
+          
+        </time></span>
+      </p>
+
+      <div class="content">
+        <p>Moving to a new home, I was confronted with empty walls. Thinking about images to decorete them reminded of an old project: creating abstract art using machine learning.</p>
+<p>It is fascinating to combine the rigidity of Linear Algebra with art and creativity. Inspired by the work of <a href="https://drib.net/perception-engines" target="_blank">dribnet</a>
+, I aimed to create abstract images that could deceive Machine Learning algorithms while still being recognizable to humans. Different from dribnet&rsquo;s approach, my objective was to generate those images with an end-to-end differentiable approach.</p>
+
+ <figure>
+   <div class="gif_player">
+     <img src="" rel:animated_src="/blog/2024/07/abstract-machine-learning-art/img/cockroach.gif" alt="Gif showing the progress of creating an abstract art that represents a cockroach"></img>
+   </div>
+   <figcaption>The evolution of an abstract cockroach.</figcaption>
+ </figure>
+
+<p>Given two inputs - a target <a href="https://www.image-net.org/" target="_blank">Imagenet</a>
+ class and a target image - the algorithm optimizes two objectives. The first objective is the difference between the generated image and the target image. The second objective aims to minimize the classification error for the target class, forcing the creation of an image that can be recognized by classification algorithms.</p>
+<p>In this example, you can see a piggy bank image. On the right is an image that multiple algorithms correctly classify as <code>piggybank</code>, but it lacks visual grounding for humans. On the left is the image optimized to match the target image.</p>
+
+ <figure >
+   <img src="/blog/2024/07/abstract-machine-learning-art/img/w.png" alt="The effect of weight in image optimization. On the left the image that only optimizes for similarity with target, on the right one that is correctly classified as `piggy bank` by multiple models." />
+   <figcaption>The effect of weight in image optimization. On the left the image that only optimizes for similarity with target, on the right one that is correctly classified as <code>piggy bank</code> by multiple models.</figcaption>
+ </figure>
+
+<h2 id="architecture">Architecture</h2>
+<p>The main idea is to use <a href="https://github.com/BachiLi/diffvg" target="_blank">diffvg</a>
+, a differentiable vector graphics rasterizer, for creating the images. This approach allows backpropagation of a given loss to the inputs, adjusting the image to the desired optimization objective. The network input consists of points and colors for each path. Most images in this post are generated with 20 paths. Adding other SVG shapes such as lines, circles or rectangles is planned for future versions.</p>
+<p>The diffvg rasterized image is fed into a visual loss and various Machine Learning models to obtain the classification loss. To optimize the image to deceive Machine Learning models, we use different models trained with Imagenet data: <a href="https://pytorch.org/hub/pytorch_vision_alexnet/" target="_blank">AlexNet</a>
+, <a href="https://pytorch.org/hub/pytorch_vision_vgg/" target="_blank">VGG11</a>
+, and Visual Transformes (<a href="https://pytorch.org/vision/main/models/generated/torchvision.models.vit_b_16.html" target="_blank">ViT_b_16</a>
+), all accessible via Torch Hub. The perceptual similarity (<a href="https://github.com/richzhang/PerceptualSimilarity" target="_blank">LPIPS</a>
+) and RMSE are utilized as the visual losses.</p>
+<p>Finally, a loss function weights all the mentioned components. The gradients are <strong>backpropagated to the inputs</strong>, keeping all models weights frozen. <strong>Only the input points and colors are updated</strong>. In other words, we are optimizing the generated image to minimize the loss. The following diagram shows the network&rsquo;s architecture.</p>
+<pre class="mermaid">flowchart TD
+    points[SVG input points]
+    colors[SVG input colors]
+    target[Target image]
+    tcls[Target Imagenet class]
+    diffvg[Diffvg]
+    image[Rasterized image]
+    alexnet[alexnet]
+    vgg[vgg11]
+    vit[vit_b_16]
+    lpips[Perceptual similarity LPIPS]
+    rmse[RMSE]
+    visual[Visual loss]
+    cls[Classification loss]
+    loss[Loss function]
+    points --> diffvg
+    colors --> diffvg
+    diffvg --> image
+    image --> alexnet
+    image --> vgg
+    image --> vit
+    image --> lpips
+    target --> lpips
+    target --> rmse
+    image --> rmse
+    alexnet --> cls
+    vgg --> cls
+    vit --> cls
+    rmse --> visual
+    lpips --> visual
+    cls --> loss
+    tcls --> cls
+    visual --> loss
+
+    subgraph Legend
+    ni[Network Inputs]
+    ui[User Inputs]
+    end
+
+    style ni fill:#FFAA80
+    style points fill:#FFAA80
+    style colors fill:#FFAA80
+    style ui fill:#9BEC00
+    style target fill:#9BEC00
+    style tcls fill:#9BEC00
+</pre>
+
+
+<h2 id="loss-function">Loss function</h2>
+<p>To better understand the optimization process, it&rsquo;s important to detail the loss function used. This function was refined through experimentation with the objective to create visually interesting art. The loss has two main components: the target class loss and the visual loss. The target class loss measures how far a model is from classifying the image as the target class using <a href="https://pytorch.org/docs/stable/generated/torch.nn.CrossEntropyLoss.html" target="_blank">cross-entropy</a>
+. The visual loss measures the distance of the resultant image from the target image. These components are weighted by the hyperparameter \(w\). When \(w=0\), only the visual loss is considered. When \(w=1\), only the target class loss is considered. The complete formula is as follows:</p>
+$$
+\begin{align}
+\text{AlexLoss} &= \text{CrossEntropyLoss}_{\text{AlexNet}}(\hat{y}, y) \\
+\text{VGGLoss} &= \text{CrossEntropyLoss}_{\text{VGG11}}(\hat{y}, y) \\
+\text{VitLoss} &= \text{CrossEntropyLoss}_{\text{Vit_b_16}}(\hat{y}, y) \\
+\text{TargetClassLoss} &= \text{mean}(\text{AlexLoss}, \text{VGGLoss}, \text{VitLoss}) \\
+&+ \text{sd}(\text{AlexLoss}, \text{VGGLoss}, \text{VitLoss}) \\
+\\
+\text{VisualLoss} &= \text{LPIPS}(y, \hat{y}) + \text{RMSE}(y, \hat{y}) \\
+\\
+\text{Loss} &= ((1.0 - w) * \text{VisualLoss}) + (w * \text{TargetClassLoss})
+\end{align}
+$$
+<p>The target class component sums the mean with the standard deviation of the losses. Using the standard deviation ensures that all models&rsquo; losses are optimized together, preventing significant differences between them. From my tests, this approach yields better results. Removing the standard deviation could cause the optimization to favor one model over another, leading to potential saddle points and stagnation.</p>
+<p>To measure the visual difference between images, two loss functions are combined: LPIPS and RMSE between the generated and target images. LPIPS is usually enough for optimizing an image that broadly resembles the target but incorporating RMSE provides better guidance for the optimization process.</p>
+<p>To achieve better results, the weight \(w\) should start at zero and increase throughout the process. During the first epochs, the focus should be on optimizing for visual similarity alone. As optimization progresses, the target class component is gradually introduced until the image is predicted as belonging to the target class. No scheduling algorithm is employed; this process is done manually by examining the image and loss charts. The following charts show the progress in LPIPS loss and target classification as well as changes in \(w\).</p>
+
+ <figure >
+   <img src="/blog/2024/07/abstract-machine-learning-art/img/opt.png" alt="Charts showing the reduction in LPIPS and the increase in target class probability" />
+   <figcaption>Progress in LPIPS loss and target classification.</figcaption>
+ </figure>
+
+<h2 id="half-art-half-engineering">Half art, half engineering</h2>
+<p>I developed a Terminal User Interface (TUI) that displays logs and important losses, allowing real-time interaction with the algorithm. The TUI provides a comprehensive overview of the optimization process, making it possible to fine-tune the weights interactively without interrupting the optimization workflow. The following screenshot showcases the functionality and layout of the TUI. Losses and metrics are logged using Tensorboard.</p>
+
+ <figure >
+   <img src="/blog/2024/07/abstract-machine-learning-art/img/tui.png" alt="Screenshot of TUI that allows for interatction with parameters" />
+   <figcaption>TUI for adjusting optimization parameters. It is possible to increment the weight, the learning rate, and read current losses.</figcaption>
+ </figure>
+
+<h2 id="can-it-fool-chatgpt">Can it fool ChatGPT?</h2>
+<p>Now you may be asking, do these images actually fool ML models? The models used to generate the images indeed assign high probability to the target class. As more models are incorporated, these adversarial images become more robust. However, the effectiveness varies with other models, depending on their underlying architecture and training data. The following representation of a <strong>torch</strong> is correctly classified by Alexnet (84%), Vgg11 (79%), and Vit (90%).</p>
+
+ <figure >
+   <img src="/blog/2024/07/abstract-machine-learning-art/img/torch.png" alt="An abstract representation of a torch" />
+   <figcaption>An abstract representation of a torch.</figcaption>
+ </figure>
+
+<p>From my examples, I was able to achieve one adversarial example that fools ChatGPT (gpt-4o). In this image, you see a piggy bank image before \(w\) was increased. Although it is similar to the final image, ChatGPT couldn&rsquo;t guess its representation.</p>
+
+ <figure class="shadow">
+   <img src="/blog/2024/07/abstract-machine-learning-art/img/gpt_before.png" alt="ChatGPT classification of image before increasing w." />
+   <figcaption>ChatGPT classification of image before increasing w.</figcaption>
+ </figure>
+
+<p>After optimizing for the target class, ChatGPT recognizes it as a piggy bank. It is possible to generate adversarial images for ChatGPT, but developing a robust method would require further research.</p>
+
+ <figure class="shadow">
+   <img src="/blog/2024/07/abstract-machine-learning-art/img/gpt_after.png" alt="ChatGPT classification of image after increasing w. ChatGPT is able to see a Piggy Bank." />
+   <figcaption>ChatGPT classification of image after increasing w. ChatGPT is able to see a Piggy Bank.</figcaption>
+ </figure>
+
+<h2 id="gallery">Gallery</h2>
+<div style="display: flex; flex-wrap: wrap;">
+  
+ 
+ <figure >
+   <img src="/blog/2024/07/abstract-machine-learning-art/img/piggybank.png" alt="Piggy Bank" />
+   <figcaption>Piggy Bank</figcaption>
+ </figure>
+
+
+ 
+ <figure >
+   <img src="/blog/2024/07/abstract-machine-learning-art/img/torch.png" alt="Torch" />
+   <figcaption>Torch</figcaption>
+ </figure>
+
+
+ 
+ <figure >
+   <img src="/blog/2024/07/abstract-machine-learning-art/img/llama.png" alt="Llama" />
+   <figcaption>Llama</figcaption>
+ </figure>
+
+
+ 
+ <figure >
+   <img src="/blog/2024/07/abstract-machine-learning-art/img/cockroach.png" alt="Cockroach" />
+   <figcaption>Cockroach</figcaption>
+ </figure>
+
+
+ 
+ <figure >
+   <img src="/blog/2024/07/abstract-machine-learning-art/img/cab.png" alt="Cab" />
+   <figcaption>Cab</figcaption>
+ </figure>
+
+
+</div>
+
+<script type="text/javascript" src="/js/lc_gif_player.pack.js"></script>
+<script type="text/javascript">
+  document.addEventListener("DOMContentLoaded", function(event) {   
+  lc_gif_player('.gif_player', true);     
+});
+</script>
+
+
+      </div>
+    </div>
+  </section>
+</div>
+
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+<script>
+  MathJax = {
+    tex: {
+      displayMath: [['\\[', '\\]'], ['$$', '$$']],  
+      inlineMath: [['\\(', '\\)']]                  
+    }
+  };
+</script>
+
+<script type="module">
+  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.esm.min.mjs';
+  mermaid.initialize({ startOnLoad: true });
+</script>
+
+</body>
+</html>

@@ -1,21 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>security on Thiago Cardoso</title>
+    <title>Security on Thiago Cardoso</title>
     <link>https://tncardoso.com/tags/security/</link>
-    <description>Recent content in security on Thiago Cardoso</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Security on Thiago Cardoso</description>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 27 Mar 2021 16:40:10 -0300</lastBuildDate><atom:link href="https://tncardoso.com/tags/security/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 27 Mar 2021 16:40:10 -0300</lastBuildDate>
+    <atom:link href="https://tncardoso.com/tags/security/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>git-wormhole: generating partial collisions in commits</title>
       <link>https://tncardoso.com/blog/2021/03/git-wormhole-generating-partial-collisions-in-commits/</link>
       <pubDate>Sat, 27 Mar 2021 16:40:10 -0300</pubDate>
-      
       <guid>https://tncardoso.com/blog/2021/03/git-wormhole-generating-partial-collisions-in-commits/</guid>
-      <description>If you tried to add a substring from the git commit hash to your software version, you may have noticed that it is not easy (or possible). For example, imagine you want to version your software as &amp;ldquo;0.0.0-aabbccdd&amp;rdquo;, being &amp;ldquo;aabbccdd&amp;rdquo; the commit&amp;rsquo;s prefix in which this version was defined.
-It turns out that the git hash is the sha1 of multiple pieces of information: the repository tree hash, the parent commit, author and committer name and email, Unix timestamp, timezone offset and message.</description>
+      <description>If you tried to add a substring from the git commit hash to your software version, you may have noticed that it is not easy (or possible). For example, imagine you want to version your software as &amp;ldquo;0.0.0-aabbccdd&amp;rdquo;, being &amp;ldquo;aabbccdd&amp;rdquo; the commit&amp;rsquo;s prefix in which this version was defined.&#xA;It turns out that the git hash is the sha1 of multiple pieces of information: the repository tree hash, the parent commit, author and committer name and email, Unix timestamp, timezone offset and message.</description>
     </item>
-    
   </channel>
 </rss>

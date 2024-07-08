@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html>
-<head>
+<html><head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>
@@ -43,11 +42,10 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
   <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
   <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/lc_gif_player.css">
   <link rel="stylesheet" href="/css/main.css">
 </head>
-
-<body>
-<nav class="navbar is-dark" role="navigation" aria-label="main navigation">
+<body><nav class="navbar is-dark" role="navigation" aria-label="main navigation">
   <div class="container">
     <div class="navbar-brand">
       <span class="navbar-item"><img src="/img/logo.png"></span>
@@ -83,10 +81,8 @@
         
       </div>
     </div>
+  </div>
 </nav>
-
-
-
 
 <div class="container">
   <section class="section">
@@ -104,7 +100,7 @@
         <p>Turing Machine is a competitive board game designed by Fabin Gridel and Yoann Levet. The goal is to uncover a three-digit code using minimal tests. The game features machines with multiple cards, each performing an unknown test. For example, one card might test if one digit is smaller than three, but the specific digit being tested remains a mystery until uncovered through gameplay. Players must strategically use their tests to deduce the correct code.</p>
 <p>The game consists of code cards, criteria cards, and verification cards. Code cards represent the code being tested, while criteria cards specify the criteria that each code card could be testing. Verification cards provide the results of whether a code tests true or false for a specific criteria card. Changing the verification card changes the criterion being evaluated.</p>
 
- <figure>
+ <figure >
    <img src="/blog/2023/11/turing-machine-board-game/img/code_stacked.jpg" alt="Code cards representing code 145 stacked over a verification card. The test output is a single red square, representing a False outcome." />
    <figcaption>Code cards when stacked leave only one square visible in the verification card. This is the outcome of the test. Source <a href="https://whatsericplaying.com/2022/11/14/turing-machine/" target="_blank">What&rsquo;s Eric Playing?</a>
  .</figcaption>
@@ -117,10 +113,10 @@
  works.</p>
 <h2 id="code-pruning">Code pruning</h2>
 <p>The machine, equipped with criteria cards 9, 16, 25, 26, 47, and 48, can test various potential sub-criteria. Although card 48 alone offers nine possible tests, the machine as a whole can combine these criteria into 3,888 unique configurations.</p>
-<p>$$\text{PossibleConfigs} = \prod_{card_i} NumberSubCriteria(card_i)$$</p>
+$$\text{PossibleConfigs} = \prod_{card_i} NumberSubCriteria(card_i)$$
 <p>Out of these, only 332 form functional machines—those with a single valid code. This refinement process reduces the potential codes from an initial count of 125 to a final selection of just 89 valid options, without using any tests. Subsequently, the appropriate code and corresponding cards are selected for testing.</p>
 
- <figure>
+ <figure >
    <img src="/blog/2023/11/turing-machine-board-game/img/machine.png" alt="Example machine composed of criteria cards 9, 16, 25, 26, 47, 48." />
    <figcaption>Example machine composed of criteria cards 9, 16, 25, 26, 47, 48. Source <a href="https://turingmachine.info/" target="_blank">Turing Machine</a>
  .</figcaption>
@@ -133,7 +129,7 @@
 <p>The following image contains one example game. You can find the code for solving Turing Machines in this <a href="https://github.com/tncardoso/random/tree/main/boardgames/boardgames/turingmachine" target="_blank">repository</a>
 .</p>
 
- <figure>
+ <figure >
    <img src="/blog/2023/11/turing-machine-board-game/img/tmresult.png" alt="Image showing a terminal with a test run of solver." />
    <figcaption>Example run of the solver.</figcaption>
  </figure>
@@ -145,4 +141,15 @@
 </div>
 
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+<script>
+  MathJax = {
+    tex: {
+      displayMath: [['\\[', '\\]'], ['$$', '$$']],  
+      inlineMath: [['\\(', '\\)']]                  
+    }
+  };
+</script>
+
+</body>
+</html>

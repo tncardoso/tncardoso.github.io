@@ -1,20 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>boardgame on Thiago Cardoso</title>
+    <title>Boardgame on Thiago Cardoso</title>
     <link>https://tncardoso.com/tags/boardgame/</link>
-    <description>Recent content in boardgame on Thiago Cardoso</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Boardgame on Thiago Cardoso</description>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 26 Nov 2023 20:12:15 -0300</lastBuildDate><atom:link href="https://tncardoso.com/tags/boardgame/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 26 Nov 2023 20:12:15 -0300</lastBuildDate>
+    <atom:link href="https://tncardoso.com/tags/boardgame/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Turing Machine | Board Game</title>
       <link>https://tncardoso.com/blog/2023/11/turing-machine-board-game/</link>
       <pubDate>Sun, 26 Nov 2023 20:12:15 -0300</pubDate>
-      
       <guid>https://tncardoso.com/blog/2023/11/turing-machine-board-game/</guid>
       <description>Turing Machine is a competitive board game designed by Fabin Gridel and Yoann Levet. The goal is to uncover a three-digit code using minimal tests. The game features machines with multiple cards, each performing an unknown test. For example, one card might test if one digit is smaller than three, but the specific digit being tested remains a mystery until uncovered through gameplay. Players must strategically use their tests to deduce the correct code.</description>
     </item>
-    
   </channel>
 </rss>

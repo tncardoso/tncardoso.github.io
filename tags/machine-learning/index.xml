@@ -1,31 +1,33 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>machine-learning on Thiago Cardoso</title>
+    <title>Machine-Learning on Thiago Cardoso</title>
     <link>https://tncardoso.com/tags/machine-learning/</link>
-    <description>Recent content in machine-learning on Thiago Cardoso</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Machine-Learning on Thiago Cardoso</description>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 08 May 2023 08:00:10 -0300</lastBuildDate><atom:link href="https://tncardoso.com/tags/machine-learning/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 07 Jul 2024 11:28:56 -0300</lastBuildDate>
+    <atom:link href="https://tncardoso.com/tags/machine-learning/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Abstract Machine Learning Art</title>
+      <link>https://tncardoso.com/blog/2024/07/abstract-machine-learning-art/</link>
+      <pubDate>Sun, 07 Jul 2024 11:28:56 -0300</pubDate>
+      <guid>https://tncardoso.com/blog/2024/07/abstract-machine-learning-art/</guid>
+      <description>Moving to a new home, I was confronted with empty walls. Thinking about images to decorete them reminded of an old project: creating abstract art using machine learning.&#xA;It is fascinating to combine the rigidity of Linear Algebra with art and creativity. Inspired by the work of dribnet , I aimed to create abstract images that could deceive Machine Learning algorithms while still being recognizable to humans. Different from dribnet&amp;rsquo;s approach, my objective was to generate those images with an end-to-end differentiable approach.</description>
+    </item>
     <item>
       <title>Generative AI reading (and watching) list</title>
       <link>https://tncardoso.com/blog/2023/05/generative-ai-reading-and-watching-list/</link>
       <pubDate>Mon, 08 May 2023 08:00:10 -0300</pubDate>
-      
       <guid>https://tncardoso.com/blog/2023/05/generative-ai-reading-and-watching-list/</guid>
-      <description>Reading (and watching) list for getting started on Generative AI and Prompting.
-Prompt Engineering site OpenAI Cookbook : Example code for executing tasks with the OpenAI API. course Prompt Engineering: How to Talk to the AIs : A compact introduction and some advanced topics in prompt engineering by Xavier Amatriain. course ChatGPT Prompt Engineering for Developers : DeepLearning.ai course on prompt engineering. post Brex&amp;rsquo;s Prompt Engineering Guide : Prompt engineering guide created by Brex.</description>
+      <description>Reading (and watching) list for getting started on Generative AI and Prompting.&#xA;Prompt Engineering site OpenAI Cookbook : Example code for executing tasks with the OpenAI API. course Prompt Engineering: How to Talk to the AIs : A compact introduction and some advanced topics in prompt engineering by Xavier Amatriain. course ChatGPT Prompt Engineering for Developers : DeepLearning.ai course on prompt engineering. post Brex&amp;rsquo;s Prompt Engineering Guide : Prompt engineering guide created by Brex.</description>
     </item>
-    
     <item>
       <title>Machine Learning reading (and watching) list</title>
       <link>https://tncardoso.com/blog/2020/10/machine-learning-reading-and-watching-list/</link>
       <pubDate>Thu, 08 Oct 2020 18:56:10 -0300</pubDate>
-      
       <guid>https://tncardoso.com/blog/2020/10/machine-learning-reading-and-watching-list/</guid>
-      <description>Reading (and watching) list for getting started on Machine Learning.
-Foundation course Andrew Ng&amp;rsquo;s Machine Learning Course : A good starting point. Although it is not recent, the course is a good overview of Machine Learning methods. course Deep Learning Specialization : Andrew&amp;rsquo;s specialization on Deep Learning methods that hold state of the art in many applications. course Structuring Machine Learning Projects : A course of the Deep Learning specialization that deserves mention.</description>
+      <description>Reading (and watching) list for getting started on Machine Learning.&#xA;Foundation course Andrew Ng&amp;rsquo;s Machine Learning Course : A good starting point. Although it is not recent, the course is a good overview of Machine Learning methods. course Deep Learning Specialization : Andrew&amp;rsquo;s specialization on Deep Learning methods that hold state of the art in many applications. course Structuring Machine Learning Projects : A course of the Deep Learning specialization that deserves mention.</description>
     </item>
-    
   </channel>
 </rss>

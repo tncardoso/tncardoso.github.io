@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html>
-<head>
+<html><head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>
@@ -43,11 +42,10 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
   <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
   <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/lc_gif_player.css">
   <link rel="stylesheet" href="/css/main.css">
 </head>
-
-<body>
-<nav class="navbar is-dark" role="navigation" aria-label="main navigation">
+<body><nav class="navbar is-dark" role="navigation" aria-label="main navigation">
   <div class="container">
     <div class="navbar-brand">
       <span class="navbar-item"><img src="/img/logo.png"></span>
@@ -83,10 +81,8 @@
         
       </div>
     </div>
+  </div>
 </nav>
-
-
-
 
 <div class="container">
   <section class="section">
@@ -134,7 +130,7 @@ outputs via serial port using a computer. Also, resistors are used for
 each connection in order to protect the board and reduce the voltage
 used for keeping inputs idle.</p>
 
-<figure>
+<figure >
   <img src="/blog/2014/09/gaming-for-the-lazy/img/board.jpg" alt="An arduino board connected to a breadboard" />
   <figcaption>The hardware used</figcaption>
 </figure>
@@ -154,9 +150,12 @@ previously recorded session leads to exactly the same outcome.</p>
 <p>In the following video you can see a playback of Sonic&rsquo;s first stage,
 fully controlled by Arduino.</p>
 
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/4H-_ebr436g" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
+
+    
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/4H-_ebr436g?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
+      ></iframe>
+    </div>
 
 <h2 id="now-its-on-you">Now it&rsquo;s on you</h2>
 <p>If you want to dive into the details of Master Arduino Controller, just
@@ -171,4 +170,15 @@ under a three-clause BSD license and go for it.</p>
 </div>
 
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+<script>
+  MathJax = {
+    tex: {
+      displayMath: [['\\[', '\\]'], ['$$', '$$']],  
+      inlineMath: [['\\(', '\\)']]                  
+    }
+  };
+</script>
+
+</body>
+</html>

@@ -4,148 +4,114 @@
     <title>Thiago Cardoso</title>
     <link>https://tncardoso.com/</link>
     <description>Recent content on Thiago Cardoso</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 26 Nov 2023 20:12:15 -0300</lastBuildDate><atom:link href="https://tncardoso.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 07 Jul 2024 11:28:56 -0300</lastBuildDate>
+    <atom:link href="https://tncardoso.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Abstract Machine Learning Art</title>
+      <link>https://tncardoso.com/blog/2024/07/abstract-machine-learning-art/</link>
+      <pubDate>Sun, 07 Jul 2024 11:28:56 -0300</pubDate>
+      <guid>https://tncardoso.com/blog/2024/07/abstract-machine-learning-art/</guid>
+      <description>Moving to a new home, I was confronted with empty walls. Thinking about images to decorete them reminded of an old project: creating abstract art using machine learning.&#xA;It is fascinating to combine the rigidity of Linear Algebra with art and creativity. Inspired by the work of dribnet , I aimed to create abstract images that could deceive Machine Learning algorithms while still being recognizable to humans. Different from dribnet&amp;rsquo;s approach, my objective was to generate those images with an end-to-end differentiable approach.</description>
+    </item>
     <item>
       <title>Turing Machine | Board Game</title>
       <link>https://tncardoso.com/blog/2023/11/turing-machine-board-game/</link>
       <pubDate>Sun, 26 Nov 2023 20:12:15 -0300</pubDate>
-      
       <guid>https://tncardoso.com/blog/2023/11/turing-machine-board-game/</guid>
       <description>Turing Machine is a competitive board game designed by Fabin Gridel and Yoann Levet. The goal is to uncover a three-digit code using minimal tests. The game features machines with multiple cards, each performing an unknown test. For example, one card might test if one digit is smaller than three, but the specific digit being tested remains a mystery until uncovered through gameplay. Players must strategically use their tests to deduce the correct code.</description>
     </item>
-    
     <item>
       <title>sec/gdb</title>
       <link>https://tncardoso.com/snippets/sec_gdb/</link>
       <pubDate>Wed, 13 Sep 2023 08:00:23 -0300</pubDate>
-      
       <guid>https://tncardoso.com/snippets/sec_gdb/</guid>
-      <description>Coredump Dumping the process memory can be useful for recovering data.
-$ # get the process pid $ pgrep -l app_name $ # attach gdb and dump core, this will kill the app $ gdb &amp;lt;pid&amp;gt; gcore app.dump quit $ # find data in dump $ strings app.dump | grep &amp;quot;what i want to find&amp;quot; </description>
+      <description>Coredump Dumping the process memory can be useful for recovering data.&#xA;$ # get the process pid $ pgrep -l app_name $ # attach gdb and dump core, this will kill the app $ gdb &amp;lt;pid&amp;gt; gcore app.dump quit $ # find data in dump $ strings app.dump | grep &amp;quot;what i want to find&amp;quot; </description>
     </item>
-    
     <item>
       <title>Generative AI reading (and watching) list</title>
       <link>https://tncardoso.com/blog/2023/05/generative-ai-reading-and-watching-list/</link>
       <pubDate>Mon, 08 May 2023 08:00:10 -0300</pubDate>
-      
       <guid>https://tncardoso.com/blog/2023/05/generative-ai-reading-and-watching-list/</guid>
-      <description>Reading (and watching) list for getting started on Generative AI and Prompting.
-Prompt Engineering site OpenAI Cookbook : Example code for executing tasks with the OpenAI API. course Prompt Engineering: How to Talk to the AIs : A compact introduction and some advanced topics in prompt engineering by Xavier Amatriain. course ChatGPT Prompt Engineering for Developers : DeepLearning.ai course on prompt engineering. post Brex&amp;rsquo;s Prompt Engineering Guide : Prompt engineering guide created by Brex.</description>
+      <description>Reading (and watching) list for getting started on Generative AI and Prompting.&#xA;Prompt Engineering site OpenAI Cookbook : Example code for executing tasks with the OpenAI API. course Prompt Engineering: How to Talk to the AIs : A compact introduction and some advanced topics in prompt engineering by Xavier Amatriain. course ChatGPT Prompt Engineering for Developers : DeepLearning.ai course on prompt engineering. post Brex&amp;rsquo;s Prompt Engineering Guide : Prompt engineering guide created by Brex.</description>
     </item>
-    
     <item>
       <title>ml/optimizers</title>
       <link>https://tncardoso.com/snippets/ml_optimizer/</link>
       <pubDate>Fri, 05 May 2023 08:18:43 -0300</pubDate>
-      
       <guid>https://tncardoso.com/snippets/ml_optimizer/</guid>
-      <description>Lion Lion is an learned optimizer that only uses the gradient sign for the update vector. The paper Symbolic Discovery of Optimization Algorithms presents how they used symbolic AI.
-def train(weight, gradient, momentum, lr): # default beta1 = 0.9, beta2 = 0.99 # only tracks momentum and uses sign to compute update update = interp(gradient, momentum, beta1) update = sign(update) momentum = interp(gradient, momentum, beta2) # regular weight decay weight_decay = weight * lambda update = update + weight_decay update = update * lr return update, momentum </description>
+      <description>Lion Lion is an learned optimizer that only uses the gradient sign for the update vector. The paper Symbolic Discovery of Optimization Algorithms presents how they used symbolic AI.&#xA;def train(weight, gradient, momentum, lr): # default beta1 = 0.9, beta2 = 0.99 # only tracks momentum and uses sign to compute update update = interp(gradient, momentum, beta1) update = sign(update) momentum = interp(gradient, momentum, beta2) # regular weight decay weight_decay = weight * lambda update = update + weight_decay update = update * lr return update, momentum </description>
     </item>
-    
     <item>
       <title>devices/huion</title>
       <link>https://tncardoso.com/snippets/devices_huion/</link>
       <pubDate>Thu, 03 Jun 2021 13:18:43 -0300</pubDate>
-      
       <guid>https://tncardoso.com/snippets/devices_huion/</guid>
-      <description>Map device to primary monitor It is possible to list devices using xsetwacom.
-$ xsetwacom --list devices HUION Huion Tablet Pad pad id: 16	type: PAD HUION Huion Tablet Pen stylus id: 17	type: STYLUS The following script can be used to map the device:
-$ xsetwacom set &amp;quot;HUION Huion Tablet Pen stylus&amp;quot; MapToOutput &amp;quot;HEAD-1&amp;quot; $ xsetwacom set &amp;quot;HUION Huion Tablet Pad pad&amp;quot; MapToOutput &amp;quot;HEAD-1&amp;quot; Set coordinates when dealing with multiple monitors:</description>
+      <description>Map device to primary monitor It is possible to list devices using xsetwacom.&#xA;$ xsetwacom --list devices HUION Huion Tablet Pad pad id: 16&#x9;type: PAD HUION Huion Tablet Pen stylus id: 17&#x9;type: STYLUS The following script can be used to map the device:&#xA;$ xsetwacom set &amp;quot;HUION Huion Tablet Pen stylus&amp;quot; MapToOutput &amp;quot;HEAD-1&amp;quot; $ xsetwacom set &amp;quot;HUION Huion Tablet Pad pad&amp;quot; MapToOutput &amp;quot;HEAD-1&amp;quot; Set coordinates when dealing with multiple monitors:</description>
     </item>
-    
     <item>
       <title>git-wormhole: generating partial collisions in commits</title>
       <link>https://tncardoso.com/blog/2021/03/git-wormhole-generating-partial-collisions-in-commits/</link>
       <pubDate>Sat, 27 Mar 2021 16:40:10 -0300</pubDate>
-      
       <guid>https://tncardoso.com/blog/2021/03/git-wormhole-generating-partial-collisions-in-commits/</guid>
-      <description>If you tried to add a substring from the git commit hash to your software version, you may have noticed that it is not easy (or possible). For example, imagine you want to version your software as &amp;ldquo;0.0.0-aabbccdd&amp;rdquo;, being &amp;ldquo;aabbccdd&amp;rdquo; the commit&amp;rsquo;s prefix in which this version was defined.
-It turns out that the git hash is the sha1 of multiple pieces of information: the repository tree hash, the parent commit, author and committer name and email, Unix timestamp, timezone offset and message.</description>
+      <description>If you tried to add a substring from the git commit hash to your software version, you may have noticed that it is not easy (or possible). For example, imagine you want to version your software as &amp;ldquo;0.0.0-aabbccdd&amp;rdquo;, being &amp;ldquo;aabbccdd&amp;rdquo; the commit&amp;rsquo;s prefix in which this version was defined.&#xA;It turns out that the git hash is the sha1 of multiple pieces of information: the repository tree hash, the parent commit, author and committer name and email, Unix timestamp, timezone offset and message.</description>
     </item>
-    
     <item>
       <title>Machine Learning reading (and watching) list</title>
       <link>https://tncardoso.com/blog/2020/10/machine-learning-reading-and-watching-list/</link>
       <pubDate>Thu, 08 Oct 2020 18:56:10 -0300</pubDate>
-      
       <guid>https://tncardoso.com/blog/2020/10/machine-learning-reading-and-watching-list/</guid>
-      <description>Reading (and watching) list for getting started on Machine Learning.
-Foundation course Andrew Ng&amp;rsquo;s Machine Learning Course : A good starting point. Although it is not recent, the course is a good overview of Machine Learning methods. course Deep Learning Specialization : Andrew&amp;rsquo;s specialization on Deep Learning methods that hold state of the art in many applications. course Structuring Machine Learning Projects : A course of the Deep Learning specialization that deserves mention.</description>
+      <description>Reading (and watching) list for getting started on Machine Learning.&#xA;Foundation course Andrew Ng&amp;rsquo;s Machine Learning Course : A good starting point. Although it is not recent, the course is a good overview of Machine Learning methods. course Deep Learning Specialization : Andrew&amp;rsquo;s specialization on Deep Learning methods that hold state of the art in many applications. course Structuring Machine Learning Projects : A course of the Deep Learning specialization that deserves mention.</description>
     </item>
-    
     <item>
       <title>LCD custom characters library</title>
       <link>https://tncardoso.com/blog/2020/07/lcd-custom-characters-library/</link>
       <pubDate>Sun, 26 Jul 2020 14:56:10 -0300</pubDate>
-      
       <guid>https://tncardoso.com/blog/2020/07/lcd-custom-characters-library/</guid>
-      <description>If you use LCD components(1602, HD44780) and haven&amp;rsquo;t given up to modern OLEDs and e-ink displays, the chances are that you know the possibility of using custom characters.
-I was searching for some cut-and-paste characters for a project but could not find an easy solution. For that reason, I decided to assemble an editor and library with some characters.
-The editor with a selection of ready-to-use characters. You can access a live version of the project here , and the source code is available on Github .</description>
+      <description>If you use LCD components(1602, HD44780) and haven&amp;rsquo;t given up to modern OLEDs and e-ink displays, the chances are that you know the possibility of using custom characters.&#xA;I was searching for some cut-and-paste characters for a project but could not find an easy solution. For that reason, I decided to assemble an editor and library with some characters.&#xA;The editor with a selection of ready-to-use characters. You can access a live version of the project here , and the source code is available on Github .</description>
     </item>
-    
     <item>
       <title>Padoca: hotkey keyboard</title>
       <link>https://tncardoso.com/blog/2020/07/padoca-hotkey-keyboard/</link>
       <pubDate>Sun, 19 Jul 2020 18:36:30 -0300</pubDate>
-      
       <guid>https://tncardoso.com/blog/2020/07/padoca-hotkey-keyboard/</guid>
       <description>Online meetings became widespread during the 2020 COVID pandemic. Call etiquette mandates that you keep your microphone muted while not talking, as almost everyone knows. This mute-unmute dynamic inspired me to search for a more comfortable solution that didn&amp;rsquo;t involve pressing multiple keys on the keyboard or reaching for the mouse every time. Luckily I stumbled upon this Instructable by FabroLabs Technologies . I decided to give it a try and build a hotkey keyboard from scratch: the casing, circuit, firmware, and keycaps.</description>
     </item>
-    
     <item>
       <title>Eletronic Voting</title>
       <link>https://tncardoso.com/projects/eletronic-voting/</link>
       <pubDate>Tue, 09 Jan 2018 17:18:43 -0300</pubDate>
-      
       <guid>https://tncardoso.com/projects/eletronic-voting/</guid>
       <description>Security assessment of brazilian voting machines.</description>
     </item>
-    
     <item>
       <title>apps/dbeaver</title>
       <link>https://tncardoso.com/snippets/apps_dbeaver/</link>
       <pubDate>Sat, 09 Sep 2017 17:18:43 -0300</pubDate>
-      
       <guid>https://tncardoso.com/snippets/apps_dbeaver/</guid>
-      <description>Single connection mode dbeaver usually opens multiple connections to databases. If you have limited connections, then it is necessary to restrict the pool size or connection numbers. Since dbeaver does not have a &amp;ldquo;Single connection mode&amp;rdquo;, a few tweaks are necessary.
-Disable using one exclusive connection for metadata:
-Uncheck: &amp;gt; File &amp;gt; Properties &amp;gt; Metadata &amp;gt; Open separate connection for metadata read Disable using exclusive connections for SQL Editors:
-Uncheck: &amp;gt; Right mouse click in SQL Editor &amp;gt; Preferences &amp;gt; DBeaver &amp;gt; Editors &amp;gt; SQL Editor &amp;gt; Open separate connection for each editor </description>
+      <description>Single connection mode dbeaver usually opens multiple connections to databases. If you have limited connections, then it is necessary to restrict the pool size or connection numbers. Since dbeaver does not have a &amp;ldquo;Single connection mode&amp;rdquo;, a few tweaks are necessary.&#xA;Disable using one exclusive connection for metadata:&#xA;Uncheck: &amp;gt; File &amp;gt; Properties &amp;gt; Metadata &amp;gt; Open separate connection for metadata read Disable using exclusive connections for SQL Editors:&#xA;Uncheck: &amp;gt; Right mouse click in SQL Editor &amp;gt; Preferences &amp;gt; DBeaver &amp;gt; Editors &amp;gt; SQL Editor &amp;gt; Open separate connection for each editor </description>
     </item>
-    
     <item>
       <title>Dermis</title>
       <link>https://tncardoso.com/projects/dermis/</link>
       <pubDate>Sat, 09 Sep 2017 17:18:43 -0300</pubDate>
-      
       <guid>https://tncardoso.com/projects/dermis/</guid>
       <description>Dermis is an experiment on libc debugging.</description>
     </item>
-    
     <item>
       <title>Gaming for the lazy</title>
       <link>https://tncardoso.com/blog/2014/09/gaming-for-the-lazy/</link>
       <pubDate>Mon, 01 Sep 2014 16:16:30 -0200</pubDate>
-      
       <guid>https://tncardoso.com/blog/2014/09/gaming-for-the-lazy/</guid>
-      <description>I come from a time when gaming was serious business. You could not beat a game without hours of continuous effort. There was no such thing as saving your progress and the only difficulty level was &amp;lsquo;Hard&amp;rsquo;.
-Once, as a kid, I was playing Sonic when someone accidentally kicked the videogame, making the screen go black. After moments of tension, images suddenly returned, surprisingly, in the final stage of the game.</description>
+      <description>I come from a time when gaming was serious business. You could not beat a game without hours of continuous effort. There was no such thing as saving your progress and the only difficulty level was &amp;lsquo;Hard&amp;rsquo;.&#xA;Once, as a kid, I was playing Sonic when someone accidentally kicked the videogame, making the screen go black. After moments of tension, images suddenly returned, surprisingly, in the final stage of the game.</description>
     </item>
-    
     <item>
       <title>artreepie, a procedural art bot</title>
       <link>https://tncardoso.com/blog/2014/08/artreepie-a-procedural-art-bot/</link>
       <pubDate>Sat, 09 Aug 2014 16:16:30 -0200</pubDate>
-      
       <guid>https://tncardoso.com/blog/2014/08/artreepie-a-procedural-art-bot/</guid>
-      <description>Last week, I stumbled upon a great stackexchange discussion on procedural art . The idea was to come up with three code snippets that would be used to generate an image. More specifically, each snippet &amp;ndash; one for each color channel (R, G, B) &amp;ndash; is a function that, given a pixel coordinate, returns its intensity. Each snippet should fit in a single tweet.
-This very interesting exercise inspired me into creating @artreepie .</description>
+      <description>Last week, I stumbled upon a great stackexchange discussion on procedural art . The idea was to come up with three code snippets that would be used to generate an image. More specifically, each snippet &amp;ndash; one for each color channel (R, G, B) &amp;ndash; is a function that, given a pixel coordinate, returns its intensity. Each snippet should fit in a single tweet.&#xA;This very interesting exercise inspired me into creating @artreepie .</description>
     </item>
-    
   </channel>
 </rss>
