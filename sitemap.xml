@@ -2,22 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://tncardoso.com/blog/</loc>
+    <lastmod>2025-01-07T13:00:00-03:00</lastmod>
+  </url><url>
+    <loc>https://tncardoso.com/tags/machine-learning/</loc>
+    <lastmod>2025-01-07T13:00:00-03:00</lastmod>
+  </url><url>
+    <loc>https://tncardoso.com/tags/pt/</loc>
+    <lastmod>2025-01-07T13:00:00-03:00</lastmod>
+  </url><url>
+    <loc>https://tncardoso.com/tags/</loc>
+    <lastmod>2025-01-07T13:00:00-03:00</lastmod>
+  </url><url>
+    <loc>https://tncardoso.com/</loc>
+    <lastmod>2025-01-07T13:00:00-03:00</lastmod>
+  </url><url>
+    <loc>https://tncardoso.com/blog/2025/01/trabalhando-com-ia-e-aprendizagem-de-m%C3%A1quina/</loc>
+    <lastmod>2025-01-07T13:00:00-03:00</lastmod>
+  </url><url>
+    <loc>https://tncardoso.com/snippets/</loc>
+    <lastmod>2024-11-01T08:18:43-03:00</lastmod>
+  </url><url>
+    <loc>https://tncardoso.com/snippets/talks/</loc>
+    <lastmod>2024-11-01T08:18:43-03:00</lastmod>
+  </url><url>
     <loc>https://tncardoso.com/blog/2024/07/abstract-machine-learning-art/</loc>
     <lastmod>2024-07-07T11:28:56-03:00</lastmod>
   </url><url>
     <loc>https://tncardoso.com/tags/art/</loc>
-    <lastmod>2024-07-07T11:28:56-03:00</lastmod>
-  </url><url>
-    <loc>https://tncardoso.com/blog/</loc>
-    <lastmod>2024-07-07T11:28:56-03:00</lastmod>
-  </url><url>
-    <loc>https://tncardoso.com/tags/machine-learning/</loc>
-    <lastmod>2024-07-07T11:28:56-03:00</lastmod>
-  </url><url>
-    <loc>https://tncardoso.com/tags/</loc>
-    <lastmod>2024-07-07T11:28:56-03:00</lastmod>
-  </url><url>
-    <loc>https://tncardoso.com/</loc>
     <lastmod>2024-07-07T11:28:56-03:00</lastmod>
   </url><url>
     <loc>https://tncardoso.com/tags/boardgame/</loc>
@@ -25,9 +37,6 @@
   </url><url>
     <loc>https://tncardoso.com/blog/2023/11/turing-machine-board-game/</loc>
     <lastmod>2023-11-26T20:12:15-03:00</lastmod>
-  </url><url>
-    <loc>https://tncardoso.com/snippets/</loc>
-    <lastmod>2023-09-13T08:00:23-03:00</lastmod>
   </url><url>
     <loc>https://tncardoso.com/snippets/sec_gdb/</loc>
     <lastmod>2023-09-13T08:00:23-03:00</lastmod>

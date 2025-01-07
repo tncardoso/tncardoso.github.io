@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Thiago Cardoso's personal website">
+  <title>
+    
+    
+      
+        Thiago Cardoso :: Trabalhando com IA e Aprendizagem de Máquina
+      
+    
+  </title>
+
+  
+  <script data-goatcounter="https://tncardoso.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+
+  
+  const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+  
+  $navbarBurgers.forEach( el => {
+    el.addEventListener('click', () => {
+
+      
+      const target = el.dataset.target;
+      const $target = document.getElementById(target);
+
+      
+      el.classList.toggle('is-active');
+      $target.classList.toggle('is-active');
+
+    });
+  });
+
+});
+  </script>
+
+  <link rel="icon" type="image/png" href="/img/favicon.png">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+  <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/lc_gif_player.css">
+  <link rel="stylesheet" href="/css/main.css">
+</head>
+<body><nav class="navbar is-dark" role="navigation" aria-label="main navigation">
+  <div class="container">
+    <div class="navbar-brand">
+      <span class="navbar-item"><img src="/img/logo.png"></span>
+
+      <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+
+    <div id="navbarBasicExample" class="navbar-menu">
+      <div class="navbar-start">
+      </div>
+
+      <div class="navbar-end">
+        
+          
+          <a class="navbar-item" href="https://tncardoso.com/">About</a>
+          
+        
+          
+          <a class="navbar-item" href="https://tncardoso.com/blog">Blog</a>
+          
+        
+          
+          <a class="navbar-item" href="https://tncardoso.com/projects">Projects</a>
+          
+        
+          
+          <a class="navbar-item" href="https://scholar.google.com/citations?user=XLih4b8AAAAJ" target="_blank">Publications</a>
+          
+        
+      </div>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+  <section class="section">
+    <div class="container">
+      <h1 class="title has-text-grey-dark">Trabalhando com IA e Aprendizagem de Máquina</h1>
+      <p class="subtitle">
+        <span class="post-date"><time datetime='2025-01-07T13:00:00-03:00'>
+          
+            2025-01-07
+          
+        </time></span>
+      </p>
+
+      <div class="content">
+        <p>Já me perguntaram algumas vezes como uma pessoa pode se preparar para a área de Dados / Inteligência Artificial. Por ser uma área em constante (e rápida) evolução, faltam materiais e direcionais que se mantenham relevantes por mais tempo. Nesse texto vou compartilhar minha perspectiva sobre quais habilidades e conhecimentos são essenciais.</p>
+<p>Se você já pesquisou sobre como se preparar para a área, provavelmente já se deparou com a importância de temas como programação, estatística, aprendizagem de máquina e resolução de problemas. Existe bastante conteúdo específico sobre estes temas, então vou focar em habilidades menos exploradas: a importância da programação, os fundamentos da computação e o pensamento sistêmico.</p>
+<h2 id="programação-primeiro-ia-depois">Programação primeiro, IA depois</h2>
+<p>A programação é nossa forma de comunicar com os computadores: é a ferramenta que transforma ideias em resultados concretos. Uma maior fluência significa conseguir fazer essa tradução de forma mais eficiente e rápida. Além disso, ser um bom programador irá expandir o leque de possibilidades e irá permitir que você navegue com mais habilidade pelos desafios técnicos, sendo um conhecimento essencial para qualquer profissional que deseje atuar na área de IA.</p>
+<p>Em ambientes maduros, com integrações já construídas, interfaces entre modelos e produtos bem definidas, ferramental auxiliar disponível, e sistemas de AutoML (Automated Machine Learning), a necessidade de programar e conhecer os fundamentos de computação é reduzida. O profissional pode focar apenas em definir o problema, modelo, os atributos adequados, e o impacto em negócio.</p>
+<p>Por outro lado, na realidade quase nunca encontramos esse tipo de ambiente . Em alguns casos o ambiente ainda é imaturo, o produto ainda está sendo desenvolvido, estamos experimentando com novas funcionalidades ou a empresa é inovadora e cria novos produtos constantemente. Em ambientes muito dinâmicos acaba que a necessidade de construir as integrações dos modelos (a &ldquo;última milha&rdquo;) sempre vai existir. Quanto mais versátil for o seu perfil, significa que mais modelos você será capaz de colocar em produção, tomando decisões reais, com usuários reais.</p>
+<p>Além disso, quanto mais confortável com diferentes tecnologias, linguagens, bibliotecas, e produtos você estiver, maior será sua &ldquo;caixa de ferramentas&rdquo;. Isso irá te ajudar a identificar novas oportunidades mais facilmente, além de oportunidades de otimização nos processos e sistemas existentes.</p>
+<p>Por exemplo, imagine que você está construindo um sistema para recomendar produtos para uma pessoa. Se a interface ainda não existe, você poderia começar a validar sua ideia enviando um email com as recomendações. Conhecer as APIs de envio de email ajudariam você a pensar nessa ideia além de implementar em tempo recorde o experimento.</p>
+<h2 id="o-poder-dos-fundamentos">O poder dos fundamentos</h2>
+<p>Existe um debate frequente na internet sobre a importância de se ter uma formação em Computação, seja para atuar em IA ou desenvolvimento. Conheço excelentes programadores com diferentes formações e, apesar de ser possível aprender qualquer coisa na internet hoje, o curso de graduação tem um diferencial: o foco em fundamentos.</p>
+<p>Quando falo em fundamentos me refiro ao conhecimento de como funciona um computador, o que é uma rede, como avaliar algoritmos, como as APIs se comunicam e quais os princípios que regem a computação como um todo. Em um cenário de transformação acelerada, esse é o conjunto de habilidades que se mantém útil por mais tempo, além de servirem como blocos básicos que aceleram o aprendizado de conceitos mais complexos.</p>
+<p>Existem alguns exemplos que gosto para ilustrar o poder dos fundamentos: o aprendizado de novas linguagens de programação, os desafios de se depurar problemas e o acompanhamento das novidades em IA Generativa.</p>
+<ol>
+<li>
+<p>Algumas pessoas se identificam como programadores de Java, Python, C# ou outras linguagens específicas. Ao se deparar com uma nova linguagem, é como se precisassem aprender a programar do zero. No entanto, se você compreende os fundamentos de linguagens: qual seu paradigma, tipagem e como a memória é gerenciada, você é capaz de construir um modelo mental sobre como programar com essa nova linguagem. Conhecer a anatomia da linguagem irá acelerar muito seu aprendizado.</p>
+</li>
+<li>
+<p>Nossos modelos e sistemas tem várias dependências e nem sempre as coisas saem como planejado. Em alguns casos, acompanhei profissionais que gastaram um tempo significativo tentando entender um problema em seu modelo que, na verdade, era um erro de chamada de API. Conhecer as chamadas HTTP teria economizado mais de um dia de trabalho deste profissional.</p>
+</li>
+<li>
+<p>Por fim, isso se aplica também aos conhecimentos de Dados e IA. Nos últimos anos vimos um aumento significativo nos artigos que tratam de Large Language Models (LLM): novas otimizações, melhorias nos algoritmos, ajustes em funções de ativação, entre outros. Apesar disso, a arquitetura base (Transformers) continua muito próxima da publicada no artigo <a href="https://arxiv.org/abs/1706.03762" target="_blank">Attention is All You Need</a>
+ de 2017. Ou seja, acompanhar a avalanche de novos artigos, conceitos e aplicações, se torna muito mais fácil quando se tem o conhecimento base.</p>
+</li>
+</ol>
+
+ <figure >
+   <img src="/blog/2025/01/trabalhando-com-ia-e-aprendizagem-de-m%C3%A1quina/img/publications.png" alt="Entre 2010 e 2022 o número de publicações em IA quase triplicaram, atingindo mais de 240.000 em 2022. Fonte [AI Index](https://aiindex.stanford.edu/report/)." />
+   <figcaption>Entre 2010 e 2022 o número de publicações em IA quase triplicaram, atingindo mais de 240.000 em 2022. Fonte <a href="https://aiindex.stanford.edu/report/" target="_blank">AI Index</a>
+ .</figcaption>
+ </figure>
+
+<p>Toda essa base teórica pode ser crucial para enfrentar problemas complexos e ajudar a te manter atualizado. Embora existam muitos caminhos para seguir na área de IA, a graduação em Computação (ou curso correlato) pode te ajudar a ser um profissional versátil e bem preparado para os desafios técnicos e éticos do setor.</p>
+<h2 id="pensamento-sistêmico-e-resolução-de-problemas">Pensamento sistêmico e resolução de problemas</h2>
+<p>Construir sistemas que utilizam Inteligência Artificial é bem diferente de construir produtos &ldquo;tradicionais&rdquo;. Você não está resolvendo uma demanda pontual, e sim criando um sistema que amadurece e evolui ao longo do tempo. Isto é feito por meio de um ciclo virtuoso que começa quando os usuários interagem com a IA gerando dados que retroalimentam os modelos, processos e produtos. Essas melhorias acabam atraindo novos usuários que também passam a gerar os dados utilizados no amadurecimento dos sistemas, estabelecendo assim um ciclo.</p>
+
+ <figure >
+   <img src="/blog/2025/01/trabalhando-com-ia-e-aprendizagem-de-m%C3%A1quina/img/feedback.png" alt="Ciclo virtuso de modelos de Aprendizagem de Máquina. Usuários geram dados de treinamento a partir de feedback. Os dados são utilizados para melhorar o serviço que atrai novos usuários." />
+   <figcaption>Ciclo virtuso de modelos de Aprendizagem de Máquina. Usuários geram dados de treinamento a partir de feedback. Os dados são utilizados para melhorar o serviço que atrai novos usuários.</figcaption>
+ </figure>
+
+<p>A IA deve ser pensada não como uma funcionalidade isolada e sim como a construção do ciclo acima. E para que este ciclo funcione é preciso entender quais os pontos fortes e fracos da IA, como se comunicar com o usuário e como construir os loops que irão retroalimentar o modelo e melhorar a experiência.</p>
+<p>O Google desenvolveu o guia &ldquo;<a href="https://pair.withgoogle.com/" target="_blank">People+AI Research</a>
+&rdquo; com exemplos de boas práticas para integração de IA em produtos. Um exemplo de boa prática é sempre compartilhar com o usuário a explicação das predições. No Netflix isso aparece nas recomendações como: &ldquo;porque você gostou da série A&rdquo;.
+Outra boa prática é a possibilidade de receber feedback do usuário como o &ldquo;thumbs up / like&rdquo; e &ldquo;thumbs down / dislike&rdquo;. Seguir este guia irá ajudar a construir bons ciclos virtuosos que fortalecem a confiança e satisfação dos usuários.</p>
+<p>Pensar no sistema significa pensar, também, no resultado do negócio. A viabilidade e utilidade de um modelo está intimamente conectada com sua eficácia e custo. Por exemplo, imagine um cenário em que a nova versão de um modelo gera um ganho de acurácia a partir de um aumento de custo de processamento. O deploy deste modelo só faz sentido se os ganhos em negócio compensarem os novos custos.</p>
+<h2 id="escalando-desenvolvimento-vs-escalando-ia">Escalando Desenvolvimento vs Escalando IA</h2>
+<p>Outro argumento a favor de ser um bom programador e focar nos fundamentos é a diferença de dificuldade entre escalar o conhecimento de aprendizagem de máquina e o desenvolvimento de software. Considere dois cenários:</p>
+<ol>
+<li>O time A contém somente especialistas em Inteligência Artificial e Estatística e um único engenheiro de software experiente.</li>
+<li>O time B contém somente especialistas em Engenharia de Software e apenas uma pessoa experiente em Inteligência Artificial.</li>
+</ol>
+<p>Qual time você acredita que consegue construir soluções práticas mais rápido? O time A com certeza terá um grande número de ideias inovadoras e aplicações interessantes, porém pode esbarrar na dificuldade técnica da implementação. Já no time B, uma &ldquo;consultoria&rdquo; com o especialista em IA é normalmente suficiente para colocar o time na direção correta. Greg Brockman, um dos fundadores da OpenAI, parece ter uma visão parecida.</p>
+<blockquote>
+<p>As pessoas normalmente perguntam se Aprendizagem de Máquina ou habilidades de software são o gargalo para o progresso em IA. Essa é a pergunta incorreta - ambas são inestimáveis, e as pessoas com as duas habilidades podem ter um impacto descomunal. Apesar disso, nós achamos mais fácil ensinar as pessoas Aprendizagem de Máquina, quando necessário, do que Engenharia de Software.</p>
+<p>– <a href="https://x.com/gdb/status/1729893902814192096?s=09&amp;t=5ou2FDBsURPmv-6LGYyHqQ" target="_blank">Greg Brockman</a>
+</p>
+</blockquote>
+<p>Cada linha de código escrita traz decisões que afetam a arquitetura, organização e desempenho dos sistemas. Assim, embora um especialista em desenvolvimento possa oferecer orientação valiosa para equipes de IA, o impacto de sua mentoria é limitado. Um breve ponto de contato não é suficiente para impulsionar significativamente os resultados.</p>
+<p>Em contrapartida, um time composto por programadores habilidosos, mas com menos experiência em IA, pode se beneficiar significativamente da presença de um especialista. Tal especialista tem a capacidade de trabalhar colaborativamente com a equipe para modelar o problema, definir os atributos certos e posteriormente avaliar os resultados. Ou seja, o especialista em IA constroi o plano que é concretizado pelo time.</p>
+<p>No mundo real, os diferentes integrantes de um time terão forças e pontos de desenvolvimento diferentes. Essa diversidade de perfis é o que traz diferentes pontos de vista e riquezas para as soluções construídas. Contudo, quanto mais conhecimento horizontal você tiver, mais versatilidade para aplicar IA. Essa adaptabilidade é chave para maximizar seu impacto e alcançar o sucesso profissional na área.</p>
+<h2 id="na-prática">Na prática</h2>
+<p>Neste texto compartilhei minha visão sobre a importância dos fundamentos da computação além dos conhecimentos mais comuns da área de Dados e IA. Mas por onde começar? Seguem alguns conceitos úteis e materiais relevantes.</p>
+<ul>
+<li>Fundamentos de Computação
+<ul>
+<li><a href="https://code.energy/computer-science-distilled/" target="_blank">Livro Computer Science Distilled</a>
+: livro com uma visão geral de um curso de computação.</li>
+<li><a href="https://www.coursera.org/specializations/algorithms" target="_blank">Algoritmos e Estruturas de Dados</a>
+: como avaliar algoritmos e como funcionam estruturas de dados.</li>
+<li>Experimente com a construção de aplicações com frontend e backend. Utilize Django, Streamlit, Flask, ou outro framework.</li>
+</ul>
+</li>
+<li>Matemática e Estatística
+<ul>
+<li><a href="https://mml-book.github.io/" target="_blank">Livro Mathematics for Machine Learning</a>
+: um resumo com a matemática básica para Aprendizagem de Máquina</li>
+</ul>
+</li>
+<li>Aprendizagem de Máquina
+<ul>
+<li><a href="https://tncardoso.com/blog/2020/10/machine-learning-reading-and-watching-list/" target="_blank">Post detalhado</a>
+ com livros, artigos, e cursos focados em Aprendizagem de Máquina.</li>
+<li><a href="https://tncardoso.com/blog/2023/05/generative-ai-reading-and-watching-list/" target="_blank">Post sobre IA Generativa</a>
+ com artigos, sites e cursos relevantes.</li>
+</ul>
+</li>
+</ul>
+<p>Estas sugestões, em sua maioria, tendem a ser conhecimentos mais duradouros, que servirão como base para as novidades que virão nos próximos anos. Para se manter atualizado e aprender novas técnicas, recomendo também o <a href="https://www.kaggle.com/discussions?sort=hotness" target="_blank">fórum do Kaggle</a>
+ e a leitura de código open-source (ex. <a href="https://github.com/karpathy/micrograd" target="_blank">micrograd</a>
+, <a href="https://github.com/karpathy/nanoGPT" target="_blank">nanoGPT</a>
+ , etc).</p>
+<h2 id="conclusão">Conclusão</h2>
+<p>Com os fundamentos bem sedimentados, aprender novas tecnologias e conceitos é uma tarefa bem mais simples e rápida. Você será bem mais adaptável, o que é especialmente importante na atual conjuntura de constante mudança. Os links acima devem te ajudar a sair da teoria e dar o primeiro passo prático nesta jornada.</p>
+<p>Caso tenha dúvidas ou queira discutir sobre estes temas me envie uma mensagem no <a href="https://x.com/tncardoso" target="_blank">X</a>
+, onde compartilho conteúdo sobre IA, segurança da informação e inovação.</p>
+
+      </div>
+    </div>
+  </section>
+</div>
+
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+<script>
+  MathJax = {
+    tex: {
+      displayMath: [['\\[', '\\]'], ['$$', '$$']],  
+      inlineMath: [['\\(', '\\)']]                  
+    }
+  };
+</script>
+
+</body>
+</html>

@@ -2,6 +2,7 @@
 <html><head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Thiago Cardoso's personal website">
   <title>
     
     
@@ -97,7 +98,7 @@
       </p>
 
       <div class="content">
-        <p>Moving to a new home, I was confronted with empty walls. Thinking about images to decorete them reminded of an old project: creating abstract art using machine learning.</p>
+        <p>Moving to a new home, I was confronted with empty walls. Thinking about images to decorate them reminded of an old project: creating abstract art using machine learning.</p>
 <p>It is fascinating to combine the rigidity of Linear Algebra with art and creativity. Inspired by the work of <a href="https://drib.net/perception-engines" target="_blank">dribnet</a>
 , I aimed to create abstract images that could deceive Machine Learning algorithms while still being recognizable to humans. Different from dribnet&rsquo;s approach, my objective was to generate those images with an end-to-end differentiable approach.</p>
 
@@ -122,7 +123,7 @@
 , a differentiable vector graphics rasterizer, for creating the images. This approach allows backpropagation of a given loss to the inputs, adjusting the image to the desired optimization objective. The network input consists of points and colors for each path. Most images in this post are generated with 20 paths. Adding other SVG shapes such as lines, circles or rectangles is planned for future versions.</p>
 <p>The diffvg rasterized image is fed into a visual loss and various Machine Learning models to obtain the classification loss. To optimize the image to deceive Machine Learning models, we use different models trained with Imagenet data: <a href="https://pytorch.org/hub/pytorch_vision_alexnet/" target="_blank">AlexNet</a>
 , <a href="https://pytorch.org/hub/pytorch_vision_vgg/" target="_blank">VGG11</a>
-, and Visual Transformes (<a href="https://pytorch.org/vision/main/models/generated/torchvision.models.vit_b_16.html" target="_blank">ViT_b_16</a>
+, and Visual Transformers (<a href="https://pytorch.org/vision/main/models/generated/torchvision.models.vit_b_16.html" target="_blank">ViT_b_16</a>
 ), all accessible via Torch Hub. The perceptual similarity (<a href="https://github.com/richzhang/PerceptualSimilarity" target="_blank">LPIPS</a>
 ) and RMSE are utilized as the visual losses.</p>
 <p>Finally, a loss function weights all the mentioned components. The gradients are <strong>backpropagated to the inputs</strong>, keeping all models weights frozen. <strong>Only the input points and colors are updated</strong>. In other words, we are optimizing the generated image to minimize the loss. The following diagram shows the network&rsquo;s architecture.</p>
@@ -189,8 +190,7 @@ $$
 \\
 \text{Loss} &= ((1.0 - w) * \text{VisualLoss}) + (w * \text{TargetClassLoss})
 \end{align}
-$$
-<p>The target class component sums the mean with the standard deviation of the losses. Using the standard deviation ensures that all models&rsquo; losses are optimized together, preventing significant differences between them. From my tests, this approach yields better results. Removing the standard deviation could cause the optimization to favor one model over another, leading to potential saddle points and stagnation.</p>
+$$<p>The target class component sums the mean with the standard deviation of the losses. Using the standard deviation ensures that all models&rsquo; losses are optimized together, preventing significant differences between them. From my tests, this approach yields better results. Removing the standard deviation could cause the optimization to favor one model over another, leading to potential saddle points and stagnation.</p>
 <p>To measure the visual difference between images, two loss functions are combined: LPIPS and RMSE between the generated and target images. LPIPS is usually enough for optimizing an image that broadly resembles the target but incorporating RMSE provides better guidance for the optimization process.</p>
 <p>To achieve better results, the weight \(w\) should start at zero and increase throughout the process. During the first epochs, the focus should be on optimizing for visual similarity alone. As optimization progresses, the target class component is gradually introduced until the image is predicted as belonging to the target class. No scheduling algorithm is employed; this process is done manually by examining the image and loss charts. The following charts show the progress in LPIPS loss and target classification as well as changes in \(w\).</p>
 
@@ -203,7 +203,7 @@ $$
 <p>I developed a Terminal User Interface (TUI) that displays logs and important losses, allowing real-time interaction with the algorithm. The TUI provides a comprehensive overview of the optimization process, making it possible to fine-tune the weights interactively without interrupting the optimization workflow. The following screenshot showcases the functionality and layout of the TUI. Losses and metrics are logged using Tensorboard.</p>
 
  <figure >
-   <img src="/blog/2024/07/abstract-machine-learning-art/img/tui.png" alt="Screenshot of TUI that allows for interatction with parameters" />
+   <img src="/blog/2024/07/abstract-machine-learning-art/img/tui.png" alt="Screenshot of TUI that allows for interaction with parameters" />
    <figcaption>TUI for adjusting optimization parameters. It is possible to increment the weight, the learning rate, and read current losses.</figcaption>
  </figure>
 
