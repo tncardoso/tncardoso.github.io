@@ -6,8 +6,15 @@
     <description>Recent content on Thiago Cardoso</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 07 Jan 2025 13:00:00 -0300</lastBuildDate>
+    <lastBuildDate>Sat, 01 Feb 2025 18:59:23 -0300</lastBuildDate>
     <atom:link href="https://tncardoso.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>infra/cloudflare</title>
+      <link>https://tncardoso.com/snippets/infra_cloudflare/</link>
+      <pubDate>Sat, 01 Feb 2025 18:59:23 -0300</pubDate>
+      <guid>https://tncardoso.com/snippets/infra_cloudflare/</guid>
+      <description>&lt;h3 id=&#34;email-with-custom-domain&#34;&gt;Email with custom domain&lt;/h3&gt;&#xA;&lt;p&gt;If you are using Cloudflare&amp;rsquo;s custom email, it is possible to send&#xA;email using Gmail&amp;rsquo;s SMTP.&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;Make sure your Google account has &lt;a href=&#34;https://myaccount.google.com/signinoptions/two-step-verification&#34; target=&#34;_blank&#34;&gt;2FA&lt;/a&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;Create an &lt;a href=&#34;https://security.google.com/settings/security/apppasswords&#34; target=&#34;_blank&#34;&gt;App Password&lt;/a&gt;&#xA; for using the SMTP server&lt;/li&gt;&#xA;&lt;li&gt;Add the Cloudflare-routed email address: In Gmail go to Settings -&amp;gt; Accounts -&amp;gt; Send email as -&amp;gt; Add another email address&lt;/li&gt;&#xA;&lt;li&gt;Config the SMTP server &lt;code&gt;smtp.gmail.com&lt;/code&gt;, your email as the username, and the App Password created in (2)&lt;/li&gt;&#xA;&lt;li&gt;Update the SPF config in your domain to include google.com. &lt;code&gt;v=spf1 include:_spf.mx.cloudflare.net include:_spf.google.com ~all&lt;/code&gt;&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;h3 id=&#34;references&#34;&gt;References&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://community.cloudflare.com/t/solved-how-to-use-gmail-smtp-to-send-from-an-email-address-which-uses-cloudflare-email-routing/382769&#34; target=&#34;_blank&#34;&gt;How to use Gmail SMTP to send from an email address which uses Cloudflare email routing&lt;/a&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+    </item>
     <item>
       <title>Trabalhando com IA e Aprendizagem de Máquina</title>
       <link>https://tncardoso.com/blog/2025/01/trabalhando-com-ia-e-aprendizagem-de-m%C3%A1quina/</link>
@@ -83,7 +90,7 @@
       <link>https://tncardoso.com/blog/2020/07/lcd-custom-characters-library/</link>
       <pubDate>Sun, 26 Jul 2020 14:56:10 -0300</pubDate>
       <guid>https://tncardoso.com/blog/2020/07/lcd-custom-characters-library/</guid>
-      <description>&lt;p&gt;If you use LCD components(1602, HD44780) and haven&amp;rsquo;t given up to modern OLEDs and e-ink displays, the chances are that you know the possibility of using custom characters.&lt;/p&gt;&#xA;&lt;p&gt;I was searching for some cut-and-paste characters for a project but could not find an easy solution. For that reason, I decided to assemble an editor and library with some characters.&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;http://tncardoso.com/lcd-custom-chars/&#34; target=&#34;_blank&#34;&gt;&#xA;&#xA;&lt;figure&gt;&#xA;  &lt;img src=&#34;https://tncardoso.com/blog/2020/07/lcd-custom-characters-library/img/screenshot_hu11392422471537520102.png&#34; alt=&#34;The editor with a selection of ready-to-use characters.&#34; /&gt;&#xA;  &lt;figcaption&gt;The editor with a selection of ready-to-use characters.&lt;/figcaption&gt;&#xA;&lt;/figure&gt;&#xA;&lt;/a&gt;&#xA;&lt;/p&gt;</description>
+      <description>&lt;p&gt;If you use LCD components(1602, HD44780) and haven&amp;rsquo;t given up to modern OLEDs and e-ink displays, the chances are that you know the possibility of using custom characters.&lt;/p&gt;&#xA;&lt;p&gt;I was searching for some cut-and-paste characters for a project but could not find an easy solution. For that reason, I decided to assemble an editor and library with some characters.&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;http://tncardoso.com/lcd-custom-chars/&#34; target=&#34;_blank&#34;&gt;&#xA;&#xA;&lt;figure&gt;&#xA;  &lt;img src=&#34;https://tncardoso.com/blog/2020/07/lcd-custom-characters-library/img/screenshot_hu_75b6e32cb56d28b6.png&#34; alt=&#34;The editor with a selection of ready-to-use characters.&#34; /&gt;&#xA;  &lt;figcaption&gt;The editor with a selection of ready-to-use characters.&lt;/figcaption&gt;&#xA;&lt;/figure&gt;&#xA;&lt;/a&gt;&#xA;&lt;/p&gt;</description>
     </item>
     <item>
       <title>Padoca: hotkey keyboard</title>

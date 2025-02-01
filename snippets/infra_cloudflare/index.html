@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html><head>
+<html>
+<head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Thiago Cardoso's personal website">
@@ -7,7 +8,7 @@
     
     
       
-        Thiago Cardoso :: LCD custom characters library
+        Thiago Cardoso :: infra/cloudflare
       
     
   </title>
@@ -46,7 +47,9 @@
   <link rel="stylesheet" href="/css/lc_gif_player.css">
   <link rel="stylesheet" href="/css/main.css">
 </head>
-<body><nav class="navbar is-dark" role="navigation" aria-label="main navigation">
+
+<body>
+<nav class="navbar is-dark" role="navigation" aria-label="main navigation">
   <div class="container">
     <div class="navbar-brand">
       <span class="navbar-item"><img src="/img/logo.png"></span>
@@ -85,51 +88,37 @@
   </div>
 </nav>
 
+
+
+
 <div class="container">
   <section class="section">
     <div class="container">
-      <h1 class="title has-text-grey-dark">LCD custom characters library</h1>
+      <h1 class="title has-text-grey-dark">infra/cloudflare</h1>
       <p class="subtitle">
-        <span class="post-date"><time datetime='2020-07-26T14:56:10-03:00'>
-          
-            2020-07-26
-          
-        </time></span>
       </p>
+      <br />
 
       <div class="content">
-        <p>If you use LCD components(1602, HD44780) and haven&rsquo;t given up to modern OLEDs and e-ink displays, the chances are that you know the possibility of using custom characters.</p>
-<p>I was searching for some cut-and-paste characters for a project but could not find an easy solution. For that reason, I decided to assemble an editor and library with some characters.</p>
-<p><a href="http://tncardoso.com/lcd-custom-chars/" target="_blank">
-
-<figure>
-  <img src="/blog/2020/07/lcd-custom-characters-library/img/screenshot_hu_75b6e32cb56d28b6.png" alt="The editor with a selection of ready-to-use characters." />
-  <figcaption>The editor with a selection of ready-to-use characters.</figcaption>
-</figure>
-</a>
-</p>
-<p>You can access a
-<a href="https://tncardoso.com/lcd-custom-chars/" target="_blank">live version of the project here</a>
-
-, and the
-<a href="https://github.com/tncardoso/lcd-custom-chars" target="_blank">source code is available on Github</a>
-. After creating your characters, don&rsquo;t forget to add it to the library with a pull request.</p>
+        <h3 id="email-with-custom-domain">Email with custom domain</h3>
+<p>If you are using Cloudflare&rsquo;s custom email, it is possible to send
+email using Gmail&rsquo;s SMTP.</p>
+<ol>
+<li>Make sure your Google account has <a href="https://myaccount.google.com/signinoptions/two-step-verification" target="_blank">2FA</a>
+</li>
+<li>Create an <a href="https://security.google.com/settings/security/apppasswords" target="_blank">App Password</a>
+ for using the SMTP server</li>
+<li>Add the Cloudflare-routed email address: In Gmail go to Settings -&gt; Accounts -&gt; Send email as -&gt; Add another email address</li>
+<li>Config the SMTP server <code>smtp.gmail.com</code>, your email as the username, and the App Password created in (2)</li>
+<li>Update the SPF config in your domain to include google.com. <code>v=spf1 include:_spf.mx.cloudflare.net include:_spf.google.com ~all</code></li>
+</ol>
+<h3 id="references">References</h3>
+<ul>
+<li><a href="https://community.cloudflare.com/t/solved-how-to-use-gmail-smtp-to-send-from-an-email-address-which-uses-cloudflare-email-routing/382769" target="_blank">How to use Gmail SMTP to send from an email address which uses Cloudflare email routing</a>
+</li>
+</ul>
 
       </div>
     </div>
   </section>
 </div>
-
-<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
-<script>
-  MathJax = {
-    tex: {
-      displayMath: [['\\[', '\\]'], ['$$', '$$']],  
-      inlineMath: [['\\(', '\\)']]                  
-    }
-  };
-</script>
-
-</body>
-</html>
