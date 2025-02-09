@@ -2,19 +2,31 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://tncardoso.com/blog/</loc>
+    <lastmod>2025-02-09T18:45:12-03:00</lastmod>
+  </url><url>
+    <loc>https://tncardoso.com/tags/boardgame/</loc>
+    <lastmod>2025-02-09T18:45:12-03:00</lastmod>
+  </url><url>
+    <loc>https://tncardoso.com/blog/2025/02/guess-who-evaluating-ai-models-with-games/</loc>
+    <lastmod>2025-02-09T18:45:12-03:00</lastmod>
+  </url><url>
+    <loc>https://tncardoso.com/tags/llm/</loc>
+    <lastmod>2025-02-09T18:45:12-03:00</lastmod>
+  </url><url>
+    <loc>https://tncardoso.com/tags/machine-learning/</loc>
+    <lastmod>2025-02-09T18:45:12-03:00</lastmod>
+  </url><url>
+    <loc>https://tncardoso.com/tags/</loc>
+    <lastmod>2025-02-09T18:45:12-03:00</lastmod>
+  </url><url>
+    <loc>https://tncardoso.com/</loc>
+    <lastmod>2025-02-09T18:45:12-03:00</lastmod>
+  </url><url>
     <loc>https://tncardoso.com/blog/2025/02/a-era-da-a%C3%A7%C3%A3o/</loc>
     <lastmod>2025-02-07T19:15:01-03:00</lastmod>
   </url><url>
-    <loc>https://tncardoso.com/blog/</loc>
-    <lastmod>2025-02-07T19:15:01-03:00</lastmod>
-  </url><url>
     <loc>https://tncardoso.com/tags/pt/</loc>
-    <lastmod>2025-02-07T19:15:01-03:00</lastmod>
-  </url><url>
-    <loc>https://tncardoso.com/tags/</loc>
-    <lastmod>2025-02-07T19:15:01-03:00</lastmod>
-  </url><url>
-    <loc>https://tncardoso.com/</loc>
     <lastmod>2025-02-07T19:15:01-03:00</lastmod>
   </url><url>
     <loc>https://tncardoso.com/snippets/</loc>
@@ -22,9 +34,6 @@
   </url><url>
     <loc>https://tncardoso.com/snippets/infra_cloudflare/</loc>
     <lastmod>2025-02-01T18:59:23-03:00</lastmod>
-  </url><url>
-    <loc>https://tncardoso.com/tags/machine-learning/</loc>
-    <lastmod>2025-01-07T13:00:00-03:00</lastmod>
   </url><url>
     <loc>https://tncardoso.com/blog/2025/01/trabalhando-com-ia-e-aprendizagem-de-m%C3%A1quina/</loc>
     <lastmod>2025-01-07T13:00:00-03:00</lastmod>
@@ -37,9 +46,6 @@
   </url><url>
     <loc>https://tncardoso.com/tags/art/</loc>
     <lastmod>2024-07-07T11:28:56-03:00</lastmod>
-  </url><url>
-    <loc>https://tncardoso.com/tags/boardgame/</loc>
-    <lastmod>2023-11-26T20:12:15-03:00</lastmod>
   </url><url>
     <loc>https://tncardoso.com/blog/2023/11/turing-machine-board-game/</loc>
     <lastmod>2023-11-26T20:12:15-03:00</lastmod>

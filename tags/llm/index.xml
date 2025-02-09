@@ -1,26 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Boardgame on Thiago Cardoso</title>
-    <link>https://tncardoso.com/tags/boardgame/</link>
-    <description>Recent content in Boardgame on Thiago Cardoso</description>
+    <title>Llm on Thiago Cardoso</title>
+    <link>https://tncardoso.com/tags/llm/</link>
+    <description>Recent content in Llm on Thiago Cardoso</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 09 Feb 2025 18:45:12 -0300</lastBuildDate>
-    <atom:link href="https://tncardoso.com/tags/boardgame/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://tncardoso.com/tags/llm/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Guess Who? Evaluating AI models with games</title>
       <link>https://tncardoso.com/blog/2025/02/guess-who-evaluating-ai-models-with-games/</link>
       <pubDate>Sun, 09 Feb 2025 18:45:12 -0300</pubDate>
       <guid>https://tncardoso.com/blog/2025/02/guess-who-evaluating-ai-models-with-games/</guid>
       <description>&lt;p&gt;We all love interesting AI benchmarks. They might only show part of the picture, but it&amp;rsquo;s fascinating to see AI models tackle vastly different challenges. From the &amp;ldquo;&lt;a href=&#34;https://lmarena.ai/&#34; target=&#34;_blank&#34;&gt;usual benchmarks&lt;/a&gt;&#xA;&amp;rdquo; , to &lt;a href=&#34;https://arcprize.org/arc&#34; target=&#34;_blank&#34;&gt;abstract reasoning&lt;/a&gt;&#xA;, &lt;a href=&#34;https://textarena.ai/&#34; target=&#34;_blank&#34;&gt;textual games&lt;/a&gt;&#xA;, and even &lt;a href=&#34;https://github.com/OpenGenerativeAI/llm-colosseum&#34; target=&#34;_blank&#34;&gt;Street Fighter&lt;/a&gt;&#xA;, researchers are always coming up with new ways to measure AI capacity.&lt;/p&gt;&#xA;&lt;p&gt;This brings us to a nostalgic twist: how about evaluating AI with the game &amp;ldquo;&lt;a href=&#34;https://en.wikipedia.org/wiki/Guess_Who%3F&#34; target=&#34;_blank&#34;&gt;Guess Who?&lt;/a&gt;&#xA;,&amp;rdquo; a beloved board game from the 90s and 2000s?&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Turing Machine | Board Game</title>
-      <link>https://tncardoso.com/blog/2023/11/turing-machine-board-game/</link>
-      <pubDate>Sun, 26 Nov 2023 20:12:15 -0300</pubDate>
-      <guid>https://tncardoso.com/blog/2023/11/turing-machine-board-game/</guid>
-      <description>&lt;p&gt;Turing Machine is a competitive board game designed by Fabin Gridel and Yoann Levet. The goal is to uncover a three-digit code using minimal tests. The game features machines with multiple cards, each performing an unknown test. For example, one card might test if one digit is smaller than three, but the specific digit being tested remains a mystery until uncovered through gameplay. Players must strategically use their tests to deduce the correct code.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

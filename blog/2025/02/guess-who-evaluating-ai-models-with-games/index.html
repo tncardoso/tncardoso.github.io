@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Thiago Cardoso's personal website">
+  <title>
+    
+    
+      
+        Thiago Cardoso :: Guess Who? Evaluating AI models with games
+      
+    
+  </title>
+
+  
+  <script data-goatcounter="https://tncardoso.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+
+  
+  const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+  
+  $navbarBurgers.forEach( el => {
+    el.addEventListener('click', () => {
+
+      
+      const target = el.dataset.target;
+      const $target = document.getElementById(target);
+
+      
+      el.classList.toggle('is-active');
+      $target.classList.toggle('is-active');
+
+    });
+  });
+
+});
+  </script>
+
+  <link rel="icon" type="image/png" href="/img/favicon.png">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+  <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/lc_gif_player.css">
+  <link rel="stylesheet" href="/css/main.css">
+</head>
+<body><nav class="navbar is-dark" role="navigation" aria-label="main navigation">
+  <div class="container">
+    <div class="navbar-brand">
+      <span class="navbar-item"><img src="/img/logo.png"></span>
+
+      <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+
+    <div id="navbarBasicExample" class="navbar-menu">
+      <div class="navbar-start">
+      </div>
+
+      <div class="navbar-end">
+        
+          
+          <a class="navbar-item" href="https://tncardoso.com/">About</a>
+          
+        
+          
+          <a class="navbar-item" href="https://tncardoso.com/blog">Blog</a>
+          
+        
+          
+          <a class="navbar-item" href="https://tncardoso.com/projects">Projects</a>
+          
+        
+          
+          <a class="navbar-item" href="https://scholar.google.com/citations?user=XLih4b8AAAAJ" target="_blank">Publications</a>
+          
+        
+      </div>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+  <section class="section">
+    <div class="container">
+      <h1 class="title has-text-grey-dark">Guess Who? Evaluating AI models with games</h1>
+      <p class="subtitle">
+        <span class="post-date"><time datetime='2025-02-09T18:45:12-03:00'>
+          
+            2025-02-09
+          
+        </time></span>
+      </p>
+
+      <div class="content">
+        <p>We all love interesting AI benchmarks. They might only show part of the picture, but it&rsquo;s fascinating to see AI models tackle vastly different challenges. From the &ldquo;<a href="https://lmarena.ai/" target="_blank">usual benchmarks</a>
+&rdquo; , to <a href="https://arcprize.org/arc" target="_blank">abstract reasoning</a>
+, <a href="https://textarena.ai/" target="_blank">textual games</a>
+, and even <a href="https://github.com/OpenGenerativeAI/llm-colosseum" target="_blank">Street Fighter</a>
+, researchers are always coming up with new ways to measure AI capacity.</p>
+<p>This brings us to a nostalgic twist: how about evaluating AI with the game &ldquo;<a href="https://en.wikipedia.org/wiki/Guess_Who%3F" target="_blank">Guess Who?</a>
+,&rdquo; a beloved board game from the 90s and 2000s?</p>
+<h2 id="guess-who">Guess Who?</h2>
+<p>In &ldquo;Guess Who?&rdquo; two players face each other trying to deduce the identity of the opponents&rsquo;s character. Starting with a pool of 24 characters, players take turns in asking <strong>yes or no</strong> questions to reduce the search space. The winner is the first to single out the correct character.</p>
+<p>Why is this intriguing for AI evaluation?</p>
+<ul>
+<li>To be effective, the agent has to formulate well crafted questions, i.e. the ones that will eliminate more possibilities (<strong>reasoning</strong>).</li>
+<li>Choosing questions and updating the board state rely on the <strong>visual inspection</strong> of the cards. It is a good benchmark for visual Q&amp;A. Also, there is some subjectivity involved, e.g. does your character have short hair?</li>
+<li>Finally there is the <strong>model alignment</strong>. A model can refuse to answer or use certain information.</li>
+</ul>
+<h2 id="creating-the-game">Creating the game</h2>
+<p>The first step was to create the actual game characters. I used <code>gpt-4o</code> to generate descriptions of a diverse set of 24 people. Those descriptions were then used as prompts for the <code>flux</code> image generator model. The result was this set of characters.</p>
+
+ <figure >
+   <img src="/blog/2025/02/guess-who-evaluating-ai-models-with-games/img/board.jpg" alt="A grid of 24 diverse characters organized in 4 rows and 6 columns." />
+   <figcaption>Characters generated for the benchmark. It is possible to create new character sets.</figcaption>
+ </figure>
+
+<h2 id="game-loop">Game loop</h2>
+<p>The game flow is simple:</p>
+<ol>
+<li>A player asks a yes-or-no question.</li>
+<li>The opponent answers <strong>honestly</strong>.</li>
+<li>Based on the response, the player updates the board or guesses the opponent&rsquo;s character.</li>
+<li>If unresolved, the other player takes a turn.</li>
+</ol>
+<p>Here&rsquo;s what a turn could look like:</p>
+<ol>
+<li><strong>Player A</strong>: Is your character wearing glasses?</li>
+<li><strong>Referee (Player B)</strong>: Yes.</li>
+<li>Thus, Player A narrows it down to Alice, Grace, Nathan, or Tina.</li>
+</ol>
+<h2 id="the-role-of-the-referee">The Role of the Referee</h2>
+<p>Truthful responses are crucial, and errors in understanding could disrupt play. A model could even benefit from a mistake or failure. To tackle that problem, we introduced the Referee - an ensemble of models that deliver the actual answers through majority voting. This way we ensure that the game is fair for both players.</p>
+<h2 id="ai-players">AI Players</h2>
+<p>Each AI player must handle two functions: devising insightful yes-or-no questions and revising their knowledge based on answers.</p>
+<h3 id="formulating-questions">Formulating Questions</h3>
+<p>The prompt used to define a question contains a short explanation of the game, the strategy (eliminating more characters), and an image of the current board state. The AI needs to interpret the scene, find critical traits, and formulate strategic questions.</p>
+<h3 id="updating-insights">Updating Insights</h3>
+<p>Upon receiving an answer, the model adjusts its board view. In the previous example, after geting the information that the character uses glasses, the agent checks each character, removing everyone that is not wearing glasses.</p>
+<p>In this step, if the model makes a mistake while interpreting the answer, it could exclude the target character. In that case, the opponent can win the match with reason WRONG_GUESS.</p>
+
+ <figure >
+   <img src="/blog/2025/02/guess-who-evaluating-ai-models-with-games/img/board_glasses.jpg" alt="A grid of 24 portraits but most of them are blocked by red rectangles. The only characters visible are wearing glasses." />
+   <figcaption>Image that represents the board state and is attached to the prompt. This is the state after updating belief with question <code>Is the character wearing glasses? Yes</code>.</figcaption>
+ </figure>
+
+<h2 id="ranking-and-replays">Ranking and Replays</h2>
+<p>As AI matches unfold, we compile rankings with Trueskill and record replays. Take a look at this <a href="https://tncardoso.com/ai-olympics/guesswho/20250207222704" target="_blank">replay of a memorable match</a>
+ between <code>gpt-4o-mini</code> and <code>gemini-2.0-flash-exp</code>. The latest rankings are available <a href="https://tncardoso.com/ai-olympics/ranking" target="_blank">here</a>
+.</p>
+
+<figure >
+<video class="video-shortcode" preload="true" loop="true" autoplay="true"  controls>
+    <source src="/blog/2025/02/guess-who-evaluating-ai-models-with-games/img/guesswho.mp4" type="">
+    There should have been a video here but your browser does not seem
+    to support it.
+</video>
+  <figcaption>Replay of a lucky match between <code>gpt-4o-mini</code> and <code>gemini-2.0-flash-exp</code> . <code>gpt-4o-mini</code> is able to identify Alice with two questions: <code>Is this person wearing glasses?</code> and <code>Is this person wearing a red shirt?</code>.</figcaption>
+</figure>
+
+<h2 id="join-the-fun">Join the fun</h2>
+<p>There are lots of models to add and matches to run. You can find the <a href="https://github.com/tncardoso/ai-olympics" target="_blank">code here</a>
+, and reach out on <a href="https://x.com/tncardoso" target="_blank">X</a>
+ if you would like to contribute.</p>
+
+      </div>
+    </div>
+  </section>
+</div>
+
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+<script>
+  MathJax = {
+    tex: {
+      displayMath: [['\\[', '\\]'], ['$$', '$$']],  
+      inlineMath: [['\\(', '\\)']]                  
+    }
+  };
+</script>
+
+</body>
+</html>

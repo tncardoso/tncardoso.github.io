@@ -6,8 +6,15 @@
     <description>Recent content on Thiago Cardoso</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 07 Feb 2025 19:15:01 -0300</lastBuildDate>
+    <lastBuildDate>Sun, 09 Feb 2025 18:45:12 -0300</lastBuildDate>
     <atom:link href="https://tncardoso.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Guess Who? Evaluating AI models with games</title>
+      <link>https://tncardoso.com/blog/2025/02/guess-who-evaluating-ai-models-with-games/</link>
+      <pubDate>Sun, 09 Feb 2025 18:45:12 -0300</pubDate>
+      <guid>https://tncardoso.com/blog/2025/02/guess-who-evaluating-ai-models-with-games/</guid>
+      <description>&lt;p&gt;We all love interesting AI benchmarks. They might only show part of the picture, but it&amp;rsquo;s fascinating to see AI models tackle vastly different challenges. From the &amp;ldquo;&lt;a href=&#34;https://lmarena.ai/&#34; target=&#34;_blank&#34;&gt;usual benchmarks&lt;/a&gt;&#xA;&amp;rdquo; , to &lt;a href=&#34;https://arcprize.org/arc&#34; target=&#34;_blank&#34;&gt;abstract reasoning&lt;/a&gt;&#xA;, &lt;a href=&#34;https://textarena.ai/&#34; target=&#34;_blank&#34;&gt;textual games&lt;/a&gt;&#xA;, and even &lt;a href=&#34;https://github.com/OpenGenerativeAI/llm-colosseum&#34; target=&#34;_blank&#34;&gt;Street Fighter&lt;/a&gt;&#xA;, researchers are always coming up with new ways to measure AI capacity.&lt;/p&gt;&#xA;&lt;p&gt;This brings us to a nostalgic twist: how about evaluating AI with the game &amp;ldquo;&lt;a href=&#34;https://en.wikipedia.org/wiki/Guess_Who%3F&#34; target=&#34;_blank&#34;&gt;Guess Who?&lt;/a&gt;&#xA;,&amp;rdquo; a beloved board game from the 90s and 2000s?&lt;/p&gt;</description>
+    </item>
     <item>
       <title>A Era da Ação</title>
       <link>https://tncardoso.com/blog/2025/02/a-era-da-a%C3%A7%C3%A3o/</link>
