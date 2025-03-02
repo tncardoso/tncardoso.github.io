@@ -49,7 +49,7 @@
 <body><nav class="navbar is-dark" role="navigation" aria-label="main navigation">
   <div class="container">
     <div class="navbar-brand">
-      <span class="navbar-item"><img src="/img/logo.png"></span>
+      <span class="navbar-item"><img src="/img/logo_hu27d304debca2feef06d19f0d50bafc69_11325_64x0_resize_q75_h2_box_3.webp"></span>
 
       <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
         <span aria-hidden="true"></span>
@@ -116,8 +116,9 @@
 <h2 id="creating-the-game">Creating the game</h2>
 <p>The first step was to create the actual game characters. I used <code>gpt-4o</code> to generate descriptions of a diverse set of 24 people. Those descriptions were then used as prompts for the <code>flux</code> image generator model. The result was this set of characters.</p>
 
+ 
  <figure >
-   <img src="/blog/2025/02/guess-who-evaluating-ai-models-with-games/img/board.jpg" alt="A grid of 24 diverse characters organized in 4 rows and 6 columns." />
+   <img src="/blog/2025/02/guess-who-evaluating-ai-models-with-games/img/board_hu7a819503ae1ceb78a93a6afee38fa021_396719_0x0_q75_h2_.webp" alt="A grid of 24 diverse characters organized in 4 rows and 6 columns." />
    <figcaption>Characters generated for the benchmark. It is possible to create new character sets.</figcaption>
  </figure>
 
@@ -145,8 +146,9 @@
 <p>Upon receiving an answer, the model adjusts its board view. In the previous example, after geting the information that the character uses glasses, the agent checks each character, removing everyone that is not wearing glasses.</p>
 <p>In this step, if the model makes a mistake while interpreting the answer, it could exclude the target character. In that case, the opponent can win the match with reason WRONG_GUESS.</p>
 
+ 
  <figure >
-   <img src="/blog/2025/02/guess-who-evaluating-ai-models-with-games/img/board_glasses.jpg" alt="A grid of 24 portraits but most of them are blocked by red rectangles. The only characters visible are wearing glasses." />
+   <img src="/blog/2025/02/guess-who-evaluating-ai-models-with-games/img/board_glasses_hu799a68352408003ba174397d31ea68e6_104181_0x0_q75_h2_.webp" alt="A grid of 24 portraits but most of them are blocked by red rectangles. The only characters visible are wearing glasses." />
    <figcaption>Image that represents the board state and is attached to the prompt. This is the state after updating belief with question <code>Is the character wearing glasses? Yes</code>.</figcaption>
  </figure>
 

@@ -13,7 +13,7 @@
       <link>https://tncardoso.com/blog/2021/03/git-wormhole-generating-partial-collisions-in-commits/</link>
       <pubDate>Sat, 27 Mar 2021 16:40:10 -0300</pubDate>
       <guid>https://tncardoso.com/blog/2021/03/git-wormhole-generating-partial-collisions-in-commits/</guid>
-      <description>&lt;p&gt;If you tried to add a substring from the git commit hash to your software version,  you may have noticed that it is not easy (or possible). For example, imagine you want to version your software as &amp;ldquo;0.0.0-aabbccdd&amp;rdquo;, being &amp;ldquo;aabbccdd&amp;rdquo; the commit&amp;rsquo;s prefix in which this version was defined.&lt;/p&gt;&#xA;&lt;p&gt;It turns out that the git hash is the sha1 of multiple pieces of information: the repository tree hash, the parent commit, author and committer name and email, Unix timestamp, timezone offset and message. You can visualize this information with &lt;code&gt;git cat-file&lt;/code&gt;:&lt;/p&gt;</description>
+      <description>If you tried to add a substring from the git commit hash to your software version, you may have noticed that it is not easy (or possible). For example, imagine you want to version your software as &amp;ldquo;0.0.0-aabbccdd&amp;rdquo;, being &amp;ldquo;aabbccdd&amp;rdquo; the commit&amp;rsquo;s prefix in which this version was defined.&#xA;It turns out that the git hash is the sha1 of multiple pieces of information: the repository tree hash, the parent commit, author and committer name and email, Unix timestamp, timezone offset and message.</description>
     </item>
   </channel>
 </rss>

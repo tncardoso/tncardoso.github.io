@@ -49,7 +49,7 @@
 <body><nav class="navbar is-dark" role="navigation" aria-label="main navigation">
   <div class="container">
     <div class="navbar-brand">
-      <span class="navbar-item"><img src="/img/logo.png"></span>
+      <span class="navbar-item"><img src="/img/logo_hu27d304debca2feef06d19f0d50bafc69_11325_64x0_resize_q75_h2_box_3.webp"></span>
 
       <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
         <span aria-hidden="true"></span>
@@ -113,8 +113,9 @@
  class and a target image - the algorithm optimizes two objectives. The first objective is the difference between the generated image and the target image. The second objective aims to minimize the classification error for the target class, forcing the creation of an image that can be recognized by classification algorithms.</p>
 <p>In this example, you can see a piggy bank image. On the right is an image that multiple algorithms correctly classify as <code>piggybank</code>, but it lacks visual grounding for humans. On the left is the image optimized to match the target image.</p>
 
+ 
  <figure >
-   <img src="/blog/2024/07/abstract-machine-learning-art/img/w.png" alt="The effect of weight in image optimization. On the left the image that only optimizes for similarity with target, on the right one that is correctly classified as `piggy bank` by multiple models." />
+   <img src="/blog/2024/07/abstract-machine-learning-art/img/w_hu574f84e3c402111c1331fd6148692bff_108333_0x0_q75_h2__3.webp" alt="The effect of weight in image optimization. On the left the image that only optimizes for similarity with target, on the right one that is correctly classified as `piggy bank` by multiple models." />
    <figcaption>The effect of weight in image optimization. On the left the image that only optimizes for similarity with target, on the right one that is correctly classified as <code>piggy bank</code> by multiple models.</figcaption>
  </figure>
 
@@ -190,42 +191,48 @@ $$
 \\
 \text{Loss} &= ((1.0 - w) * \text{VisualLoss}) + (w * \text{TargetClassLoss})
 \end{align}
-$$<p>The target class component sums the mean with the standard deviation of the losses. Using the standard deviation ensures that all models&rsquo; losses are optimized together, preventing significant differences between them. From my tests, this approach yields better results. Removing the standard deviation could cause the optimization to favor one model over another, leading to potential saddle points and stagnation.</p>
+$$
+<p>The target class component sums the mean with the standard deviation of the losses. Using the standard deviation ensures that all models&rsquo; losses are optimized together, preventing significant differences between them. From my tests, this approach yields better results. Removing the standard deviation could cause the optimization to favor one model over another, leading to potential saddle points and stagnation.</p>
 <p>To measure the visual difference between images, two loss functions are combined: LPIPS and RMSE between the generated and target images. LPIPS is usually enough for optimizing an image that broadly resembles the target but incorporating RMSE provides better guidance for the optimization process.</p>
 <p>To achieve better results, the weight \(w\) should start at zero and increase throughout the process. During the first epochs, the focus should be on optimizing for visual similarity alone. As optimization progresses, the target class component is gradually introduced until the image is predicted as belonging to the target class. No scheduling algorithm is employed; this process is done manually by examining the image and loss charts. The following charts show the progress in LPIPS loss and target classification as well as changes in \(w\).</p>
 
+ 
  <figure >
-   <img src="/blog/2024/07/abstract-machine-learning-art/img/opt.png" alt="Charts showing the reduction in LPIPS and the increase in target class probability" />
+   <img src="/blog/2024/07/abstract-machine-learning-art/img/opt_hud83049582d7d93c91e556731d0d6855a_123472_0x0_q75_h2__3.webp" alt="Charts showing the reduction in LPIPS and the increase in target class probability" />
    <figcaption>Progress in LPIPS loss and target classification.</figcaption>
  </figure>
 
 <h2 id="half-art-half-engineering">Half art, half engineering</h2>
 <p>I developed a Terminal User Interface (TUI) that displays logs and important losses, allowing real-time interaction with the algorithm. The TUI provides a comprehensive overview of the optimization process, making it possible to fine-tune the weights interactively without interrupting the optimization workflow. The following screenshot showcases the functionality and layout of the TUI. Losses and metrics are logged using Tensorboard.</p>
 
+ 
  <figure >
-   <img src="/blog/2024/07/abstract-machine-learning-art/img/tui.png" alt="Screenshot of TUI that allows for interaction with parameters" />
+   <img src="/blog/2024/07/abstract-machine-learning-art/img/tui_hu1a0e70f42b83c4ebe688836ac8df4162_73202_0x0_q75_h2__3.webp" alt="Screenshot of TUI that allows for interaction with parameters" />
    <figcaption>TUI for adjusting optimization parameters. It is possible to increment the weight, the learning rate, and read current losses.</figcaption>
  </figure>
 
 <h2 id="can-it-fool-chatgpt">Can it fool ChatGPT?</h2>
 <p>Now you may be asking, do these images actually fool ML models? The models used to generate the images indeed assign high probability to the target class. As more models are incorporated, these adversarial images become more robust. However, the effectiveness varies with other models, depending on their underlying architecture and training data. The following representation of a <strong>torch</strong> is correctly classified by Alexnet (84%), Vgg11 (79%), and Vit (90%).</p>
 
+ 
  <figure >
-   <img src="/blog/2024/07/abstract-machine-learning-art/img/torch.png" alt="An abstract representation of a torch" />
+   <img src="/blog/2024/07/abstract-machine-learning-art/img/torch_huafbf7c43fbf1015417aafbce7bc39942_19913_0x0_q75_h2__3.webp" alt="An abstract representation of a torch" />
    <figcaption>An abstract representation of a torch.</figcaption>
  </figure>
 
 <p>From my examples, I was able to achieve one adversarial example that fools ChatGPT (gpt-4o). In this image, you see a piggy bank image before \(w\) was increased. Although it is similar to the final image, ChatGPT couldn&rsquo;t guess its representation.</p>
 
+ 
  <figure class="shadow">
-   <img src="/blog/2024/07/abstract-machine-learning-art/img/gpt_before.png" alt="ChatGPT classification of image before increasing w." />
+   <img src="/blog/2024/07/abstract-machine-learning-art/img/gpt_before_huf0d3426a6a3a810fa2a9965d059986f7_55277_0x0_q75_h2__3.webp" alt="ChatGPT classification of image before increasing w." />
    <figcaption>ChatGPT classification of image before increasing w.</figcaption>
  </figure>
 
 <p>After optimizing for the target class, ChatGPT recognizes it as a piggy bank. It is possible to generate adversarial images for ChatGPT, but developing a robust method would require further research.</p>
 
+ 
  <figure class="shadow">
-   <img src="/blog/2024/07/abstract-machine-learning-art/img/gpt_after.png" alt="ChatGPT classification of image after increasing w. ChatGPT is able to see a Piggy Bank." />
+   <img src="/blog/2024/07/abstract-machine-learning-art/img/gpt_after_hu5716273e36ebf0cec45b0de5ad604ade_48377_0x0_q75_h2__3.webp" alt="ChatGPT classification of image after increasing w. ChatGPT is able to see a Piggy Bank." />
    <figcaption>ChatGPT classification of image after increasing w. ChatGPT is able to see a Piggy Bank.</figcaption>
  </figure>
 
@@ -233,36 +240,41 @@ $$<p>The target class component sums the mean with the standard deviation of the
 <div style="display: flex; flex-wrap: wrap;">
   
  
+ 
  <figure >
-   <img src="/blog/2024/07/abstract-machine-learning-art/img/piggybank.png" alt="Piggy Bank" />
+   <img src="/blog/2024/07/abstract-machine-learning-art/img/piggybank_hu5220e1eac064e0308e5fd6632ca03ec2_16333_0x0_q75_h2__3.webp" alt="Piggy Bank" />
    <figcaption>Piggy Bank</figcaption>
  </figure>
 
 
  
+ 
  <figure >
-   <img src="/blog/2024/07/abstract-machine-learning-art/img/torch.png" alt="Torch" />
+   <img src="/blog/2024/07/abstract-machine-learning-art/img/torch_huafbf7c43fbf1015417aafbce7bc39942_19913_0x0_q75_h2__3.webp" alt="Torch" />
    <figcaption>Torch</figcaption>
  </figure>
 
 
  
+ 
  <figure >
-   <img src="/blog/2024/07/abstract-machine-learning-art/img/llama.png" alt="Llama" />
+   <img src="/blog/2024/07/abstract-machine-learning-art/img/llama_huf3c55cb3bf9b7ca4192338000a04da8d_19040_0x0_q75_h2__3.webp" alt="Llama" />
    <figcaption>Llama</figcaption>
  </figure>
 
 
  
+ 
  <figure >
-   <img src="/blog/2024/07/abstract-machine-learning-art/img/cockroach.png" alt="Cockroach" />
+   <img src="/blog/2024/07/abstract-machine-learning-art/img/cockroach_huf306de4263a77a9b9cad57afef787b43_22368_0x0_q75_h2__3.webp" alt="Cockroach" />
    <figcaption>Cockroach</figcaption>
  </figure>
 
 
  
+ 
  <figure >
-   <img src="/blog/2024/07/abstract-machine-learning-art/img/cab.png" alt="Cab" />
+   <img src="/blog/2024/07/abstract-machine-learning-art/img/cab_huaa412ec5c25835dd96f27a661e793758_21413_0x0_q75_h2__3.webp" alt="Cab" />
    <figcaption>Cab</figcaption>
  </figure>
 
