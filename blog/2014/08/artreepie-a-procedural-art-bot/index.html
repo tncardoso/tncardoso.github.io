@@ -49,7 +49,7 @@
 <body><nav class="navbar is-dark" role="navigation" aria-label="main navigation">
   <div class="container">
     <div class="navbar-brand">
-      <span class="navbar-item"><img src="/img/logo_hu27d304debca2feef06d19f0d50bafc69_11325_64x0_resize_q75_h2_box_3.webp"></span>
+      <span class="navbar-item"><img src="/img/logo_hu_c0b670782d18d791.webp"></span>
 
       <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
         <span aria-hidden="true"></span>
@@ -102,7 +102,7 @@
 
 <section class="section has-text-centered">
   <div class="is-inline-block">
-    <img src="/blog/2014/08/artreepie-a-procedural-art-bot/img/icon_hu8bba39481a58ad3f0b1fcc02a284cff1_268482_0x0_q75_h2__3.webp" width="128" height="128">
+    <img src="/blog/2014/08/artreepie-a-procedural-art-bot/img/icon_hu_4b1ad06e165ce3b0.webp" width="128" height="128">
   </div>
 </section>
 
@@ -127,117 +127,117 @@ a tiny lisp-like language, in its rendering engine.
 The code snippet to be tweeted to <em>artreepie</em> may use a number of provided variables and functions:</p>
 <h3 id="variables">Variables</h3>
 <table>
-<thead>
-<tr>
-<th style="text-align:left">Name</th>
-<th style="text-align:center">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">i</td>
-<td style="text-align:center">Column number of pixel being calculated (starting from zero)</td>
-</tr>
-<tr>
-<td style="text-align:left">j</td>
-<td style="text-align:center">Row of pixel being calculated (starting from zero)</td>
-</tr>
-<tr>
-<td style="text-align:left">w</td>
-<td style="text-align:center">Image width in pixels (currently 1024)</td>
-</tr>
-<tr>
-<td style="text-align:left">h</td>
-<td style="text-align:center">Image height in pixels (currently 1024)</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: left">Name</th>
+          <th style="text-align: center">Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">i</td>
+          <td style="text-align: center">Column number of pixel being calculated (starting from zero)</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">j</td>
+          <td style="text-align: center">Row of pixel being calculated (starting from zero)</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">w</td>
+          <td style="text-align: center">Image width in pixels (currently 1024)</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">h</td>
+          <td style="text-align: center">Image height in pixels (currently 1024)</td>
+      </tr>
+  </tbody>
 </table>
 <h3 id="functions">Functions</h3>
 <table>
-<thead>
-<tr>
-<th style="text-align:left">Name</th>
-<th style="text-align:center">Syntax</th>
-<th style="text-align:right">Example</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">If</td>
-<td style="text-align:center">if</td>
-<td style="text-align:right">(if true 1 0)</td>
-</tr>
-<tr>
-<td style="text-align:left">And</td>
-<td style="text-align:center">and</td>
-<td style="text-align:right">(and true false)</td>
-</tr>
-<tr>
-<td style="text-align:left">Or</td>
-<td style="text-align:center">or</td>
-<td style="text-align:right">(or true false)</td>
-</tr>
-<tr>
-<td style="text-align:left">Sine</td>
-<td style="text-align:center">sin</td>
-<td style="text-align:right">(sin 1.0)</td>
-</tr>
-<tr>
-<td style="text-align:left">Cosine</td>
-<td style="text-align:center">cos</td>
-<td style="text-align:right">(cos 1.0)</td>
-</tr>
-<tr>
-<td style="text-align:left">Bitwise And</td>
-<td style="text-align:center">&amp;</td>
-<td style="text-align:right">(&amp; 1 2 3)</td>
-</tr>
-<tr>
-<td style="text-align:left">Bitwise Or</td>
-<td style="text-align:center">|</td>
-<td style="text-align:right">(| 1 2 3 )</td>
-</tr>
-<tr>
-<td style="text-align:left">Modulo</td>
-<td style="text-align:center">%</td>
-<td style="text-align:right">(% 10 2)</td>
-</tr>
-<tr>
-<td style="text-align:left">Random [0.0, 1.0)</td>
-<td style="text-align:center">rnd</td>
-<td style="text-align:right">(rnd)</td>
-</tr>
-<tr>
-<td style="text-align:left">Square Root</td>
-<td style="text-align:center">sqrt</td>
-<td style="text-align:right">(sqrt 16)</td>
-</tr>
-<tr>
-<td style="text-align:left">Square</td>
-<td style="text-align:center">sq</td>
-<td style="text-align:right">(sq 10)</td>
-</tr>
-<tr>
-<td style="text-align:left">Less Than</td>
-<td style="text-align:center">&lt;</td>
-<td style="text-align:right">(lt 1 4)</td>
-</tr>
-<tr>
-<td style="text-align:left">Greater than</td>
-<td style="text-align:center">&gt;</td>
-<td style="text-align:right">(gt 1 4)</td>
-</tr>
-<tr>
-<td style="text-align:left">Equals</td>
-<td style="text-align:center">==</td>
-<td style="text-align:right">(== 1 1)</td>
-</tr>
-<tr>
-<td style="text-align:left">Not equal</td>
-<td style="text-align:center">!=</td>
-<td style="text-align:right">(!= 1 2)</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: left">Name</th>
+          <th style="text-align: center">Syntax</th>
+          <th style="text-align: right">Example</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">If</td>
+          <td style="text-align: center">if</td>
+          <td style="text-align: right">(if true 1 0)</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">And</td>
+          <td style="text-align: center">and</td>
+          <td style="text-align: right">(and true false)</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Or</td>
+          <td style="text-align: center">or</td>
+          <td style="text-align: right">(or true false)</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Sine</td>
+          <td style="text-align: center">sin</td>
+          <td style="text-align: right">(sin 1.0)</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Cosine</td>
+          <td style="text-align: center">cos</td>
+          <td style="text-align: right">(cos 1.0)</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Bitwise And</td>
+          <td style="text-align: center">&amp;</td>
+          <td style="text-align: right">(&amp; 1 2 3)</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Bitwise Or</td>
+          <td style="text-align: center">|</td>
+          <td style="text-align: right">(| 1 2 3 )</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Modulo</td>
+          <td style="text-align: center">%</td>
+          <td style="text-align: right">(% 10 2)</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Random [0.0, 1.0)</td>
+          <td style="text-align: center">rnd</td>
+          <td style="text-align: right">(rnd)</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Square Root</td>
+          <td style="text-align: center">sqrt</td>
+          <td style="text-align: right">(sqrt 16)</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Square</td>
+          <td style="text-align: center">sq</td>
+          <td style="text-align: right">(sq 10)</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Less Than</td>
+          <td style="text-align: center">&lt;</td>
+          <td style="text-align: right">(lt 1 4)</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Greater than</td>
+          <td style="text-align: center">&gt;</td>
+          <td style="text-align: right">(gt 1 4)</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Equals</td>
+          <td style="text-align: center">==</td>
+          <td style="text-align: right">(== 1 1)</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Not equal</td>
+          <td style="text-align: center">!=</td>
+          <td style="text-align: right">(!= 1 2)</td>
+      </tr>
+  </tbody>
 </table>
 <h2 id="ok-i-am-ready-to-use-it">Ok, I am ready to use it</h2>
 <p>In order to use <em>artreepie</em> all you need is a Twitter account. Tweets are processed
@@ -247,7 +247,7 @@ red channel, the second for the green channel and the third for the blue channel
 
 
 <figure >
-  <img src="/blog/2014/08/artreepie-a-procedural-art-bot/img/example1_huefc582dd21c1e798948e2af6a2bc752c_29264_0x0_q75_h2__3.webp" alt="An abstract art generated by artreepie" />
+  <img src="/blog/2014/08/artreepie-a-procedural-art-bot/img/example1_hu_87826fc5c3ecb646.webp" alt="An abstract art generated by artreepie" />
   <figcaption>Another abstract art by artreepie</figcaption>
 </figure>
 
